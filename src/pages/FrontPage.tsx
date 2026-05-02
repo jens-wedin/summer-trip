@@ -67,9 +67,9 @@ export function FrontPage() {
               <Stat label="Days on the road" value={String(trip.totalDays)} />
               <Stat label="Total kilometres" value={trip.totalKm.toLocaleString()} />
               <Stat label="Countries traversed" value={String(trip.countries.length)} />
-              <Stat label="Ferry crossings" value="2" />
-              <Stat label="Capital cities" value="5" />
-              <Stat label="Cathedrals planned" value="6" />
+              <Stat label="Ferry crossings" value="3" />
+              <Stat label="Nights in Bayeux" value="3" />
+              <Stat label="Nights in Paris" value="3" />
             </dl>
           </div>
 
