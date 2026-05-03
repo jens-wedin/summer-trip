@@ -611,6 +611,7 @@ export const towns: Town[] = [
     country: "Sweden",
     tagline: "The Cathedral City of the North",
     visitContext: "Day 13 · Fri 3 July · 1 night",
+    lodging: { name: "The More Hotel Lund", url: "https://www.themorehotel.se/lund/", note: "Familjerum · 2 366,85 kr · parking via lund@themorehotel.com." },
     images: [
       { src: "https://images.unsplash.com/photo-1601215899055-017ccd00d567?w=1600&auto=format&fit=crop&q=80", caption: "Lund — back on Swedish soil." },
       { src: "https://images.unsplash.com/photo-1542628682-88321d2a4828?w=1600&auto=format&fit=crop&q=80", caption: "Cobblestone streets in the old town." },
