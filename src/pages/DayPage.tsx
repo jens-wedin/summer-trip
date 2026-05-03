@@ -351,7 +351,7 @@ export function DayPage() {
 function LodgingCard({ lodging }: { lodging: Lodging }) {
   const statusBadge = {
     booked: { label: "✅ Booked", cls: "text-green-800" },
-    pending: { label: "⏳ Pending", cls: "text-amber-800" },
+    pending: { label: "⏳ Pending", cls: "text-accent" },
     "not-booked": { label: "❌ Not booked", cls: "text-red-800" },
     home: { label: "🏠 Home", cls: "text-ink" },
   } as const;

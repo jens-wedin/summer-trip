@@ -8,7 +8,7 @@ import {
 } from "../data/drinks";
 
 const calloutStyle = {
-  tradition: { kicker: "Tradition", cls: "border-amber-700 bg-amber-50/40 text-amber-900" },
+  tradition: { kicker: "Tradition", cls: "border-rule bg-paperDark/40 text-ink" },
   tip: { kicker: "Tip", cls: "border-ink/40 bg-paper/40" },
   must: { kicker: "Must Try", cls: "border-accent bg-accent/5" },
 } as const;

@@ -165,8 +165,8 @@ function FoodStopSection({ stop }: { stop: FoodStop }) {
       )}
 
       {stop.tip && (
-        <div className="mt-6 border-2 border-amber-700 bg-amber-50/40 p-4">
-          <p className="kicker text-amber-800">💡 {stop.tip.title}</p>
+        <div className="mt-6 border-2 border-rule bg-paperDark/40 p-4">
+          <p className="kicker text-accent">💡 {stop.tip.title}</p>
           <p className="font-serif text-[15px] mt-2">{stop.tip.body}</p>
         </div>
       )}

@@ -20,7 +20,7 @@ const stageBadge = {
   meet: { label: "Meet", cls: "bg-ink text-paper" },
   guided: { label: "Guided", cls: "border border-ink" },
   "drive-by": { label: "Drive-by", cls: "border border-ink/60 text-muted" },
-  lunch: { label: "Lunch", cls: "border border-amber-700 text-amber-800" },
+  lunch: { label: "Lunch", cls: "border border-rule text-accent" },
   return: { label: "Return", cls: "bg-ink text-paper" },
 } as const;
 
@@ -56,8 +56,8 @@ export function NormandyPage() {
       </figure>
 
       {/* Tapestry warning */}
-      <div className="my-6 border-2 border-amber-700 bg-amber-50/40 p-5">
-        <p className="kicker text-amber-800">⚠️ Important — Bayeux Tapestry Closed</p>
+      <div className="my-6 border-2 border-rule bg-paperDark/40 p-5">
+        <p className="kicker text-accent">⚠️ Important — Bayeux Tapestry Closed</p>
         <p className="font-serif text-[15px] mt-2">
           The Bayeux Tapestry Museum closed on September 1, 2025 for major
           renovation and will not reopen until October 2027. The Tapestry will{" "}
