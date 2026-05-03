@@ -9,28 +9,26 @@ import {
 
 const calloutStyle = {
   tradition: { kicker: "Tradition", cls: "border-rule bg-paperDark/40 text-ink" },
-  tip: { kicker: "Tip", cls: "border-ink/40 bg-paper/40" },
-  must: { kicker: "Must Try", cls: "border-accent bg-accent/5" },
+  tip: { kicker: "Tips", cls: "border-ink/40 bg-paper/40" },
+  must: { kicker: "Måste prova", cls: "border-accent bg-accent/5" },
 } as const;
 
 export function DrinksPage() {
   return (
     <article className="max-w-6xl mx-auto px-6 pb-16">
       <header className="text-center py-10 border-b-[3px] border-double border-ink">
-        <p className="kicker">Section D · Beer & Wine</p>
+        <p className="kicker">Avdelning D · Öl &amp; vin</p>
         <h2 className="headline text-4xl md:text-6xl mt-3 leading-[1.05]">
-          🍺 The Drinks Trail 🍷
+          🍺 Dryckesvägen 🍷
         </h2>
         <p className="deck text-lg md:text-xl mt-4 max-w-3xl mx-auto">
-          Two weeks across some of Europe's most distinctive and protected drinking
-          cultures — Kölsch, the bolleke, Trappist ales, Norman cider and calvados,
-          and Paris natural wine. What to drink, what to order by name, and where.
+          Två veckor genom några av Europas mest särpräglade och skyddade dryckeskulturer — Kölsch, bolleken, trappistöl, normandiskt cider och calvados och naturvin i Paris. Vad man dricker, vad man beställer med namn och var.
         </p>
       </header>
 
       {/* TOC */}
       <nav aria-label="Drink stops" className="border-b border-ink py-4">
-        <p className="kicker text-center mb-3">Stop by Stop</p>
+        <p className="kicker text-center mb-3">Stopp för stopp</p>
         <ul className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
           {drinkStops.map((s) => (
             <li key={s.id}>
@@ -39,8 +37,8 @@ export function DrinksPage() {
               </a>
             </li>
           ))}
-          <li><a href="#unmissables" className="kicker ink-link">🏆 Unmissables</a></li>
-          <li><a href="#quick-ref" className="kicker ink-link">Quick Reference</a></li>
+          <li><a href="#unmissables" className="kicker ink-link">🏆 Oumbärliga</a></li>
+          <li><a href="#quick-ref" className="kicker ink-link">Snabbreferens</a></li>
         </ul>
       </nav>
 
@@ -49,9 +47,9 @@ export function DrinksPage() {
         id="unmissables"
         className="py-10 border-b border-ink/40 scroll-mt-24"
       >
-        <p className="kicker">Section D · The Five</p>
+        <p className="kicker">Avdelning D · De fem</p>
         <h3 className="headline text-3xl md:text-5xl mt-2">
-          🏆 The Five Unmissables on This Route
+          🏆 De fem oumbärliga längs denna rutt
         </h3>
         <hr className="rule mt-4 mb-5" />
         <ol className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
@@ -78,21 +76,21 @@ export function DrinksPage() {
         id="quick-ref"
         className="py-10 scroll-mt-24"
       >
-        <p className="kicker">Section D · Cheat Sheet</p>
+        <p className="kicker">Avdelning D · Fusklappar</p>
         <h3 className="headline text-3xl md:text-5xl mt-2">
-          What to Order Where
+          Vad man beställer var
         </h3>
         <p className="deck text-lg mt-3 max-w-3xl">
-          Pocket-sized — keep this open at the bar. Phrasebook included.
+          Fickformat — håll den öppen vid bardisken. Parlesbok ingår.
         </p>
         <hr className="rule mt-4 mb-5" />
         <div className="overflow-x-auto">
           <table className="w-full text-left font-serif text-[15px] border-collapse">
             <thead>
               <tr className="border-b-2 border-ink">
-                <th className="kicker py-3 pr-4">Stop</th>
-                <th className="kicker py-3 pr-4">Order this</th>
-                <th className="kicker py-3">Say this</th>
+                <th className="kicker py-3 pr-4">Stopp</th>
+                <th className="kicker py-3 pr-4">Beställ detta</th>
+                <th className="kicker py-3">Säg så här</th>
               </tr>
             </thead>
             <tbody>
@@ -111,13 +109,13 @@ export function DrinksPage() {
       {/* Footer nav */}
       <nav className="mt-12 pt-6 border-t-[3px] border-double border-ink flex flex-col md:flex-row items-center justify-between gap-3">
         <Link to="/itinerary" className="kicker ink-link">
-          ← Full Itinerary
+          ← Hela reseplanen
         </Link>
         <Link to="/towns" className="kicker ink-link">
-          Towns Index
+          Stadsindex
         </Link>
         <Link to="/paris" className="kicker ink-link">
-          Section P: Paris in History →
+          Avdelning P: Paris i historien →
         </Link>
       </nav>
     </article>
@@ -136,29 +134,29 @@ function DrinkStopSection({ stop }: { stop: DrinkStop }) {
       <hr className="rule mt-4 mb-5" />
 
       {stop.beer && stop.beer.length > 0 && (
-        <SubBlock title="🍺 Beer" body={stop.beer} />
+        <SubBlock title="🍺 Öl" body={stop.beer} />
       )}
 
       {stop.beerVenues && stop.beerVenues.length > 0 && (
-        <VenueGrid title="Beer venues & breweries" venues={stop.beerVenues} />
+        <VenueGrid title="Ölkrogar & bryggerier" venues={stop.beerVenues} />
       )}
 
       {stop.cider && stop.cider.length > 0 && (
-        <SubBlock title="🍏 Cider, Calvados & Pommeau" body={stop.cider} />
+        <SubBlock title="🍏 Cider, calvados & pommeau" body={stop.cider} />
       )}
 
       {stop.styles && stop.styles.length > 0 && (
         <div className="mt-6">
-          <p className="kicker">Styles & what to order</p>
+          <p className="kicker">Stilar &amp; vad man beställer</p>
           <hr className="rule mt-2 mb-3" />
           <div className="overflow-x-auto">
             <table className="w-full text-left font-serif text-[14px] border-collapse">
               <thead>
                 <tr className="border-b border-ink">
-                  <th className="kicker py-2 pr-3">Style</th>
+                  <th className="kicker py-2 pr-3">Stil</th>
                   <th className="kicker py-2 pr-3">ABV</th>
-                  <th className="kicker py-2 pr-3">About</th>
-                  <th className="kicker py-2">Order this</th>
+                  <th className="kicker py-2 pr-3">Om</th>
+                  <th className="kicker py-2">Beställ detta</th>
                 </tr>
               </thead>
               <tbody>
@@ -177,15 +175,15 @@ function DrinkStopSection({ stop }: { stop: DrinkStop }) {
       )}
 
       {stop.ciderProducers && stop.ciderProducers.length > 0 && (
-        <VenueGrid title="Cider producers & route" venues={stop.ciderProducers} />
+        <VenueGrid title="Ciderproducenter & rutt" venues={stop.ciderProducers} />
       )}
 
       {stop.wine && stop.wine.length > 0 && (
-        <SubBlock title="🍷 Wine" body={stop.wine} />
+        <SubBlock title="🍷 Vin" body={stop.wine} />
       )}
 
       {stop.wineVenues && stop.wineVenues.length > 0 && (
-        <VenueGrid title="Wine bars & merchants" venues={stop.wineVenues} />
+        <VenueGrid title="Vinbarer & handlare" venues={stop.wineVenues} />
       )}
 
       {stop.callouts && stop.callouts.length > 0 && (
@@ -241,7 +239,7 @@ function VenueGrid({
               <p className="font-serif font-bold text-[15px]">
                 {v.name}
                 {v.pilgrimage && (
-                  <span className="kicker text-accent ml-2">⭐ Pilgrimage</span>
+                  <span className="kicker text-accent ml-2">⭐ Pilgrimsmål</span>
                 )}
               </p>
               {v.address && <span className="byline">{v.address}</span>}

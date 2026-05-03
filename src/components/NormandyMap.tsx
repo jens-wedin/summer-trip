@@ -40,11 +40,11 @@ function FitBounds({ sites }: { sites: NormandySite[] }) {
 }
 
 const filterTabs: { id: NormandySiteTheme | "all"; label: string }[] = [
-  { id: "all", label: "All sectors" },
-  { id: "us", label: "US" },
-  { id: "uk", label: "British" },
-  { id: "canadian", label: "Canadian" },
-  { id: "shared", label: "Museums & city" },
+  { id: "all", label: "Alla sektorer" },
+  { id: "us", label: "USA" },
+  { id: "uk", label: "Brittisk" },
+  { id: "canadian", label: "Kanadensisk" },
+  { id: "shared", label: "Museer & stad" },
 ];
 
 export function NormandyMap({ sites, height = 540 }: Props) {
@@ -57,7 +57,7 @@ export function NormandyMap({ sites, height = 540 }: Props) {
     <div>
       <div
         role="tablist"
-        aria-label="Filter sites by sector"
+        aria-label="Filtrera platser efter sektor"
         className="flex flex-wrap items-center gap-2 mb-3"
       >
         <span className="kicker text-muted mr-1">Filter:</span>

@@ -18,11 +18,11 @@ import { NormandyMap } from "../components/NormandyMap";
 import { useTheme } from "../lib/useTheme";
 
 const stageBadge = {
-  meet: { label: "Meet", cls: "bg-ink text-paper" },
-  guided: { label: "Guided", cls: "border border-ink" },
-  "drive-by": { label: "Drive-by", cls: "border border-ink/60 text-muted" },
+  meet: { label: "Möte", cls: "bg-ink text-paper" },
+  guided: { label: "Guidad", cls: "border border-ink" },
+  "drive-by": { label: "Förbiresa", cls: "border border-ink/60 text-muted" },
   lunch: { label: "Lunch", cls: "border border-rule text-accent" },
-  return: { label: "Return", cls: "bg-ink text-paper" },
+  return: { label: "Återresa", cls: "bg-ink text-paper" },
 } as const;
 
 export function NormandyPage() {
@@ -30,16 +30,16 @@ export function NormandyPage() {
   return (
     <article className="max-w-6xl mx-auto px-6 pb-16">
       <header className="text-center py-10 border-b-[3px] border-double border-ink">
-        <p className="kicker">Section N · Normandy</p>
+        <p className="kicker">Avdelning N · Normandie</p>
         <h2 className="headline text-4xl md:text-6xl mt-3 leading-[1.05]">
-          The Longest Day
+          Den längsta dagen
         </h2>
         <p className="deck text-lg md:text-xl mt-4 max-w-3xl mx-auto">
-          A field guide to D-Day and the Battle of Normandy — for our three
-          nights based in Bayeux, the Norman city that survived the war intact.
+          En fältguide till D-Day och slaget om Normandie — för våra tre
+          nätter med bas i Bayeux, den normandiska stad som klarade sig igenom kriget intakt.
         </p>
         <p className="byline mt-3">
-          Days 5–7 · Thu 25 – Sat 27 June, 2026
+          Dag 5–7 · tor 25 – lör 27 juni 2026
         </p>
       </header>
 
@@ -59,20 +59,20 @@ export function NormandyPage() {
 
       {/* Tapestry warning */}
       <div className="my-6 border-2 border-rule bg-paperDark/40 p-5">
-        <p className="kicker text-accent">⚠️ Important — Bayeux Tapestry Closed</p>
+        <p className="kicker text-accent">⚠️ Viktigt — Bayeuxtapeten stängd</p>
         <p className="font-serif text-[15px] mt-2">
-          The Bayeux Tapestry Museum closed on September 1, 2025 for major
-          renovation and will not reopen until October 2027. The Tapestry will{" "}
-          <strong>not</strong> be on display during our July 2026 visit. It may
-          be loaned to the British Museum in London during this period. Plan the
-          free day around the cathedral, the Mémorial Musée, the war cemetery,
-          and the old town instead.
+          Bayeuxtapetens museum stängde den 1 september 2025 för en stor
+          renovering och öppnar inte igen förrän oktober 2027. Tapeten kommer{" "}
+          <strong>inte</strong> att visas under vårt besök i juli 2026. Den kan
+          bli utlånad till British Museum i London under denna period. Planera
+          den lediga dagen kring katedralen, Mémorial Musée, krigskyrkogården
+          och gamla stan i stället.
         </p>
       </div>
 
       {/* TOC */}
       <nav aria-label="Normandy sections" className="border-b border-ink py-4">
-        <p className="kicker text-center mb-3">In This Section</p>
+        <p className="kicker text-center mb-3">I denna avdelning</p>
         <ul className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
           {normandySections.map((s) => (
             <li key={s.id}>
@@ -81,11 +81,11 @@ export function NormandyPage() {
               </a>
             </li>
           ))}
-          <li><a href="#timeline" className="kicker ink-link">Timeline</a></li>
-          <li><a href="#command" className="kicker ink-link">Command Structure</a></li>
-          <li><a href="#sites-map" className="kicker ink-link">Sites Map</a></li>
-          <li><a href="#bayeux" className="kicker ink-link">Bayeux Base</a></li>
-          <li><a href="#shuttle" className="kicker ink-link">Shuttle Tour</a></li>
+          <li><a href="#timeline" className="kicker ink-link">Tidslinje</a></li>
+          <li><a href="#command" className="kicker ink-link">Befälsstruktur</a></li>
+          <li><a href="#sites-map" className="kicker ink-link">Platskarta</a></li>
+          <li><a href="#bayeux" className="kicker ink-link">Bayeuxbasen</a></li>
+          <li><a href="#shuttle" className="kicker ink-link">Shuttle-tur</a></li>
         </ul>
       </nav>
 
@@ -141,8 +141,8 @@ export function NormandyPage() {
 
       {/* Timeline */}
       <section id="timeline" className="py-10 border-b border-ink/40 scroll-mt-24">
-        <p className="kicker">Section N · Quick Timeline</p>
-        <h3 className="headline text-3xl md:text-4xl mt-2">From Invasion to V-E Day</h3>
+        <p className="kicker">Avdelning N · Kort tidslinje</p>
+        <h3 className="headline text-3xl md:text-4xl mt-2">Från invasion till V-E-dagen</h3>
         <hr className="rule mt-4 mb-5" />
         <ol className="space-y-3">
           {normandyTimeline.map((t) => (
@@ -156,12 +156,12 @@ export function NormandyPage() {
 
       {/* Command structure */}
       <section id="command" className="py-10 border-b border-ink/40 scroll-mt-24">
-        <p className="kicker">Section N · The Generals</p>
-        <h3 className="headline text-3xl md:text-4xl mt-2">Who Commanded What</h3>
+        <p className="kicker">Avdelning N · Generalerna</p>
+        <h3 className="headline text-3xl md:text-4xl mt-2">Vem befälde vad</h3>
         <hr className="rule mt-4 mb-5" />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
-            <p className="kicker text-accent">Allied Command (June 6, 1944)</p>
+            <p className="kicker text-accent">Allierat befäl (6 juni 1944)</p>
             <hr className="rule mt-2 mb-3" />
             <ul className="space-y-2">
               {dDayCommandStructure.map((c) => (
@@ -176,7 +176,7 @@ export function NormandyPage() {
             </ul>
           </div>
           <div>
-            <p className="kicker">German Command — Where They Were</p>
+            <p className="kicker">Tyskt befäl — var de befann sig</p>
             <hr className="rule mt-2 mb-3" />
             <ul className="space-y-3">
               {germanCommanders.map((g) => (
@@ -191,7 +191,7 @@ export function NormandyPage() {
         </div>
 
         <div className="mt-10">
-          <p className="kicker">German Units Defending Normandy on June 6</p>
+          <p className="kicker">Tyska enheter som försvarade Normandie den 6 juni</p>
           <hr className="rule mt-2 mb-4" />
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3">
             {germanDefendingUnits.map((u) => (
@@ -207,13 +207,12 @@ export function NormandyPage() {
 
       {/* Sites + Map */}
       <section id="sites-map" className="py-10 border-b border-ink/40 scroll-mt-24">
-        <p className="kicker">Section N · Sites & Map</p>
+        <p className="kicker">Avdelning N · Platser &amp; karta</p>
         <h3 className="headline text-3xl md:text-5xl mt-2">
-          Where It Happened — On the Map
+          Där det hände — på kartan
         </h3>
         <p className="deck text-lg mt-3 max-w-3xl">
-          Filter by sector. Click any marker for the why, the area, and how
-          long to budget. Beaches are larger dots.
+          Filtrera efter sektor. Klicka på en markör för varför, området och hur lång tid att räkna med. Stränderna är större punkter.
         </p>
         <hr className="rule mt-4 mb-5" />
         <NormandyMap sites={normandySites} height={540} />
@@ -234,7 +233,7 @@ export function NormandyPage() {
               <p className="byline mt-1">{s.area}</p>
               <p className="font-serif text-[15px] mt-3 flex-1">{s.why}</p>
               <p className="byline italic mt-3 text-muted">
-                Time needed: {s.timeNeeded}
+                Tid att räkna med: {s.timeNeeded}
               </p>
             </li>
           ))}
@@ -243,14 +242,14 @@ export function NormandyPage() {
 
       {/* Bayeux base */}
       <section id="bayeux" className="py-10 border-b border-ink/40 scroll-mt-24">
-        <p className="kicker">Section N · Our Base</p>
+        <p className="kicker">Avdelning N · Vår bas</p>
         <h3 className="headline text-3xl md:text-5xl mt-2">
-          Bayeux — Three Nights
+          Bayeux — Tre nätter
         </h3>
         <p className="deck text-lg mt-3 max-w-3xl">
-          The first French city liberated after D-Day (June 7, 1944) — and
-          miraculously spared from bombing. The medieval centre, half-timbered
-          houses, and Romanesque-Gothic cathedral are essentially intact.
+          Den första franska stad som befriades efter D-Day (7 juni 1944) — och
+          mirakulöst skonad från bombning. Det medeltida centret, korsvirkehusen
+          och den romansk-gotiska katedralen är i princip intakta.
         </p>
         <hr className="rule mt-4 mb-5" />
 
@@ -268,12 +267,12 @@ export function NormandyPage() {
         </figure>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-          <BayeuxDay day="Thu 25 Jun" plan="Arrive from Honfleur · explore old town · cathedral · dinner" />
-          <BayeuxDay day="Fri 26 Jun" plan="Bayeux Shuttle Tour — pickup 8:45 AM · ref 260476 · back ~17:15" highlight />
-          <BayeuxDay day="Sat 27 Jun" plan="Free day — Mémorial Musée · War Cemetery · old town · aperitif" />
+          <BayeuxDay day="tor 25 jun" plan="Anländer från Honfleur · utforskar gamla stan · katedralen · middag" />
+          <BayeuxDay day="fre 26 jun" plan="Bayeux Shuttle Tour — upphämtning 08:45 · ref 260476 · tillbaka ~17:15" highlight />
+          <BayeuxDay day="lör 27 jun" plan="Ledig dag — Mémorial Musée · krigskyrkogården · gamla stan · aperitif" />
         </div>
 
-        <p className="kicker">🍽️ Where to Eat</p>
+        <p className="kicker">🍽️ Var man äter</p>
         <hr className="rule mt-2 mb-4" />
         <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
           {bayeuxRestaurants
@@ -289,13 +288,13 @@ export function NormandyPage() {
                 </div>
                 <p className="font-serif text-[15px] mt-1">{r.note}</p>
                 {r.closed && (
-                  <p className="byline italic mt-1 text-muted">Closed: {r.closed}</p>
+                  <p className="byline italic mt-1 text-muted">Stängt: {r.closed}</p>
                 )}
               </li>
             ))}
         </ul>
 
-        <p className="kicker mt-8">☕ Cafés & Snacks</p>
+        <p className="kicker mt-8">☕ Kaféer &amp; snacks</p>
         <hr className="rule mt-2 mb-4" />
         <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3">
           {bayeuxRestaurants
@@ -311,30 +310,29 @@ export function NormandyPage() {
 
       {/* Shuttle Tour */}
       <section id="shuttle" className="py-10 scroll-mt-24">
-        <p className="kicker">Section N · Friday's Tour</p>
+        <p className="kicker">Avdelning N · Fredagens tur</p>
         <h3 className="headline text-3xl md:text-5xl mt-2">
-          Bayeux Shuttle — British &amp; American D-Day Experience
+          Bayeux Shuttle — brittisk &amp; amerikansk D-Day-upplevelse
         </h3>
         <p className="deck text-lg mt-3 max-w-3xl">
-          Booked for Friday 26 June 2026. Ten stages along Gold and Omaha
-          sectors, ~8.5 hours, English only, max 8 passengers.
+          Bokad för fredag 26 juni 2026. Tio etapper längs Gold- och Omahasektorerna, ~8,5 timmar, engelska endast, max 8 passagerare.
         </p>
         <hr className="rule mt-4 mb-5" />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
           <div className="border border-ink p-5">
-            <p className="kicker">At a glance</p>
+            <p className="kicker">I korthet</p>
             <hr className="rule mt-2 mb-3" />
             <dl className="space-y-2 text-[14px] font-serif">
-              <DetailRow label="Date" value={bayeuxShuttle.date} />
-              <DetailRow label="Booking ref" value={bayeuxShuttle.ref} />
-              <DetailRow label="Departure" value={bayeuxShuttle.departure} />
-              <DetailRow label="Duration" value={bayeuxShuttle.duration} />
-              <DetailRow label="Passengers" value={String(bayeuxShuttle.passengers)} />
-              <DetailRow label="Total price" value={bayeuxShuttle.totalPrice} />
-              <DetailRow label="Group size" value={bayeuxShuttle.groupSize} />
-              <DetailRow label="Language" value={bayeuxShuttle.language} />
-              <DetailRow label="Sector" value={bayeuxShuttle.sector} />
+              <DetailRow label="Datum" value={bayeuxShuttle.date} />
+              <DetailRow label="Bokningsnr" value={bayeuxShuttle.ref} />
+              <DetailRow label="Avgång" value={bayeuxShuttle.departure} />
+              <DetailRow label="Varaktighet" value={bayeuxShuttle.duration} />
+              <DetailRow label="Passagerare" value={String(bayeuxShuttle.passengers)} />
+              <DetailRow label="Totalt pris" value={bayeuxShuttle.totalPrice} />
+              <DetailRow label="Gruppstorlek" value={bayeuxShuttle.groupSize} />
+              <DetailRow label="Språk" value={bayeuxShuttle.language} />
+              <DetailRow label="Sektor" value={bayeuxShuttle.sector} />
             </dl>
             <p className="mt-3">
               <a
@@ -351,7 +349,7 @@ export function NormandyPage() {
             </p>
           </div>
           <div className="border border-ink p-5">
-            <p className="kicker">Practical notes</p>
+            <p className="kicker">Praktiska upplysningar</p>
             <hr className="rule mt-2 mb-3" />
             <ul className="space-y-2 list-disc list-inside font-serif text-[14px]">
               {bayeuxShuttle.practical.map((p) => (
@@ -364,7 +362,7 @@ export function NormandyPage() {
           </div>
         </div>
 
-        <p className="kicker">The 10 Stages</p>
+        <p className="kicker">De 10 etapperna</p>
         <hr className="rule mt-2 mb-4" />
         <ol className="space-y-3">
           {bayeuxShuttle.stops.map((s) => (
@@ -391,13 +389,13 @@ export function NormandyPage() {
       {/* Footer nav */}
       <nav className="mt-12 pt-6 border-t-[3px] border-double border-ink flex flex-col md:flex-row items-center justify-between gap-3">
         <Link to="/day/4" className="kicker ink-link">
-          ← Day 4: To the Norman Coast
+          ← Dag 4: Till den normandiska kusten
         </Link>
         <Link to="/itinerary" className="kicker ink-link">
-          Full Itinerary
+          Hela reseplanen
         </Link>
         <Link to="/paris" className="kicker ink-link">
-          Section P: Paris in History →
+          Avdelning P: Paris i historien →
         </Link>
       </nav>
     </article>

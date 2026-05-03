@@ -15,24 +15,24 @@ import { ParisThingsMap } from "../components/ParisThingsMap";
 
 const themeBadge: Record<HistoricSiteTheme, { label: string; cls: string }> = {
   napoleon: { label: "Napoleon", cls: "text-accent" },
-  wwii: { label: "WWII", cls: "text-ink" },
-  both: { label: "Both eras", cls: "text-muted" },
+  wwii: { label: "Andra världskriget", cls: "text-ink" },
+  both: { label: "Båda epoker", cls: "text-muted" },
 };
 
 export function ParisPage() {
   return (
     <article className="max-w-6xl mx-auto px-6 pb-16">
       <header className="text-center py-10 border-b-[3px] border-double border-ink">
-        <p className="kicker">Section P · Paris in History</p>
+        <p className="kicker">Avdelning P · Paris i historien</p>
         <h2 className="headline text-4xl md:text-6xl mt-3 leading-[1.05]">
-          A City of Empire and Memory
+          En stad av kejsardöme och minne
         </h2>
         <p className="deck text-lg md:text-xl mt-4 max-w-3xl mx-auto">
-          A field guide to Napoleon's imperial capital and to the city under
-          German occupation, 1940–1944. Walk the map. Stand where it happened.
+          En fältguide till Napoleons kejserliga huvudstad och till staden under
+          tysk ockupation, 1940–1944. Gå kartan. Stå där det hände.
         </p>
         <p className="byline mt-3">
-          Days 8–10 · Sunday 28 June – Tuesday 30 June, 2026
+          Dag 8–10 · söndag 28 juni – tisdag 30 juni 2026
         </p>
       </header>
 
@@ -52,7 +52,7 @@ export function ParisPage() {
 
       {/* Table of contents */}
       <nav aria-label="Paris sections" className="border-b border-ink py-4">
-        <p className="kicker text-center mb-3">In This Section</p>
+        <p className="kicker text-center mb-3">I denna avdelning</p>
         <ul className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
           {parisSections.map((s) => (
             <li key={s.id}>
@@ -63,17 +63,17 @@ export function ParisPage() {
           ))}
           <li>
             <a href="#sites-map" className="kicker ink-link">
-              Sites Map
+              Platskarta
             </a>
           </li>
           <li>
             <a href="#two-day" className="kicker ink-link">
-              2-Day Itinerary
+              2-dagarsplan
             </a>
           </li>
           <li>
             <a href="#things-to-do" className="kicker ink-link">
-              Things to Do
+              Saker att göra
             </a>
           </li>
         </ul>
@@ -131,13 +131,12 @@ export function ParisPage() {
 
       {/* Sites + Map */}
       <section id="sites-map" className="py-10 border-b border-ink/40 scroll-mt-24">
-        <p className="kicker">Section P · Sites & Map</p>
+        <p className="kicker">Avdelning P · Platser &amp; karta</p>
         <h3 className="headline text-3xl md:text-5xl mt-2">
-          Where It Happened — On the Map
+          Där det hände — på kartan
         </h3>
         <p className="deck text-lg mt-3 max-w-3xl">
-          Toggle the filter to focus on Napoleon-era monuments or WWII sites. Click
-          any marker for the why, the address, and how long to budget.
+          Använd filtret för att fokusera på Napoleontidens monument eller platser från andra världskriget. Klicka på en markör för varför, adressen och hur lång tid att räkna med.
         </p>
         <hr className="rule mt-4 mb-5" />
         <figure className="mb-6">
@@ -170,7 +169,7 @@ export function ParisPage() {
               <p className="byline mt-1">{s.address}</p>
               <p className="font-serif text-[15px] mt-3 flex-1">{s.why}</p>
               <p className="byline italic mt-3 text-muted">
-                Time needed: {s.timeNeeded}
+                Tid att räkna med: {s.timeNeeded}
               </p>
             </li>
           ))}
@@ -179,13 +178,12 @@ export function ParisPage() {
 
       {/* 2-day itinerary */}
       <section id="two-day" className="py-10 border-b border-ink/40 scroll-mt-24">
-        <p className="kicker">Section P · The Plan</p>
+        <p className="kicker">Avdelning P · Planen</p>
         <h3 className="headline text-3xl md:text-5xl mt-2">
-          A Suggested 2-Day Itinerary
+          En föreslagen 2-dagarsplan
         </h3>
         <p className="deck text-lg mt-3 max-w-3xl">
-          One day for Napoleon, one for the war. Both walkable; comfortable shoes
-          mandatory.
+          En dag för Napoleon, en för kriget. Båda gångbara; bekväma skor obligatoriska.
         </p>
         <hr className="rule mt-4 mb-5" />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -218,13 +216,13 @@ export function ParisPage() {
 
       {/* Things to do */}
       <section id="things-to-do" className="py-10 scroll-mt-24">
-        <p className="kicker">Section P · Beyond the History</p>
+        <p className="kicker">Avdelning P · Bortom historien</p>
         <h3 className="headline text-3xl md:text-5xl mt-2">
-          Things to Do, Eat, and Buy
+          Saker att göra, äta och köpa
         </h3>
         <p className="deck text-lg mt-3 max-w-3xl">
-          Curated from Elsa Billgren's Paris guide for ELLE Sweden — neighbourhoods,
-          museums, food, shopping, and hidden gems.
+          Utvalt från Elsa Billgrens Parisguide för ELLE Sverige — stadsdelar,
+          museer, mat, shopping och dolda pärlor.
         </p>
         <hr className="rule mt-4 mb-6" />
 
@@ -255,7 +253,7 @@ export function ParisPage() {
                           )}
                         </p>
                         {t.wishList && (
-                          <span className="kicker text-accent">Wish list</span>
+                          <span className="kicker text-accent">Önskelista</span>
                         )}
                       </div>
                       <p className="font-serif text-[15px] mt-1">{t.note}</p>
@@ -271,13 +269,13 @@ export function ParisPage() {
       {/* Footer link back to days */}
       <nav className="mt-12 pt-6 border-t-[3px] border-double border-ink flex flex-col md:flex-row items-center justify-between gap-3">
         <Link to="/day/8" className="kicker ink-link">
-          ← Day 8: Into Paris
+          ← Dag 8: In i Paris
         </Link>
         <Link to="/itinerary" className="kicker ink-link">
-          Full Itinerary
+          Hela reseplanen
         </Link>
         <Link to="/day/11" className="kicker ink-link">
-          Day 11: Battlefields and the Ruhr →
+          Dag 11: Slagfält och Ruhr →
         </Link>
       </nav>
     </article>

@@ -83,7 +83,7 @@ export function ParisThingsMap({ listings, height = 540 }: Props) {
     <div>
       <div
         role="group"
-        aria-label="Filter listings by category"
+        aria-label="Filtrera objekt efter kategori"
         className="flex flex-wrap items-center gap-2 mb-3"
       >
         <span className="kicker text-muted mr-1">Filter:</span>
@@ -95,7 +95,7 @@ export function ParisThingsMap({ listings, height = 540 }: Props) {
           className="kicker px-3 py-1 border border-ink hover:bg-ink/5"
           aria-pressed={allOn}
         >
-          {allOn ? "Clear all" : "Show all"}
+          {allOn ? "Rensa alla" : "Visa alla"}
         </button>
         {presentCategories.map((cat) => {
           const active = activeCats.has(cat);
@@ -123,10 +123,10 @@ export function ParisThingsMap({ listings, height = 540 }: Props) {
         })}
       </div>
       <p className="byline mb-3">
-        {visible.length} of {mappable.length} mapped
+        {visible.length} av {mappable.length} på kartan
         {unmappedCount > 0 && (
           <span className="ml-2 italic text-muted">
-            · {unmappedCount} listing{unmappedCount === 1 ? "" : "s"} without a fixed location
+            · {unmappedCount} objekt utan fast plats
           </span>
         )}
       </p>
@@ -196,7 +196,7 @@ export function ParisThingsMap({ listings, height = 540 }: Props) {
                           textTransform: "uppercase",
                         }}
                       >
-                        Wish list
+                        Önskelista
                       </span>
                     )}
                   </p>

@@ -32,8 +32,8 @@ const themeColor: Record<"light" | "dark", Record<HistoricSiteTheme, string>> = 
 
 const themeLabel: Record<HistoricSiteTheme, string> = {
   napoleon: "Napoleon",
-  wwii: "WWII",
-  both: "Both eras",
+  wwii: "Andra världskriget",
+  both: "Båda epoker",
 };
 
 function FitBounds({ sites }: { sites: HistoricSite[] }) {
@@ -63,7 +63,7 @@ export function ParisMap({ sites, height = 520 }: Props) {
     <div>
       <div
         role="tablist"
-        aria-label="Filter sites by era"
+        aria-label="Filtrera platser efter epok"
         className="flex flex-wrap items-center gap-2 mb-3"
       >
         <span className="kicker text-muted mr-1">Filter:</span>
@@ -79,14 +79,14 @@ export function ParisMap({ sites, height = 520 }: Props) {
                 active ? "bg-ink text-paper" : "hover:bg-ink/5"
               }`}
             >
-              {t === "all" ? "All sites" : t === "napoleon" ? "Napoleon" : "WWII"}
+              {t === "all" ? "Alla platser" : t === "napoleon" ? "Napoleon" : "Andra världskriget"}
             </button>
           );
         })}
         <span className="byline ml-auto">
           <LegendDot color={themeColor[theme].napoleon} /> Napoleon ·{" "}
-          <LegendDot color={themeColor[theme].wwii} /> WWII ·{" "}
-          <LegendDot color={themeColor[theme].both} /> Both
+          <LegendDot color={themeColor[theme].wwii} /> Andra världskriget ·{" "}
+          <LegendDot color={themeColor[theme].both} /> Båda
         </span>
       </div>
       <div className="border border-ink/80 bg-paperDark" style={{ height }}>

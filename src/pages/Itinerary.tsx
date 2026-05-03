@@ -5,12 +5,12 @@ export function Itinerary() {
   return (
     <article className="max-w-6xl mx-auto px-6 pb-12">
       <div className="text-center py-6">
-        <p className="kicker">Section B · The Itinerary</p>
+        <p className="kicker">Avdelning B · Reseplanen</p>
         <h2 className="headline text-4xl md:text-5xl mt-3">
-          A Day-by-Day Programme
+          Ett program dag för dag
         </h2>
         <p className="deck text-lg max-w-2xl mx-auto mt-2">
-          Fourteen consecutive days, mapped, measured, and mostly within a day's drive of a decent café.
+          Fjorton dagar i rad, kartlagda, uppmätta och mestadels inom en dags körning från ett anständigt kafé.
         </p>
       </div>
       <hr className="double-rule my-4" />
@@ -19,7 +19,7 @@ export function Itinerary() {
         {trip.days.map((d) => (
           <li key={d.id} className="py-6 grid grid-cols-12 gap-6 items-start">
             <div className="col-span-12 md:col-span-2">
-              <p className="kicker">Day {String(d.id).padStart(2, "0")}</p>
+              <p className="kicker">Dag {String(d.id).padStart(2, "0")}</p>
               <p className="masthead text-4xl mt-1 leading-none">
                 {d.id < 10 ? `0${d.id}` : d.id}
               </p>
@@ -38,18 +38,18 @@ export function Itinerary() {
               </p>
             </div>
             <div className="col-span-12 md:col-span-3 md:border-l md:border-ink/30 md:pl-5">
-              <Stat label="From" value={d.from.name} />
-              <Stat label="To" value={d.to.name} />
+              <Stat label="Från" value={d.from.name} />
+              <Stat label="Till" value={d.to.name} />
               <Stat
-                label="Distance"
+                label="Sträcka"
                 value={d.drivingKm === 0 ? "—" : `${d.drivingKm} km`}
               />
-              <Stat label="Time" value={d.drivingDuration} />
+              <Stat label="Tid" value={d.drivingDuration} />
               <Link
                 to={`/day/${d.id}`}
                 className="kicker ink-link inline-block mt-3"
               >
-                Read dispatch →
+                Läs rapport →
               </Link>
             </div>
           </li>

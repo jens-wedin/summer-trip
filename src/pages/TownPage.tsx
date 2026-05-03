@@ -10,10 +10,10 @@ export function TownPage() {
   if (!town) {
     return (
       <div className="max-w-3xl mx-auto px-6 py-12 text-center">
-        <p className="kicker">Page Not Found</p>
-        <h2 className="headline text-3xl mt-3">No such town dispatch</h2>
+        <p className="kicker">Sidan hittades inte</p>
+        <h2 className="headline text-3xl mt-3">Ingen sådan stadsrapport</h2>
         <Link to="/towns" className="kicker ink-link mt-4 inline-block">
-          ← All towns
+          ← Alla städer
         </Link>
       </div>
     );
@@ -73,7 +73,7 @@ export function TownPage() {
 
       {town.lodging && (
         <section className="border-b border-ink py-6 mt-2">
-          <p className="kicker">🏨 Where We're Staying</p>
+          <p className="kicker">🏨 Där vi bor</p>
           <hr className="rule mt-2 mb-3" />
           <p className="font-serif font-bold text-lg">{town.lodging.name}</p>
           {town.lodging.note && (
@@ -89,7 +89,7 @@ export function TownPage() {
                 rel="noopener noreferrer"
                 className="kicker ink-link"
               >
-                Visit website ↗
+                Besök webbplats ↗
               </a>
             </p>
           )}
@@ -98,7 +98,7 @@ export function TownPage() {
 
       {/* History & Context */}
       <section className="py-8 border-b border-ink/40">
-        <p className="kicker">🏛️ History & Context</p>
+        <p className="kicker">🏛️ Historia &amp; kontext</p>
         <hr className="rule mt-2 mb-4" />
         <ul className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {town.history.map((h) => (
@@ -112,7 +112,7 @@ export function TownPage() {
 
       {/* Points of Interest */}
       <section className="py-8 border-b border-ink/40">
-        <p className="kicker">📍 Points of Interest</p>
+        <p className="kicker">📍 Sevärdheter</p>
         <hr className="rule mt-2 mb-4" />
         <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
           {town.pointsOfInterest.map((p) => (
@@ -126,7 +126,7 @@ export function TownPage() {
 
       {/* Tips */}
       <section className="py-8 border-b border-ink/40">
-        <p className="kicker">💡 Local Tips</p>
+        <p className="kicker">💡 Lokala tips</p>
         <hr className="rule mt-2 mb-4" />
         <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3">
           {town.tips.map((t) => (
@@ -140,7 +140,7 @@ export function TownPage() {
 
       {/* Deep Dive */}
       <section className="py-10 border-b border-ink/40">
-        <p className="kicker">🔎 History Deep Dive</p>
+        <p className="kicker">🔎 Historisk fördjupning</p>
         <h3 className="headline text-3xl md:text-4xl mt-2">
           {town.deepDive.title}
         </h3>
@@ -152,7 +152,7 @@ export function TownPage() {
           {town.deepDive.chapters.map((c, i) => (
             <div key={c.title}>
               <p className="kicker text-accent">
-                Chapter {String(i + 1).padStart(2, "0")}
+                Kapitel {String(i + 1).padStart(2, "0")}
               </p>
               <h4 className="headline text-2xl mt-1">{c.title.replace(/^\d+\.\s*/, "")}</h4>
               <div className="body-prose mt-3 space-y-2">
@@ -165,7 +165,7 @@ export function TownPage() {
         </div>
         {town.deepDive.lookFor && (
           <blockquote className="mt-8 border-l-2 border-accent pl-5 max-w-3xl">
-            <p className="kicker text-accent">🔎 Look for this</p>
+            <p className="kicker text-accent">🔎 Att leta efter</p>
             <p className="font-serif italic text-[16px] mt-2">
               {town.deepDive.lookFor}
             </p>
@@ -175,7 +175,7 @@ export function TownPage() {
 
       {food.length > 0 && (
         <section className="py-8 border-b border-ink/40">
-          <p className="kicker">🍽️ Food & Must-Tries</p>
+          <p className="kicker">🍽️ Mat &amp; måsten</p>
           <hr className="rule mt-2 mb-4" />
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {food.map((f) => (
@@ -191,7 +191,7 @@ export function TownPage() {
                     {f.context}
                   </p>
                   <p className="kicker ink-link mt-3 inline-block">
-                    Read the food guide →
+                    Läs matguiden →
                   </p>
                 </Link>
               </li>
@@ -202,7 +202,7 @@ export function TownPage() {
 
       {drinks.length > 0 && (
         <section className="py-8 border-b border-ink/40">
-          <p className="kicker">🍺🍷 Drinks Trail</p>
+          <p className="kicker">🍺🍷 Dryckesvägen</p>
           <hr className="rule mt-2 mb-4" />
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {drinks.map((d) => (
@@ -218,7 +218,7 @@ export function TownPage() {
                     {d.subtitle}
                   </p>
                   <p className="kicker ink-link mt-3 inline-block">
-                    Read the drinks guide →
+                    Läs dryckesguiden →
                   </p>
                 </Link>
               </li>
@@ -234,7 +234,7 @@ export function TownPage() {
             to={`/town/${prev.slug}`}
             className="block border border-ink p-5 hover:bg-ink/5"
           >
-            <p className="kicker text-muted">← Previous town</p>
+            <p className="kicker text-muted">← Föregående stad</p>
             <p className="masthead text-2xl mt-2">
               {prev.flag} {prev.name}
             </p>
@@ -246,7 +246,7 @@ export function TownPage() {
             className="block border border-ink/40 p-5 hover:bg-ink/5 md:text-left"
           >
             <p className="kicker text-muted">Index</p>
-            <p className="masthead text-2xl mt-2">All towns →</p>
+            <p className="masthead text-2xl mt-2">Alla städer →</p>
           </Link>
         )}
         {next ? (
@@ -254,7 +254,7 @@ export function TownPage() {
             to={`/town/${next.slug}`}
             className="block border border-ink p-5 hover:bg-ink/5 md:text-right"
           >
-            <p className="kicker text-muted">Next town →</p>
+            <p className="kicker text-muted">Nästa stad →</p>
             <p className="masthead text-2xl mt-2">
               {next.flag} {next.name}
             </p>
@@ -266,7 +266,7 @@ export function TownPage() {
             className="block border border-ink/40 p-5 hover:bg-ink/5 md:text-right"
           >
             <p className="kicker text-muted">Index</p>
-            <p className="masthead text-2xl mt-2">All towns →</p>
+            <p className="masthead text-2xl mt-2">Alla städer →</p>
           </Link>
         )}
       </nav>
@@ -278,13 +278,13 @@ export function TownsIndex() {
   return (
     <article className="max-w-6xl mx-auto px-6 pb-16">
       <header className="text-center py-10 border-b-[3px] border-double border-ink">
-        <p className="kicker">Section T · The Stops</p>
+        <p className="kicker">Avdelning T · Stoppen</p>
         <h2 className="headline text-4xl md:text-6xl mt-3 leading-[1.05]">
-          Every Town, in Order
+          Varje stad, i ordning
         </h2>
         <p className="deck text-lg md:text-xl mt-4 max-w-3xl mx-auto">
-          Nine deep-dives into every place we sleep, visit, or pass through —
-          history, sights, and the stories behind each stop.
+          Nio fördjupningar i varje plats vi sover, besöker eller passerar —
+          historia, sevärdheter och historien bakom varje stopp.
         </p>
       </header>
 
@@ -292,7 +292,7 @@ export function TownsIndex() {
         {towns.map((t, i) => (
           <li key={t.id} className="py-6 grid grid-cols-12 gap-6 items-start">
             <div className="col-span-12 md:col-span-2">
-              <p className="kicker">Stop {String(i + 1).padStart(2, "0")}</p>
+              <p className="kicker">Stopp {String(i + 1).padStart(2, "0")}</p>
               <p className="masthead text-4xl mt-1 leading-none">{t.flag}</p>
               <p className="byline mt-2">{t.country}</p>
             </div>
@@ -313,7 +313,7 @@ export function TownsIndex() {
             <div className="col-span-12 md:col-span-3 md:border-l md:border-ink/30 md:pl-5">
               {t.lodging && (
                 <>
-                  <p className="kicker text-muted">Lodging</p>
+                  <p className="kicker text-muted">Boende</p>
                   <p className="font-serif text-[14px] mt-1">{t.lodging.name}</p>
                 </>
               )}
@@ -321,7 +321,7 @@ export function TownsIndex() {
                 to={`/town/${t.slug}`}
                 className="kicker ink-link inline-block mt-3"
               >
-                Read deep dive →
+                Läs fördjupning →
               </Link>
             </div>
           </li>

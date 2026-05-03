@@ -16,10 +16,10 @@ export function DayPage() {
   if (!day) {
     return (
       <div className="max-w-3xl mx-auto px-6 py-12 text-center">
-        <p className="kicker">Page Not Found</p>
-        <h2 className="headline text-3xl mt-3">No such dispatch</h2>
+        <p className="kicker">Sidan hittades inte</p>
+        <h2 className="headline text-3xl mt-3">Ingen sådan rapport</h2>
         <Link to="/itinerary" className="kicker ink-link mt-4 inline-block">
-          ← Back to itinerary
+          ← Tillbaka till reseplanen
         </Link>
       </div>
     );
@@ -35,17 +35,17 @@ export function DayPage() {
       <nav className="flex items-center justify-between py-3 border-b border-ink">
         {prev ? (
           <Link to={`/day/${prev.id}`} className="kicker ink-link">
-            ← Day {prev.id}: {prev.title}
+            ← Dag {prev.id}: {prev.title}
           </Link>
         ) : (
           <span />
         )}
         <Link to="/itinerary" className="kicker">
-          The Itinerary
+          Reseplanen
         </Link>
         {next ? (
           <Link to={`/day/${next.id}`} className="kicker ink-link">
-            Day {next.id}: {next.title} →
+            Dag {next.id}: {next.title} →
           </Link>
         ) : (
           <span />
@@ -59,7 +59,7 @@ export function DayPage() {
         </h2>
         <p className="deck text-lg md:text-xl mt-3 max-w-2xl mx-auto">
           {day.from.name}
-          {restDay ? " · A non-driving day" : ` → ${day.to.name}`}
+          {restDay ? " · En dag utan bilkörning" : ` → ${day.to.name}`}
           {day.drivingKm > 0 && ` · ${day.drivingKm} km · ${day.drivingDuration}`}
         </p>
         <p className="byline mt-3">{day.date}</p>
@@ -101,21 +101,21 @@ export function DayPage() {
               to="/paris"
               className="block mt-8 border border-ink p-5 hover:bg-ink/5 transition-colors"
             >
-              <p className="kicker text-accent">Section P · Paris in History</p>
+              <p className="kicker text-accent">Avdelning P · Paris i historien</p>
               <p className="masthead text-2xl mt-2">
-                Napoleon, the Occupation, the Liberation
+                Napoleon, ockupationen, befrielsen
               </p>
               <p className="font-serif text-[15px] mt-2">
-                A field guide to the city's two great historical layers — with
-                a map of every site, a 2-day itinerary, and Elsa Billgren's
-                things-to-do list. →
+                En fältguide till stadens två stora historiska lager — med
+                en karta över varje plats, en 2-dagarsplan och Elsa Billgrens
+                att-göra-lista. →
               </p>
             </Link>
           )}
 
           {dayTowns.length > 0 && (
             <section className="mt-10">
-              <p className="kicker">Town Deep-Dives</p>
+              <p className="kicker">Stadsfördjupningar</p>
               <hr className="rule mt-2 mb-4" />
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {dayTowns.map((t) => (
@@ -132,7 +132,7 @@ export function DayPage() {
                         {t.tagline}
                       </p>
                       <p className="kicker ink-link mt-3 inline-block">
-                        Read deep dive →
+                        Läs fördjupning →
                       </p>
                     </Link>
                   </li>
@@ -146,22 +146,21 @@ export function DayPage() {
               to="/normandy"
               className="block mt-8 border border-ink p-5 hover:bg-ink/5 transition-colors"
             >
-              <p className="kicker text-accent">Section N · Normandy</p>
+              <p className="kicker text-accent">Avdelning N · Normandie</p>
               <p className="masthead text-2xl mt-2">
-                The Longest Day — D-Day &amp; the Battle of Normandy
+                Den längsta dagen — D-Day &amp; slaget om Normandie
               </p>
               <p className="font-serif text-[15px] mt-2">
-                German defences, the airborne drops, the five beaches, Omaha
-                in detail, the bridge to Paris — plus the Bayeux base, the
-                shuttle tour stages, and an interactive site map filtered by
-                sector. →
+                Tyska försvar, luftlandsättningarna, de fem stränderna, Omaha
+                i detalj, vägen till Paris — plus Bayeuxbasen, shuttle-turens
+                etapper och en interaktiv platskarta filtrerad per sektor. →
               </p>
             </Link>
           )}
 
           {day.enRouteStops && day.enRouteStops.length > 0 && (
             <section className="mt-10">
-              <p className="kicker">En Route</p>
+              <p className="kicker">Längs vägen</p>
               <hr className="rule mt-2 mb-4" />
               <ul className="space-y-3">
                 {day.enRouteStops.map((s) => (
@@ -176,7 +175,7 @@ export function DayPage() {
 
           {day.resources && day.resources.length > 0 && (
             <section className="mt-10">
-              <p className="kicker">Resources & Links</p>
+              <p className="kicker">Resurser &amp; länkar</p>
               <hr className="rule mt-2 mb-4" />
               <ul className="space-y-2">
                 {day.resources.map((r) => (
@@ -202,7 +201,7 @@ export function DayPage() {
 
           {day.charging && (day.charging.stops.length > 0 || day.charging.note) && (
             <section className="mt-10">
-              <p className="kicker">⚡ Charging Plan</p>
+              <p className="kicker">⚡ Laddningsplan</p>
               <hr className="rule mt-2 mb-4" />
               {day.charging.note && (
                 <p className="font-serif italic text-[15px] mb-3">
@@ -214,12 +213,12 @@ export function DayPage() {
                   <table className="w-full text-left font-serif text-[14px] border-collapse">
                     <thead>
                       <tr className="border-b border-ink">
-                        <th className="kicker py-2 pr-3">Stop</th>
+                        <th className="kicker py-2 pr-3">Stopp</th>
                         <th className="kicker py-2 pr-3">In</th>
-                        <th className="kicker py-2 pr-3">Out</th>
-                        <th className="kicker py-2 pr-3">Time</th>
-                        <th className="kicker py-2 pr-3">Cost</th>
-                        <th className="kicker py-2">To next</th>
+                        <th className="kicker py-2 pr-3">Ut</th>
+                        <th className="kicker py-2 pr-3">Tid</th>
+                        <th className="kicker py-2 pr-3">Kostnad</th>
+                        <th className="kicker py-2">Till nästa</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -247,7 +246,7 @@ export function DayPage() {
 
           {day.images.length > 1 && (
             <section className="mt-10">
-              <p className="kicker">From the Photographer's Bag</p>
+              <p className="kicker">Ur fotografens väska</p>
               <hr className="rule mt-2 mb-4" />
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {day.images.slice(1).map((img, i) => (
@@ -271,17 +270,17 @@ export function DayPage() {
 
         <aside className="lg:col-span-4 space-y-8">
           <section>
-            <p className="kicker">The Route</p>
+            <p className="kicker">Rutten</p>
             <hr className="rule mt-2 mb-3" />
             <RouteMap days={trip.days} highlightDayId={day.id} height={260} />
             <dl className="grid grid-cols-2 gap-y-2 mt-3">
-              <Stat label="From" value={day.from.name} />
-              <Stat label="To" value={day.to.name} />
+              <Stat label="Från" value={day.from.name} />
+              <Stat label="Till" value={day.to.name} />
               <Stat
-                label="Distance"
+                label="Sträcka"
                 value={day.drivingKm === 0 ? "—" : `${day.drivingKm} km`}
               />
-              <Stat label="Time" value={day.drivingDuration} />
+              <Stat label="Tid" value={day.drivingDuration} />
             </dl>
             {day.waypoints && day.waypoints.length > 0 && (
               <div className="mt-3">
@@ -298,7 +297,7 @@ export function DayPage() {
           <Checklist
             initial={day.checklist}
             storageKey={`day-${day.id}-checklist`}
-            title="Day's Checklist"
+            title="Dagens checklista"
           />
         </aside>
       </div>
@@ -312,16 +311,16 @@ export function DayPage() {
             to={`/day/${prev.id}`}
             className="block border border-ink p-5 hover:bg-ink/5 transition-colors"
           >
-            <p className="kicker text-muted">← Previous dispatch</p>
-            <p className="masthead text-2xl mt-2">Day {prev.id}</p>
+            <p className="kicker text-muted">← Föregående rapport</p>
+            <p className="masthead text-2xl mt-2">Dag {prev.id}</p>
             <p className="font-serif text-lg mt-1">{prev.title}</p>
             <p className="byline mt-1">{prev.date}</p>
           </Link>
         ) : (
           <div className="border border-ink/20 p-5 text-muted">
-            <p className="kicker">Start of trip</p>
+            <p className="kicker">Resans start</p>
             <p className="font-serif text-[15px] mt-2">
-              No earlier dispatch — this is Day 1.
+              Ingen tidigare rapport — detta är Dag 1.
             </p>
           </div>
         )}
@@ -330,16 +329,16 @@ export function DayPage() {
             to={`/day/${next.id}`}
             className="block border border-ink p-5 hover:bg-ink/5 transition-colors md:text-right"
           >
-            <p className="kicker text-muted">Next dispatch →</p>
-            <p className="masthead text-2xl mt-2">Day {next.id}</p>
+            <p className="kicker text-muted">Nästa rapport →</p>
+            <p className="masthead text-2xl mt-2">Dag {next.id}</p>
             <p className="font-serif text-lg mt-1">{next.title}</p>
             <p className="byline mt-1">{next.date}</p>
           </Link>
         ) : (
           <div className="border border-ink/20 p-5 text-muted md:text-right">
-            <p className="kicker">End of trip</p>
+            <p className="kicker">Resans slut</p>
             <p className="font-serif text-[15px] mt-2">
-              Home again. No further dispatches.
+              Hemma igen. Inga fler rapporter.
             </p>
           </div>
         )}
@@ -350,17 +349,17 @@ export function DayPage() {
 
 function LodgingCard({ lodging }: { lodging: Lodging }) {
   const statusBadge = {
-    booked: { label: "✅ Booked", cls: "text-green-800" },
-    pending: { label: "⏳ Pending", cls: "text-accent" },
-    "not-booked": { label: "❌ Not booked", cls: "text-red-800" },
-    home: { label: "🏠 Home", cls: "text-ink" },
+    booked: { label: "✓ Bokat", cls: "text-green-800" },
+    pending: { label: "⏳ Väntar", cls: "text-accent" },
+    "not-booked": { label: "✗ Ej bokat", cls: "text-red-800" },
+    home: { label: "🏠 Hem", cls: "text-ink" },
   } as const;
   const badge = lodging.status ? statusBadge[lodging.status] : null;
 
   return (
     <section>
       <div className="flex items-baseline justify-between gap-3">
-        <p className="kicker">Lodging</p>
+        <p className="kicker">Boende</p>
         {badge && <span className={`kicker ${badge.cls}`}>{badge.label}</span>}
       </div>
       <hr className="rule mt-2 mb-3" />
@@ -376,7 +375,7 @@ function LodgingCard({ lodging }: { lodging: Lodging }) {
             rel="noopener noreferrer"
             className="kicker ink-link"
           >
-            Visit website ↗
+            Besök webbplats ↗
           </a>
         </p>
       )}
@@ -386,12 +385,12 @@ function LodgingCard({ lodging }: { lodging: Lodging }) {
         </p>
       )}
       <dl className="mt-3 space-y-2">
-        {lodging.dates && <DetailRow label="Dates" value={lodging.dates} />}
-        {lodging.room && <DetailRow label="Room" value={lodging.room} />}
-        {lodging.parking && <DetailRow label="Parking" value={lodging.parking} />}
-        {lodging.price && <DetailRow label="Price" value={lodging.price} />}
-        {lodging.payment && <DetailRow label="Payment" value={lodging.payment} />}
-        {lodging.bookedVia && <DetailRow label="Booked via" value={lodging.bookedVia} />}
+        {lodging.dates && <DetailRow label="Datum" value={lodging.dates} />}
+        {lodging.room && <DetailRow label="Rum" value={lodging.room} />}
+        {lodging.parking && <DetailRow label="Parkering" value={lodging.parking} />}
+        {lodging.price && <DetailRow label="Pris" value={lodging.price} />}
+        {lodging.payment && <DetailRow label="Betalning" value={lodging.payment} />}
+        {lodging.bookedVia && <DetailRow label="Bokad via" value={lodging.bookedVia} />}
       </dl>
     </section>
   );

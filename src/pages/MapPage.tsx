@@ -6,12 +6,12 @@ export function MapPage() {
   return (
     <article className="max-w-6xl mx-auto px-6 pb-16">
       <div className="text-center py-6">
-        <p className="kicker">Section C · Cartography</p>
+        <p className="kicker">Avdelning C · Kartografi</p>
         <h2 className="headline text-4xl md:text-5xl mt-3">
-          The Route, in Full
+          Rutten i sin helhet
         </h2>
         <p className="deck text-lg max-w-2xl mx-auto mt-2">
-          A continental loop through {trip.countries.length} countries —{" "}
+          En kontinental sluten rutt genom {trip.countries.length} länder —{" "}
           {trip.countries.join(", ")}.
         </p>
       </div>
@@ -22,12 +22,11 @@ export function MapPage() {
         <div className="lg:col-span-9">
           <RouteMap days={trip.days} height={620} />
           <p className="byline italic mt-2">
-            Map tiles: OpenStreetMap contributors. Route line is indicative; actual
-            roadways may diverge.
+            Kartbakgrund: OpenStreetMap contributors. Rutten är vägledande; faktiska vägar kan avvika.
           </p>
         </div>
         <aside className="lg:col-span-3">
-          <p className="kicker">Stops on the Tour</p>
+          <p className="kicker">Stopp på turen</p>
           <hr className="rule mt-2 mb-3" />
           <ol className="space-y-2">
             {trip.days.map((d) => (

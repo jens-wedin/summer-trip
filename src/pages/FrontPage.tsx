@@ -18,7 +18,7 @@ export function FrontPage() {
   return (
     <article className="max-w-6xl mx-auto px-6 pb-12">
       <div className="text-center pt-6 pb-3">
-        <p className="kicker">The Summer Roadtrip Issue · Special Pull-out</p>
+        <p className="kicker">Sommarbilresenumret · Specialbilaga</p>
         <h2 className="headline text-4xl md:text-6xl mt-4 mb-3">{trip.title}</h2>
         <p className="deck text-lg md:text-2xl max-w-3xl mx-auto">
           {trip.subtitle}
@@ -33,15 +33,15 @@ export function FrontPage() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
         {/* Lead column */}
         <section className="lg:col-span-7 lg:border-r lg:border-ink lg:pr-8">
-          <p className="kicker">Above the Fold · Day One</p>
+          <p className="kicker">Ovan vikningen · Dag ett</p>
           <h3 className="headline text-3xl md:text-5xl mt-2 mb-3 leading-[1.05]">
             <Link to={`/day/${lead.id}`} className="hover:text-accent">
               {lead.title}
             </Link>
           </h3>
           <p className="deck text-lg mb-4">
-            The expedition pushes off from the capital under high pressure and
-            higher hopes; a long first leg by design.
+            Expeditionen beger sig från huvudstaden under högt lufttryck och
+            ännu högre förhoppningar; ett långt första etapp av design.
           </p>
           <div className="newsprint-frame border border-ink">
             <img
@@ -62,7 +62,7 @@ export function FrontPage() {
           </div>
           <p className="mt-5">
             <Link to={`/day/${lead.id}`} className="kicker ink-link">
-              Continue reading Day One →
+              Fortsätt läsa Dag ett →
             </Link>
           </p>
         </section>
@@ -70,31 +70,31 @@ export function FrontPage() {
         {/* Right rail */}
         <aside className="lg:col-span-5 space-y-8">
           <div>
-            <p className="kicker mb-2">By the Numbers</p>
+            <p className="kicker mb-2">I siffror</p>
             <hr className="rule mb-3" />
             <dl className="grid grid-cols-2 gap-y-3">
-              <Stat label="Days on the road" value={String(trip.totalDays)} />
-              <Stat label="Total kilometres" value={trip.totalKm.toLocaleString()} />
-              <Stat label="Countries traversed" value={String(trip.countries.length)} />
-              <Stat label="Ferry crossings" value="1" />
-              <Stat label="Bridges crossed" value="4" />
-              <Stat label="Towns deep-dived" value={String(towns.length)} />
-              <Stat label="Historical sites mapped" value={String(normandySites.length + parisHistoricSites.length)} />
-              <Stat label="Nights in Bayeux + Paris" value="6" />
+              <Stat label="Dagar på vägen" value={String(trip.totalDays)} />
+              <Stat label="Total sträcka i km" value={trip.totalKm.toLocaleString()} />
+              <Stat label="Länder vi passerar" value={String(trip.countries.length)} />
+              <Stat label="Färjeöverfarter" value="1" />
+              <Stat label="Broar vi korsar" value="4" />
+              <Stat label="Städer fördjupade" value={String(towns.length)} />
+              <Stat label="Historiska platser på karta" value={String(normandySites.length + parisHistoricSites.length)} />
+              <Stat label="Nätter i Bayeux + Paris" value="6" />
             </dl>
           </div>
 
           <div>
-            <p className="kicker mb-2">The Route, in Brief</p>
+            <p className="kicker mb-2">Rutten i korthet</p>
             <hr className="rule mb-3" />
             <RouteMap days={trip.days} height={300} />
             <p className="byline mt-2 italic">
-              A continental loop: {trip.countries.join(", ")}.
+              En kontinental sluten rutt: {trip.countries.join(", ")}.
             </p>
           </div>
 
           <div>
-            <p className="kicker mb-2">Headline Days</p>
+            <p className="kicker mb-2">Rubrikdagar</p>
             <hr className="rule mb-3" />
             <ul className="space-y-3">
               {headlineDays.map((d) => (
@@ -116,46 +116,46 @@ export function FrontPage() {
 
       {/* Sections grid */}
       <section>
-        <p className="kicker text-center">Sections in This Issue</p>
+        <p className="kicker text-center">Avdelningar i detta nummer</p>
         <h3 className="headline text-center text-3xl mt-2 mb-6">
-          Read by Theme
+          Läs efter tema
         </h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           <SectionCard
             to="/normandy"
-            kicker="Section N · Days 5–7"
-            title="The Longest Day"
-            body={`D-Day, the Atlantic Wall, the airborne drops, and the Bayeux base — ${normandySites.length} sites mapped + the shuttle tour brief.`}
+            kicker="Avdelning N · Dag 5–7"
+            title="Den längsta dagen"
+            body={`D-Day, Atlantvallen, luftlandsättningarna och Bayeuxbasen — ${normandySites.length} platser på karta + shuttle-tur i korthet.`}
           />
           <SectionCard
             to="/paris"
-            kicker="Section P · Days 8–10"
-            title="A City of Empire and Memory"
-            body={`Napoleon and the occupation, ${parisHistoricSites.length} historical sites, a 2-day itinerary, and Elsa Billgren's things to do.`}
+            kicker="Avdelning P · Dag 8–10"
+            title="En stad av kejsardöme och minne"
+            body={`Napoleon och ockupationen, ${parisHistoricSites.length} historiska platser, en 2-dagarsplan och Elsa Billgrens saker att göra.`}
           />
           <SectionCard
             to="/towns"
-            kicker={`Section T · ${towns.length} stops`}
-            title="Every Town, in Order"
-            body="Deep-dives into every place we sleep, visit, or pass through — history, sights, and the stories behind each stop."
+            kicker={`Avdelning T · ${towns.length} stopp`}
+            title="Varje stad, i ordning"
+            body="Fördjupningar i varje plats vi sover, besöker eller passerar — historia, sevärdheter och historien bakom varje stopp."
           />
           <SectionCard
             to="/food"
-            kicker="Section F · 5 countries"
-            title="Must-Tries Along the Route"
-            body="From kanelbulle to camembert to croissant — country by country food guide with one drink to remember per country."
+            kicker="Avdelning F · 5 länder"
+            title="Måsten längs vägen"
+            body="Från kanelbulle till camembert till croissant — matguide land för land med en dryck att minnas per land."
           />
           <SectionCard
             to="/drinks"
-            kicker="Section D · The trail"
-            title="Beer & Wine"
-            body={`Kölsch, Trappist ales, Norman calvados, Paris natural wine — and the ${drinksUnmissables.length} unmissable stops along the way.`}
+            kicker="Avdelning D · Vägen"
+            title="Öl & vin"
+            body={`Kölsch, trappistöl, normansk calvados, naturvin i Paris — och de ${drinksUnmissables.length} oumbärliga stoppen längs vägen.`}
           />
           <SectionCard
             to="/weather"
-            kicker="Section W · Live forecast"
-            title="The Weather"
-            body="Day-by-day forecast from Open-Meteo when within range. Climate normals as a fallback for the dates further out."
+            kicker="Avdelning W · Aktuell prognos"
+            title="Vädret"
+            body="Dag för dag-prognos från Open-Meteo när inom räckvidd. Klimatnormalvärden som reserv för datum längre bort."
           />
         </div>
       </section>
@@ -164,18 +164,18 @@ export function FrontPage() {
 
       {/* Quick utility links */}
       <section className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
-        <UtilityLink to="/itinerary" kicker="The Plan" label="Full Itinerary" />
-        <UtilityLink to="/map" kicker="The Geography" label="Route Map" />
-        <UtilityLink to="/checklist" kicker="The Bag" label="Packing Checklist" />
-        <UtilityLink to="/weather" kicker="The Sky" label="Weather Forecast" />
+        <UtilityLink to="/itinerary" kicker="Planen" label="Hela reseplanen" />
+        <UtilityLink to="/map" kicker="Geografin" label="Reskartan" />
+        <UtilityLink to="/checklist" kicker="Väskan" label="Packlista" />
+        <UtilityLink to="/weather" kicker="Himlen" label="Väderprognos" />
       </section>
 
       <hr className="double-rule my-10" />
 
       <section>
-        <p className="kicker text-center">Also in This Edition</p>
+        <p className="kicker text-center">Även i detta nummer</p>
         <h3 className="headline text-center text-3xl mt-2 mb-6">
-          Dispatches from the Road
+          Brev från vägen
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:divide-x md:divide-ink/40">
           {minor.map((d) => (
@@ -230,7 +230,7 @@ function SectionCard({
       <p className="kicker text-accent">{kicker}</p>
       <p className="masthead text-2xl mt-2">{title}</p>
       <p className="font-serif text-[14px] mt-2">{body}</p>
-      <p className="kicker ink-link mt-3 inline-block">Open section →</p>
+      <p className="kicker ink-link mt-3 inline-block">Öppna avdelning →</p>
     </Link>
   );
 }
