@@ -5,7 +5,5 @@ import { cleanup } from "@testing-library/react";
 afterEach(() => {
   cleanup();
   document.documentElement.removeAttribute("data-theme");
-  if (typeof localStorage !== "undefined" && localStorage.clear) {
-    localStorage.clear();
-  }
+  localStorage.clear();
 });
