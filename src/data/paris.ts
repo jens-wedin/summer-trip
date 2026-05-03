@@ -412,26 +412,26 @@ export const parisThingsToDo: ParisListing[] = [
   { category: "restaurants", name: "Sauvage", wishList: true, note: "Trendigt vinbar och restaurang med klassiska småätter och naturviner." },
 
   // Shopping
-  { category: "shopping", name: "L'Objet qui parle", coords: [48.8826, 2.3398], note: "Small chaotic antique shop packed with French industrial décor, café-au-lait bowls, irresistible things." },
-  { category: "shopping", name: "Le Bon Marché", coords: [48.8516, 2.3243], note: "Paris's most beautiful luxury department store. Don't miss the food hall — including a wall of fancy water." },
-  { category: "shopping", name: "Bien", note: "Fully organic food shop in the Marais — snacks, French yoghurts, beautiful vegetables, natural beauty products." },
-  { category: "shopping", name: "Marché aux Puces de Vanves", coords: [48.8253, 2.3038], note: "Flea market with antiques and vintage. Not cheap but always worth it. Parisians drink red wine here on Saturday mornings. Haggle." },
-  { category: "shopping", name: "Merci", coords: [48.8598, 2.3686], note: "Trendy concept store with interior design, fashion, and a café. Full of tourists and must-have things." },
-  { category: "shopping", name: "Mamzelle Swing", note: "Well-curated vintage boutique, focus on 1940s and 1950s clothing." },
-  { category: "shopping", name: "Astier de Villatte", coords: [48.8639, 2.3375], note: "Elegant white French ceramic tableware, sold in a beautiful shop. Wandering the space is enough inspiration for the day." },
-  { category: "shopping", name: "Mamie Blue", area: "Montmartre", note: "Vintage shop with something a little extra." },
-  { category: "shopping", name: "Pompon", area: "St Paul", note: "Antique blouses and well-preserved dresses for the discerning buyer." },
-  { category: "shopping", name: "Episode", note: "Good budget vintage. Jeans, white blouses; dig in the basement for selected pieces under 50€." },
-  { category: "shopping", name: "Buly", coords: [48.8552, 2.3344], note: "200-year-old apotheque near the Seine — exquisite packaging, natural beauty products. Almost overwhelmingly beautiful." },
-  { category: "shopping", name: "Paraboot femme", area: "Rue de Rivoli", coords: [48.8631, 2.3429], note: "Classic French shoemaker — boutique on Rue de Rivoli." },
+  { category: "shopping", name: "L'Objet qui parle", coords: [48.8826, 2.3398], note: "Litet kaotiskt antikvitetshandlar fullastat med fransk industriell décor, café-au-lait-skålar och omoståndbara saker." },
+  { category: "shopping", name: "Le Bon Marché", coords: [48.8516, 2.3243], note: "Paris vackraste lyxvaruhus. Missa inte matavdelningen — inklusive en hel vägg av exklusivt vatten." },
+  { category: "shopping", name: "Bien", note: "Helt ekologisk livsmedelsbutik i Marais — mellanmål, franska yoghurtar, vackra grönsaker, naturliga skönhetsprodukter." },
+  { category: "shopping", name: "Marché aux Puces de Vanves", coords: [48.8253, 2.3038], note: "Loppmarknad med antikviteter och vintage. Inte billigt men alltid värt det. Parisarna dricker rödvin här på lördagsmorgnar. Pruta." },
+  { category: "shopping", name: "Merci", coords: [48.8598, 2.3686], note: "Trendigt konceptsstore med inredning, mode och ett kafé. Fullt av turister och saker man måste ha." },
+  { category: "shopping", name: "Mamzelle Swing", note: "Välkurerad vintageboutique med fokus på 1940- och 1950-talsplagg." },
+  { category: "shopping", name: "Astier de Villatte", coords: [48.8639, 2.3375], note: "Elegant vit fransk keramik, sålt i en vacker butik. Att bara vandra runt i lokalen ger tillräcklig inspiration för dagen." },
+  { category: "shopping", name: "Mamie Blue", area: "Montmartre", note: "Vintagebutik med lite extra." },
+  { category: "shopping", name: "Pompon", area: "St Paul", note: "Antika blusar och välbevarade klänningar för den kräsne köparen." },
+  { category: "shopping", name: "Episode", note: "Bra budgetvintage. Jeans, vita blusar; leta i källaren efter utvalda plagg under 50 €." },
+  { category: "shopping", name: "Buly", coords: [48.8552, 2.3344], note: "200-årig apoteksboutique nära Seinen — utsökt förpackning, naturliga skönhetsprodukter. Nästan överväldigande vackert." },
+  { category: "shopping", name: "Paraboot femme", area: "Rue de Rivoli", coords: [48.8631, 2.3429], note: "Klassisk fransk skomaker — boutique på Rue de Rivoli." },
 
-  // Hotels
-  { category: "hotels", name: "Grand Pigalle", coords: [48.8810, 2.3373], note: "Perfect small hotel in Pigalle. Compact rooms, great atmosphere, comfortable beds." },
-  { category: "hotels", name: "Hotel Grand Amour", coords: [48.8731, 2.3559], note: "Hip, wonderfully chaotic hotel with characterful rooms and a beautiful courtyard." },
-  { category: "hotels", name: "Hotel Panache", coords: [48.8731, 2.3439], note: "Small and cosy with photogenic rooms, good breakfast, family-friendly. (We're staying here.)" },
+  // Hotell
+  { category: "hotels", name: "Grand Pigalle", coords: [48.8810, 2.3373], note: "Perfekt litet hotell i Pigalle. Kompakta rum, fantastisk atmosfär, bekväma sängar." },
+  { category: "hotels", name: "Hotel Grand Amour", coords: [48.8731, 2.3559], note: "Hippt, underbart kaotiskt hotell med karaktärsfulla rum och en vacker innergård." },
+  { category: "hotels", name: "Hotel Panache", coords: [48.8731, 2.3439], note: "Litet och mysigt med fotogeniska rum, god frukost, barnvänligt. (Vi bor här.)" },
 
-  // Day trip
-  { category: "daytrip", name: "Versailles", note: "One suburban train ride away. The ultimate Marie Antoinette experience — palace, gardens, sheep on the grounds. Pack a picnic. Full-day excursion that feels like a film set." },
+  // Dagsutflykt
+  { category: "daytrip", name: "Versailles", note: "En pendeltågsresa bort. Den ultimata Marie Antoinette-upplevelsen — palats, trädgårdar, får på markerna. Ta med picknick. Heldagsutflykt som känns som ett filmset." },
 ];
 
 export const categoryLabels: Record<ParisListing["category"], { label: string; emoji: string }> = {
