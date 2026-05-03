@@ -214,8 +214,8 @@ export const normandySites: NormandySite[] = [
     coords: [49.4083, -1.3164],
     theme: "us",
     category: "airborne",
-    why: "First French town liberated on D-Day — taken by the US 82nd Airborne in the early hours of June 6. A mannequin of paratrooper John Steele still hangs from the church steeple. The Airborne Museum has an original WACO glider and a C-47.",
-    timeNeeded: "2 hours",
+    why: "Första franska stad som befriades på D-dagen — intagen av US 82nd Airborne under de tidiga timmarna den 6 juni. En mannekäng föreställande fallskärmsjägaren John Steele hänger fortfarande från kyrktornet. Airborne Museum har ett originalexemplar av ett WACO-glidflygplan och ett C-47-transportplan.",
+    timeNeeded: "2 tim",
   },
   {
     id: "utah",
@@ -224,8 +224,8 @@ export const normandySites: NormandySite[] = [
     coords: [49.4147, -1.1761],
     theme: "us",
     category: "beach",
-    why: "Westernmost beach. Most successful landing of the five — only ~197 American casualties. Modern museum built around a German bunker, with an original landing craft and Sherman tank.",
-    timeNeeded: "1.5 hours",
+    why: "Längst västerut. Den lyckligaste av de fem landstigningarna — bara ca 197 amerikanska förluster. Modernt museum uppfört kring en tysk bunker, med en original landningsbåt och en Stridsvagn Sherman.",
+    timeNeeded: "1,5 tim",
   },
   {
     id: "pointe-du-hoc",
@@ -234,8 +234,8 @@ export const normandySites: NormandySite[] = [
     coords: [49.3961, -0.9886],
     theme: "us",
     category: "battery",
-    why: "The most dramatic D-Day site in existence. US Rangers scaled 100ft cliffs under fire to destroy a German battery. Bunkers, observation posts, and shell craters left exactly as the fighting left them — a lunar landscape.",
-    timeNeeded: "1 hour",
+    why: "Den mest dramatiska D-dagsplatsen som finns. Amerikanska Rangers besteg 30 meter höga klippor under eld för att förstöra ett tyskt batteri. Bunkrar, observationsposter och granatnedslag lämnade exakt som striden lämnade dem — ett månlandskap.",
+    timeNeeded: "1 tim",
   },
   {
     id: "omaha",
@@ -244,8 +244,8 @@ export const normandySites: NormandySite[] = [
     coords: [49.3697, -0.8755],
     theme: "us",
     category: "beach",
-    why: "'Bloody Omaha' — the closest thing to failure on June 6. Walk the sand where the 1st and 29th Divisions landed. The bluffs above — where German machine guns cut men down — are still there.",
-    timeNeeded: "1.5 hours",
+    why: "'Blodiga Omaha' — det närmaste ett misslyckande den 6 juni. Promenera på sanden där 1:a och 29:e divisionen landsteg. Höjderna ovanför — där tyska kulsprutor mejade ned männen — finns fortfarande kvar.",
+    timeNeeded: "1,5 tim",
   },
   {
     id: "american-cemetery",
@@ -254,8 +254,8 @@ export const normandySites: NormandySite[] = [
     coords: [49.3585, -0.8514],
     theme: "us",
     category: "cemetery",
-    why: "9,387 white crosses and Stars of David on a clifftop above Omaha. The visitor centre is excellent — individual stories of the fallen. The Garden of the Missing lists 1,557 names of those whose remains were never found. Free entry.",
-    timeNeeded: "1.5–2 hours",
+    why: "9 387 vita kors och Davidsstjärnor på ett bergkrön ovanför Omaha. Besökscentret är utmärkt — enskilda berättelser om de stupade. Minnesgården Försvunnas trädgård listar 1 557 namn på dem vars kvarlevor aldrig återfanns. Fri entré.",
+    timeNeeded: "1,5–2 tim",
   },
 
   // British sector
