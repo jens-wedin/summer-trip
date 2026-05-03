@@ -26,12 +26,12 @@ export type NormandySection = {
 
 export const normandyHeroImage = {
   src: "https://images.unsplash.com/photo-1669861491679-7864c9705891?w=1600&auto=format&fit=crop&q=80",
-  caption: "The Normandy coastline — where the Allied invasion came ashore on 6 June 1944.",
+  caption: "Normandiekusten — där de allierade landstigningstrupperna gick i land den 6 juni 1944.",
 };
 
 export const bayeuxBaseImage = {
   src: "https://images.unsplash.com/photo-1666286487652-460b05f89842?w=1600&auto=format&fit=crop&q=80",
-  caption: "Bayeux Cathedral — the spiritual heart of the town and our base for three nights.",
+  caption: "Bayeux katedral — stadens andliga hjärta och vår bas under tre nätter.",
 };
 
 export const normandyTimeline: { date: string; event: string }[] = [
@@ -426,20 +426,20 @@ export const normandySites: NormandySite[] = [
 ];
 
 export const normandyCategoryLabels: Record<NormandySite["category"], string> = {
-  beach: "Beach",
-  airborne: "Airborne",
-  battery: "German battery",
-  cemetery: "Cemetery / Memorial",
+  beach: "Strand",
+  airborne: "Luftburet",
+  battery: "Tyskt batteri",
+  cemetery: "Kyrkogård / Memorial",
   museum: "Museum",
-  city: "City site",
-  harbour: "Mulberry Harbour",
+  city: "Stadsmiljö",
+  harbour: "Mulberryhamnen",
 };
 
 export const normandyThemeLabel: Record<NormandySiteTheme, string> = {
-  us: "US sector",
-  uk: "British sector",
-  canadian: "Canadian sector",
-  shared: "Shared / city",
+  us: "USA-sektorn",
+  uk: "Brittisk sektor",
+  canadian: "Kanadensisk sektor",
+  shared: "Gemensamt / stad",
 };
 
 // Per-sector content colors with light + dark variants. Dark variants are
