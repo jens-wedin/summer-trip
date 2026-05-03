@@ -15,6 +15,7 @@ dist-ssr
 # Tooling
 .worktrees/
 .superpowers/
+memory/
 
 # Editor directories and files
 .vscode/*
