@@ -1,5 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { trip } from "../data/trip";
+import { ThemeToggle } from "./ThemeToggle";
 
 const nav = [
   { to: "/", label: "Front Page" },
@@ -22,7 +23,10 @@ export function Masthead() {
         <div className="flex items-center justify-between text-[11px] kicker">
           <span>{trip.edition}</span>
           <span className="hidden md:inline">{trip.dateline}</span>
-          <span>Price · One Smile</span>
+          <span className="flex items-center gap-3">
+            <span>Price · One Smile</span>
+            <ThemeToggle />
+          </span>
         </div>
         <hr className="rule mt-3 mb-4" />
         <Link to="/" className="block text-center">
