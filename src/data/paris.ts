@@ -373,20 +373,20 @@ export type ParisListing = {
 };
 
 export const parisThingsToDo: ParisListing[] = [
-  // Neighbourhoods & walks
-  { category: "neighbourhoods", name: "8th & 17th arrondissement", area: "Northwest", note: "Quiet, residential, beautiful — none of the tourist crush. Tall Haussmann buildings, leafy streets, easy access to Parc Monceau." },
-  { category: "neighbourhoods", name: "Parc Monceau", coords: [48.8800, 2.3092], note: "Perhaps the most beautiful park in Paris. Ornate iron gates, ponds, neoclassical follies, well-dressed Parisians with dogs." },
-  { category: "neighbourhoods", name: "Rue Bonaparte", area: "6th", coords: [48.8540, 2.3340], note: "Elegant restaurants and bars, small art galleries, Paris's oldest surviving church. Stop at café Bonaparte." },
-  { category: "neighbourhoods", name: "Les Archives / Marais", area: "3rd & 4th", coords: [48.8597, 2.3597], note: "Hidden gardens, dogs running free, sunny park benches, antique shops. Home to the Picasso Museum." },
-  { category: "neighbourhoods", name: "Île Saint-Louis", coords: [48.8517, 2.3573], note: "A stroll around this little island in the Seine — old streets, antiquarian bookshops, ice cream, slower pace." },
-  { category: "neighbourhoods", name: "Palais Royal Gardens", coords: [48.8639, 2.3370], note: "Sit in a garden chair, read a book, watch Parisians. One of Paris's most underrated spots." },
+  // Stadsdelar & promenader
+  { category: "neighbourhoods", name: "8:e & 17:e arrondissementet", area: "Nordväst", note: "Lugnt, bostadspräglat, vackert — ingen turistträngsel. Höga haussmannska byggnader, lummiga gator, nära Parc Monceau." },
+  { category: "neighbourhoods", name: "Parc Monceau", coords: [48.8800, 2.3092], note: "Kanske Paris vackraste park. Ornamentala järngrindar, dammar, neoklassiska lusthus, välklädda parisare med hundar." },
+  { category: "neighbourhoods", name: "Rue Bonaparte", area: "6:e", coords: [48.8540, 2.3340], note: "Eleganta restauranger och barer, små konstgallerier, Paris äldsta bevarade kyrka. Stanna på café Bonaparte." },
+  { category: "neighbourhoods", name: "Les Archives / Marais", area: "3:e & 4:e", coords: [48.8597, 2.3597], note: "Dolda trädgårdar, hundar på lösdrift, soliga parkbänkar, antikaffärer. Hem för Picassomuseet." },
+  { category: "neighbourhoods", name: "Île Saint-Louis", coords: [48.8517, 2.3573], note: "En promenad runt denna lilla ö i Seinen — gamla gränder, antikvariatshandlar, glass, lugnare tempo." },
+  { category: "neighbourhoods", name: "Palais Royals trädgårdar", coords: [48.8639, 2.3370], note: "Slå sig ner i en trädgårdsstol, läs en bok, betrakta parisarna. En av Paris mest underskattade platser." },
 
-  // Museums
-  { category: "museums", name: "Musée des Arts Décoratifs", coords: [48.8632, 2.3326], note: "Watch their temporary exhibitions — when there's a fashion show on, unmissable." },
-  { category: "museums", name: "Palais de Tokyo", coords: [48.8642, 2.2965], note: "Premier contemporary art museum, always-interesting exhibitions, excellent gift shop." },
-  { category: "museums", name: "Galeries d'Anatomie Comparée et de Paléontologie", coords: [48.8438, 2.3596], note: "Extraordinary natural history museum unchanged since the 19th century. Real dinosaur skeletons, photography allowed." },
-  { category: "museums", name: "Musée Picasso", coords: [48.8598, 2.3625], note: "In the beautiful Hôtel Salé in the Marais. Essential — the building alone is worth it." },
-  { category: "museums", name: "Musée Rodin", wishList: true, coords: [48.8553, 2.3160], note: "Sculpture museum in gorgeous grounds. Right next to Les Invalides — easy combo with Napoleon's tomb." },
+  // Museer
+  { category: "museums", name: "Musée des Arts Décoratifs", coords: [48.8632, 2.3326], note: "Håll koll på deras tillfälliga utställningar — när det är en modeutställning är det ett måste." },
+  { category: "museums", name: "Palais de Tokyo", coords: [48.8642, 2.2965], note: "Stadens främsta museum för samtidskonst, alltid intressanta utställningar, utmärkt museumshop." },
+  { category: "museums", name: "Galeries d'Anatomie Comparée et de Paléontologie", coords: [48.8438, 2.3596], note: "Extraordinärt naturhistoriskt museum oförändrat sedan 1800-talet. Riktiga dinosaurieskelett, fotografering tillåten." },
+  { category: "museums", name: "Musée Picasso", coords: [48.8598, 2.3625], note: "I det vackra Hôtel Salé i Marais. Oumbärligt — byggnaden ensam är värd besöket." },
+  { category: "museums", name: "Musée Rodin", wishList: true, coords: [48.8553, 2.3160], note: "Skulpturmuseum i härlig trädgård. Alldeles bredvid Les Invalides — enkelt att kombinera med Napoleons grav." },
 
   // Cafés
   { category: "cafes", name: "Stohrer", coords: [48.8649, 2.3477], note: "Paris's oldest pâtisserie — opened 1730. Interior like an 18th-century French castle. The place for gifts to bring home." },
