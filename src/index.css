@@ -72,6 +72,43 @@
   --tile-filter: grayscale(0.9) contrast(0.9) sepia(0.25) brightness(1.02);
 }
 
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --color-paper-rgb:       28  24  18;
+  --color-paper-dark-rgb:  42  34  26;
+  --color-ink-rgb:        240 230 210;
+  --color-ink-soft-rgb:   227 216 190;
+  --color-deck-rgb:       201 188 160;
+  --color-muted-rgb:      138 129 112;
+  --color-rule-rgb:       184 168 136;
+  --color-accent-rgb:     217 122  90;
+
+  --color-paper:      rgb(var(--color-paper-rgb));
+  --color-paper-dark: rgb(var(--color-paper-dark-rgb));
+  --color-ink:        rgb(var(--color-ink-rgb));
+  --color-ink-soft:   rgb(var(--color-ink-soft-rgb));
+  --color-deck:       rgb(var(--color-deck-rgb));
+  --color-muted:      rgb(var(--color-muted-rgb));
+  --color-rule:       rgb(var(--color-rule-rgb));
+  --color-rule-soft:  rgb(var(--color-rule-rgb) / 0.35);
+  --color-accent:     rgb(var(--color-accent-rgb));
+  --color-map-bg:     #2a221a;
+
+  /* Page background dot pattern — cream-on-cocoa, lower contrast */
+  --bg-dot-1: rgb(var(--color-ink-rgb) / 0.05);
+  --bg-dot-2: rgb(var(--color-ink-rgb) / 0.035);
+
+  /* Halftone — cream-on-cocoa */
+  --halftone-dot:        rgb(var(--color-ink-rgb) / 0.45);
+  --halftone-hi:         rgb(var(--color-paper-rgb) / 0.35);
+  --photo-tint:          #5a3a1a;
+  --photo-tint-opacity:  0.55;
+
+  /* Leaflet tile filter — darker, slightly more sepia */
+  --tile-filter: grayscale(0.85) contrast(0.95) sepia(0.4) brightness(0.55);
+}
+
 html,
 body,
 #root {
