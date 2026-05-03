@@ -21,6 +21,46 @@ export type ImageItem = {
   credit?: string;
 };
 
+export type Lodging = {
+  name: string;
+  address?: string;
+  url?: string;
+  dates?: string;
+  room?: string;
+  parking?: string;
+  price?: string;
+  payment?: string;
+  bookedVia?: string;
+  description?: string;
+  status?: "booked" | "pending" | "not-booked" | "home";
+};
+
+export type Resource = {
+  title: string;
+  url: string;
+  note?: string;
+};
+
+export type ChargingStop = {
+  name: string;
+  country?: string;
+  socIn?: string;
+  socOut?: string;
+  duration?: string;
+  cost?: string;
+  legToNext?: string;
+};
+
+export type ChargingPlan = {
+  note?: string;
+  stops: ChargingStop[];
+};
+
+export type EnRouteStop = {
+  name: string;
+  description: string;
+};
+
 export type Day = {
   id: number;
   date: string;
@@ -32,7 +72,11 @@ export type Day = {
   waypoints?: Stop[];
   drivingKm: number;
   drivingDuration: string;
-  lodging?: { name: string; address?: string; url?: string };
+  driveNote?: string;
+  lodging?: Lodging;
+  charging?: ChargingPlan;
+  enRouteStops?: EnRouteStop[];
+  resources?: Resource[];
   story: string[];
   pullQuote?: string;
   images: ImageItem[];

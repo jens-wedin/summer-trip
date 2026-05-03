@@ -2,6 +2,11 @@ import { Link, useParams } from "react-router-dom";
 import { trip } from "../data/trip";
 import { RouteMap } from "../components/RouteMap";
 import { Checklist } from "../components/Checklist";
+import type { Lodging } from "../types";
+import { townsForDay } from "../data/towns";
+
+const PARIS_DAY_IDS = new Set([8, 9, 10]);
+const NORMANDY_DAY_IDS = new Set([5, 6, 7]);
 
 export function DayPage() {
   const { id } = useParams<{ id: string }>();
@@ -23,6 +28,7 @@ export function DayPage() {
   const prev = trip.days.find((d) => d.id === dayId - 1);
   const next = trip.days.find((d) => d.id === dayId + 1);
   const restDay = day.from.id === day.to.id;
+  const dayTowns = townsForDay(day.id);
 
   return (
     <article className="max-w-6xl mx-auto px-6 pb-16">
@@ -57,15 +63,20 @@ export function DayPage() {
           {day.drivingKm > 0 && ` · ${day.drivingKm} km · ${day.drivingDuration}`}
         </p>
         <p className="byline mt-3">{day.date}</p>
+        {day.driveNote && (
+          <p className="byline italic mt-1 text-muted">{day.driveNote}</p>
+        )}
       </header>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 mt-8">
         <main className="lg:col-span-8 lg:border-r lg:border-ink lg:pr-10">
-          <img
-            src={day.images[0].src}
-            alt={day.images[0].caption ?? ""}
-            className="w-full h-72 md:h-[420px] object-cover border border-ink"
-          />
+          <div className="newsprint-frame border border-ink">
+            <img
+              src={day.images[0].src}
+              alt={day.images[0].caption ?? ""}
+              className="w-full h-72 md:h-[420px] object-cover block"
+            />
+          </div>
           <p className="byline italic mt-2">
             {day.images[0].caption}
             {day.images[0].credit && ` — ${day.images[0].credit}`}
@@ -75,7 +86,7 @@ export function DayPage() {
             <p className="drop-cap">{day.story[0]}</p>
             {day.pullQuote && (
               <blockquote className="pull-quote my-6 border-l-2 border-ink pl-5">
-                “{day.pullQuote}”
+                &ldquo;{day.pullQuote}&rdquo;
               </blockquote>
             )}
             {day.story.slice(1).map((p, i) => (
@@ -85,18 +96,169 @@ export function DayPage() {
             ))}
           </div>
 
+          {PARIS_DAY_IDS.has(day.id) && (
+            <Link
+              to="/paris"
+              className="block mt-8 border border-ink p-5 hover:bg-ink/5 transition-colors"
+            >
+              <p className="kicker text-accent">Section P · Paris in History</p>
+              <p className="masthead text-2xl mt-2">
+                Napoleon, the Occupation, the Liberation
+              </p>
+              <p className="font-serif text-[15px] mt-2">
+                A field guide to the city's two great historical layers — with
+                a map of every site, a 2-day itinerary, and Elsa Billgren's
+                things-to-do list. →
+              </p>
+            </Link>
+          )}
+
+          {dayTowns.length > 0 && (
+            <section className="mt-10">
+              <p className="kicker">Town Deep-Dives</p>
+              <hr className="rule mt-2 mb-4" />
+              <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {dayTowns.map((t) => (
+                  <li key={t.id}>
+                    <Link
+                      to={`/town/${t.slug}`}
+                      className="block border border-ink p-4 hover:bg-ink/5"
+                    >
+                      <p className="kicker text-muted">
+                        {t.flag} {t.country}
+                      </p>
+                      <p className="masthead text-2xl mt-1">{t.name}</p>
+                      <p className="font-serif italic text-[14px] mt-1 text-muted">
+                        {t.tagline}
+                      </p>
+                      <p className="kicker ink-link mt-3 inline-block">
+                        Read deep dive →
+                      </p>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
+
+          {NORMANDY_DAY_IDS.has(day.id) && (
+            <Link
+              to="/normandy"
+              className="block mt-8 border border-ink p-5 hover:bg-ink/5 transition-colors"
+            >
+              <p className="kicker text-accent">Section N · Normandy</p>
+              <p className="masthead text-2xl mt-2">
+                The Longest Day — D-Day &amp; the Battle of Normandy
+              </p>
+              <p className="font-serif text-[15px] mt-2">
+                German defences, the airborne drops, the five beaches, Omaha
+                in detail, the bridge to Paris — plus the Bayeux base, the
+                shuttle tour stages, and an interactive site map filtered by
+                sector. →
+              </p>
+            </Link>
+          )}
+
+          {day.enRouteStops && day.enRouteStops.length > 0 && (
+            <section className="mt-10">
+              <p className="kicker">En Route</p>
+              <hr className="rule mt-2 mb-4" />
+              <ul className="space-y-3">
+                {day.enRouteStops.map((s) => (
+                  <li key={s.name} className="border-b border-ink/15 pb-3">
+                    <p className="font-serif font-bold text-[15px]">{s.name}</p>
+                    <p className="font-serif text-[15px] mt-1">{s.description}</p>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
+
+          {day.resources && day.resources.length > 0 && (
+            <section className="mt-10">
+              <p className="kicker">Resources & Links</p>
+              <hr className="rule mt-2 mb-4" />
+              <ul className="space-y-2">
+                {day.resources.map((r) => (
+                  <li key={r.url} className="border-b border-ink/15 pb-2">
+                    <a
+                      href={r.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-serif font-bold text-[15px] ink-link"
+                    >
+                      {r.title} ↗
+                    </a>
+                    {r.note && (
+                      <p className="font-serif italic text-[14px] mt-1 text-muted">
+                        {r.note}
+                      </p>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
+
+          {day.charging && (day.charging.stops.length > 0 || day.charging.note) && (
+            <section className="mt-10">
+              <p className="kicker">⚡ Charging Plan</p>
+              <hr className="rule mt-2 mb-4" />
+              {day.charging.note && (
+                <p className="font-serif italic text-[15px] mb-3">
+                  {day.charging.note}
+                </p>
+              )}
+              {day.charging.stops.length > 0 && (
+                <div className="overflow-x-auto">
+                  <table className="w-full text-left font-serif text-[14px] border-collapse">
+                    <thead>
+                      <tr className="border-b border-ink">
+                        <th className="kicker py-2 pr-3">Stop</th>
+                        <th className="kicker py-2 pr-3">In</th>
+                        <th className="kicker py-2 pr-3">Out</th>
+                        <th className="kicker py-2 pr-3">Time</th>
+                        <th className="kicker py-2 pr-3">Cost</th>
+                        <th className="kicker py-2">To next</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {day.charging.stops.map((s, i) => (
+                        <tr key={i} className="border-b border-ink/15">
+                          <td className="py-2 pr-3">
+                            <span className="font-bold">{s.name}</span>
+                            {s.country && (
+                              <span className="text-muted"> · {s.country}</span>
+                            )}
+                          </td>
+                          <td className="py-2 pr-3">{s.socIn ?? "—"}</td>
+                          <td className="py-2 pr-3">{s.socOut ?? "—"}</td>
+                          <td className="py-2 pr-3">{s.duration ?? "—"}</td>
+                          <td className="py-2 pr-3">{s.cost ?? "—"}</td>
+                          <td className="py-2">{s.legToNext ?? "—"}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+            </section>
+          )}
+
           {day.images.length > 1 && (
-            <section className="mt-8">
+            <section className="mt-10">
               <p className="kicker">From the Photographer's Bag</p>
               <hr className="rule mt-2 mb-4" />
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {day.images.slice(1).map((img, i) => (
                   <figure key={i}>
-                    <img
-                      src={img.src}
-                      alt={img.caption ?? ""}
-                      className="w-full h-56 object-cover border border-ink"
-                    />
+                    <div className="newsprint-frame border border-ink">
+                      <img
+                        src={img.src}
+                        alt={img.caption ?? ""}
+                        className="w-full h-56 object-cover block"
+                      />
+                    </div>
                     <figcaption className="byline italic mt-1">
                       {img.caption}
                     </figcaption>
@@ -131,16 +293,7 @@ export function DayPage() {
             )}
           </section>
 
-          {day.lodging && (
-            <section>
-              <p className="kicker">Lodging</p>
-              <hr className="rule mt-2 mb-3" />
-              <p className="font-serif text-lg">{day.lodging.name}</p>
-              {day.lodging.address && (
-                <p className="byline mt-1">{day.lodging.address}</p>
-              )}
-            </section>
-          )}
+          {day.lodging && <LodgingCard lodging={day.lodging} />}
 
           <Checklist
             initial={day.checklist}
@@ -149,7 +302,107 @@ export function DayPage() {
           />
         </aside>
       </div>
+
+      <nav
+        aria-label="Day navigation"
+        className="mt-12 pt-6 border-t-[3px] border-double border-ink grid grid-cols-1 md:grid-cols-2 gap-4"
+      >
+        {prev ? (
+          <Link
+            to={`/day/${prev.id}`}
+            className="block border border-ink p-5 hover:bg-ink/5 transition-colors"
+          >
+            <p className="kicker text-muted">← Previous dispatch</p>
+            <p className="masthead text-2xl mt-2">Day {prev.id}</p>
+            <p className="font-serif text-lg mt-1">{prev.title}</p>
+            <p className="byline mt-1">{prev.date}</p>
+          </Link>
+        ) : (
+          <div className="border border-ink/20 p-5 text-muted">
+            <p className="kicker">Start of trip</p>
+            <p className="font-serif text-[15px] mt-2">
+              No earlier dispatch — this is Day 1.
+            </p>
+          </div>
+        )}
+        {next ? (
+          <Link
+            to={`/day/${next.id}`}
+            className="block border border-ink p-5 hover:bg-ink/5 transition-colors md:text-right"
+          >
+            <p className="kicker text-muted">Next dispatch →</p>
+            <p className="masthead text-2xl mt-2">Day {next.id}</p>
+            <p className="font-serif text-lg mt-1">{next.title}</p>
+            <p className="byline mt-1">{next.date}</p>
+          </Link>
+        ) : (
+          <div className="border border-ink/20 p-5 text-muted md:text-right">
+            <p className="kicker">End of trip</p>
+            <p className="font-serif text-[15px] mt-2">
+              Home again. No further dispatches.
+            </p>
+          </div>
+        )}
+      </nav>
     </article>
+  );
+}
+
+function LodgingCard({ lodging }: { lodging: Lodging }) {
+  const statusBadge = {
+    booked: { label: "✅ Booked", cls: "text-green-800" },
+    pending: { label: "⏳ Pending", cls: "text-amber-800" },
+    "not-booked": { label: "❌ Not booked", cls: "text-red-800" },
+    home: { label: "🏠 Home", cls: "text-ink" },
+  } as const;
+  const badge = lodging.status ? statusBadge[lodging.status] : null;
+
+  return (
+    <section>
+      <div className="flex items-baseline justify-between gap-3">
+        <p className="kicker">Lodging</p>
+        {badge && <span className={`kicker ${badge.cls}`}>{badge.label}</span>}
+      </div>
+      <hr className="rule mt-2 mb-3" />
+      <p className="font-serif text-lg font-bold">{lodging.name}</p>
+      {lodging.address && (
+        <p className="byline mt-1">{lodging.address}</p>
+      )}
+      {lodging.url && (
+        <p className="mt-1">
+          <a
+            href={lodging.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="kicker ink-link"
+          >
+            Visit website ↗
+          </a>
+        </p>
+      )}
+      {lodging.description && (
+        <p className="font-serif italic text-[14px] mt-2 text-muted">
+          {lodging.description}
+        </p>
+      )}
+      <dl className="mt-3 space-y-2">
+        {lodging.dates && <DetailRow label="Dates" value={lodging.dates} />}
+        {lodging.room && <DetailRow label="Room" value={lodging.room} />}
+        {lodging.parking && <DetailRow label="Parking" value={lodging.parking} />}
+        {lodging.price && <DetailRow label="Price" value={lodging.price} />}
+        {lodging.payment && <DetailRow label="Payment" value={lodging.payment} />}
+        {lodging.bookedVia && <DetailRow label="Booked via" value={lodging.bookedVia} />}
+      </dl>
+    </section>
+  );
+}
+
+function DetailRow({ label, value }: { label: string; value: string }) {
+  return (
+    <div className="flex gap-2 text-[14px] font-serif border-b border-ink/15 pb-1.5">
+      <dt className="kicker text-muted shrink-0 w-20">{label}</dt>
+      <dd>{value}</dd>
+    </div>
   );
 }
 

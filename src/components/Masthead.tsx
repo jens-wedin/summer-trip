@@ -4,7 +4,13 @@ import { trip } from "../data/trip";
 const nav = [
   { to: "/", label: "Front Page" },
   { to: "/itinerary", label: "Itinerary" },
+  { to: "/towns", label: "Towns" },
+  { to: "/normandy", label: "Normandy" },
+  { to: "/paris", label: "Paris" },
+  { to: "/food", label: "Food" },
+  { to: "/drinks", label: "Drinks" },
   { to: "/checklist", label: "Packing" },
+  { to: "/weather", label: "Weather" },
   { to: "/map", label: "Route Map" },
 ];
 
@@ -21,7 +27,7 @@ export function Masthead() {
         <hr className="rule mt-3 mb-4" />
         <Link to="/" className="block text-center">
           <h1 className="masthead text-[64px] md:text-[96px] tracking-tight">
-            The Wedin Tribune
+            Summer Trip 2026
           </h1>
         </Link>
         <hr className="rule mt-3" />
