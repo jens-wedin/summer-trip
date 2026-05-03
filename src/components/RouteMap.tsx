@@ -8,6 +8,8 @@ import {
   useMap,
 } from "react-leaflet";
 import type { LatLng, Day } from "../types";
+import { useTheme } from "../lib/useTheme";
+import { mapColors } from "../lib/mapColors";
 
 type Props = {
   days: Day[];
@@ -54,6 +56,9 @@ export function RouteMap({ days, highlightDayId, height = 460 }: Props) {
     return Array.from(seen.values());
   }, [days]);
 
+  const { theme } = useTheme();
+  const colors = mapColors(theme);
+
   return (
     <div
       className="border border-ink/80 bg-paperDark"
@@ -72,7 +77,7 @@ export function RouteMap({ days, highlightDayId, height = 460 }: Props) {
         <Polyline
           positions={route}
           pathOptions={{
-            color: "#1a1a1a",
+            color: colors.route,
             weight: 2.5,
             opacity: 0.85,
             dashArray: "1 6",
@@ -87,9 +92,9 @@ export function RouteMap({ days, highlightDayId, height = 460 }: Props) {
               center={s.coords}
               radius={isHighlight ? 9 : 5}
               pathOptions={{
-                color: "#1a1a1a",
+                color: colors.marker,
                 weight: 1.5,
-                fillColor: isHighlight ? "#8b1a1a" : "#f4efe4",
+                fillColor: isHighlight ? colors.route : colors.markerStroke,
                 fillOpacity: 1,
               }}
             >

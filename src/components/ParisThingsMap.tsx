@@ -12,6 +12,8 @@ import {
   parisListingColor,
   type ParisListing,
 } from "../data/paris";
+import { useTheme } from "../lib/useTheme";
+import { mapColors } from "../lib/mapColors";
 
 type Props = {
   listings: ParisListing[];
@@ -71,6 +73,9 @@ export function ParisThingsMap({ listings, height = 540 }: Props) {
   };
 
   const allOn = activeCats.size === presentCategories.length;
+
+  const { theme } = useTheme();
+  const colors = mapColors(theme);
 
   const unmappedCount = listings.length - mappable.length;
 
@@ -142,7 +147,7 @@ export function ParisThingsMap({ listings, height = 540 }: Props) {
               center={l.coords}
               radius={7}
               pathOptions={{
-                color: "#1a1a1a",
+                color: colors.marker,
                 weight: 1.5,
                 fillColor: parisListingColor[l.category],
                 fillOpacity: 0.9,

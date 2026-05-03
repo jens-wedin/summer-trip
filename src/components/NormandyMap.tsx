@@ -14,6 +14,8 @@ import {
   type NormandySite,
   type NormandySiteTheme,
 } from "../data/normandy";
+import { useTheme } from "../lib/useTheme";
+import { mapColors } from "../lib/mapColors";
 
 type Props = {
   sites: NormandySite[];
@@ -47,6 +49,8 @@ const filterTabs: { id: NormandySiteTheme | "all"; label: string }[] = [
 
 export function NormandyMap({ sites, height = 540 }: Props) {
   const [filter, setFilter] = useState<NormandySiteTheme | "all">("all");
+  const { theme } = useTheme();
+  const colors = mapColors(theme);
   const visible = sites.filter((s) => filter === "all" || s.theme === filter);
 
   return (
@@ -98,7 +102,7 @@ export function NormandyMap({ sites, height = 540 }: Props) {
               center={s.coords}
               radius={s.category === "beach" ? 10 : 8}
               pathOptions={{
-                color: "#1a1a1a",
+                color: colors.marker,
                 weight: 1.5,
                 fillColor: normandyThemeColor[s.theme],
                 fillOpacity: 0.9,
@@ -143,7 +147,7 @@ export function NormandyMap({ sites, height = 540 }: Props) {
                     style={{
                       fontFamily: "Inter, system-ui",
                       fontSize: 11,
-                      color: "#5a5650",
+                      color: "var(--color-muted)",
                       margin: 0,
                     }}
                   >
@@ -171,7 +175,7 @@ function LegendDot({ color }: { color: string }) {
         background: color,
         marginRight: 4,
         verticalAlign: "middle",
-        border: "1px solid #1a1a1a",
+        border: "1px solid var(--color-rule)",
       }}
     />
   );

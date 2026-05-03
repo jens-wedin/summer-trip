@@ -8,6 +8,8 @@ import {
   useMap,
 } from "react-leaflet";
 import type { HistoricSite, HistoricSiteTheme } from "../data/paris";
+import { useTheme } from "../lib/useTheme";
+import { mapColors } from "../lib/mapColors";
 
 type Props = {
   sites: HistoricSite[];
@@ -46,6 +48,8 @@ function FitBounds({ sites }: { sites: HistoricSite[] }) {
 
 export function ParisMap({ sites, height = 520 }: Props) {
   const [filter, setFilter] = useState<HistoricSiteTheme | "all">("all");
+  const { theme } = useTheme();
+  const colors = mapColors(theme);
   const visible = sites.filter((s) => filter === "all" || s.theme === filter || s.theme === "both");
 
   return (
@@ -95,7 +99,7 @@ export function ParisMap({ sites, height = 520 }: Props) {
               center={s.coords}
               radius={8}
               pathOptions={{
-                color: "#1a1a1a",
+                color: colors.marker,
                 weight: 1.5,
                 fillColor: themeColor[s.theme],
                 fillOpacity: 0.9,
@@ -139,7 +143,7 @@ export function ParisMap({ sites, height = 520 }: Props) {
                     style={{
                       fontFamily: "Inter, system-ui",
                       fontSize: 11,
-                      color: "#5a5650",
+                      color: "var(--color-muted)",
                       margin: 0,
                     }}
                   >
@@ -167,7 +171,7 @@ function LegendDot({ color }: { color: string }) {
         background: color,
         marginRight: 4,
         verticalAlign: "middle",
-        border: "1px solid #1a1a1a",
+        border: "1px solid var(--color-rule)",
       }}
     />
   );
