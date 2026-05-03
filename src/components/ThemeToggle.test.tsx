@@ -25,17 +25,17 @@ describe("ThemeToggle", () => {
     mockMatchMedia(false);
   });
 
-  it("shows the moon icon and 'Switch to dark mode' label when light", () => {
+  it("shows the moon icon and 'Växla till mörkt läge' label when light", () => {
     applyTheme("light");
     render(<ThemeToggle />);
-    const button = screen.getByRole("button", { name: /switch to dark mode/i });
+    const button = screen.getByRole("button", { name: /växla till mörkt läge/i });
     expect(button).toHaveAttribute("aria-pressed", "false");
   });
 
-  it("shows the sun icon and 'Switch to light mode' label when dark", () => {
+  it("shows the sun icon and 'Växla till ljust läge' label when dark", () => {
     applyTheme("dark");
     render(<ThemeToggle />);
-    const button = screen.getByRole("button", { name: /switch to light mode/i });
+    const button = screen.getByRole("button", { name: /växla till ljust läge/i });
     expect(button).toHaveAttribute("aria-pressed", "true");
   });
 

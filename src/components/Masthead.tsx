@@ -3,16 +3,16 @@ import { trip } from "../data/trip";
 import { ThemeToggle } from "./ThemeToggle";
 
 const nav = [
-  { to: "/", label: "Front Page" },
-  { to: "/itinerary", label: "Itinerary" },
-  { to: "/towns", label: "Towns" },
-  { to: "/normandy", label: "Normandy" },
+  { to: "/", label: "Förstasidan" },
+  { to: "/itinerary", label: "Reseplan" },
+  { to: "/towns", label: "Städer" },
+  { to: "/normandy", label: "Normandie" },
   { to: "/paris", label: "Paris" },
-  { to: "/food", label: "Food" },
-  { to: "/drinks", label: "Drinks" },
-  { to: "/checklist", label: "Packing" },
-  { to: "/weather", label: "Weather" },
-  { to: "/map", label: "Route Map" },
+  { to: "/food", label: "Mat" },
+  { to: "/drinks", label: "Dryck" },
+  { to: "/checklist", label: "Packlista" },
+  { to: "/weather", label: "Väder" },
+  { to: "/map", label: "Reskartan" },
 ];
 
 export function Masthead() {
@@ -24,21 +24,21 @@ export function Masthead() {
           <span>{trip.edition}</span>
           <span className="hidden md:inline">{trip.dateline}</span>
           <span className="flex items-center gap-3">
-            <span>Price · One Smile</span>
+            <span>Pris · Ett leende</span>
             <ThemeToggle />
           </span>
         </div>
         <hr className="rule mt-3 mb-4" />
         <Link to="/" className="block text-center">
           <h1 className="masthead text-[64px] md:text-[96px] tracking-tight">
-            Summer Trip 2026
+            Sommarresan 2026
           </h1>
         </Link>
         <hr className="rule mt-3" />
         <div className="flex items-center justify-between text-[11px] kicker py-2 flex-wrap gap-y-1">
-          <span>Founded MMXXVI</span>
+          <span>Grundad MMXXVI</span>
           <span className="text-center flex-1">
-            All the trip that's fit to print
+            All resa värd att trycka
           </span>
           <span>Stockholm · Paris · Stockholm</span>
         </div>

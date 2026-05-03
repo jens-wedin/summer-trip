@@ -3,7 +3,7 @@ import { useTheme } from "../lib/useTheme";
 export function ThemeToggle() {
   const { theme, toggle } = useTheme();
   const isDark = theme === "dark";
-  const label = isDark ? "Switch to light mode" : "Switch to dark mode";
+  const label = isDark ? "Växla till ljust läge" : "Växla till mörkt läge";
 
   return (
     <button
