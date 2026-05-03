@@ -17,10 +17,17 @@ type Props = {
   filter?: HistoricSiteTheme | "all";
 };
 
-const themeColor: Record<HistoricSiteTheme, string> = {
-  napoleon: "#8b1a1a", // imperial red
-  wwii: "#1a1a1a", // ink
-  both: "#5a3a1a", // sepia / both
+const themeColor: Record<"light" | "dark", Record<HistoricSiteTheme, string>> = {
+  light: {
+    napoleon: "#8b1a1a", // imperial red
+    wwii:     "#1a1a1a", // ink
+    both:     "#5a3a1a", // sepia
+  },
+  dark: {
+    napoleon: "#d97a5a", // terracotta
+    wwii:     "#c8c0b0", // slate-cream
+    both:     "#a89880", // warm tan
+  },
 };
 
 const themeLabel: Record<HistoricSiteTheme, string> = {
@@ -77,9 +84,9 @@ export function ParisMap({ sites, height = 520 }: Props) {
           );
         })}
         <span className="byline ml-auto">
-          <LegendDot color={themeColor.napoleon} /> Napoleon ·{" "}
-          <LegendDot color={themeColor.wwii} /> WWII ·{" "}
-          <LegendDot color={themeColor.both} /> Both
+          <LegendDot color={themeColor[theme].napoleon} /> Napoleon ·{" "}
+          <LegendDot color={themeColor[theme].wwii} /> WWII ·{" "}
+          <LegendDot color={themeColor[theme].both} /> Both
         </span>
       </div>
       <div className="border border-ink/80 bg-paperDark" style={{ height }}>
@@ -101,7 +108,7 @@ export function ParisMap({ sites, height = 520 }: Props) {
               pathOptions={{
                 color: colors.marker,
                 weight: 1.5,
-                fillColor: themeColor[s.theme],
+                fillColor: themeColor[theme][s.theme],
                 fillOpacity: 0.9,
               }}
             >
@@ -119,7 +126,7 @@ export function ParisMap({ sites, height = 520 }: Props) {
                       letterSpacing: "0.18em",
                       fontSize: 10,
                       fontWeight: 600,
-                      color: themeColor[s.theme],
+                      color: themeColor[theme][s.theme],
                       margin: 0,
                     }}
                   >

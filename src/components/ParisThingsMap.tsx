@@ -112,7 +112,7 @@ export function ParisThingsMap({ listings, height = 540 }: Props) {
               }`}
               style={
                 active
-                  ? { backgroundColor: parisListingColor[cat], color: "#fdfaf3", borderColor: parisListingColor[cat] }
+                  ? { backgroundColor: parisListingColor[theme][cat], color: "#fdfaf3", borderColor: parisListingColor[theme][cat] }
                   : undefined
               }
             >
@@ -149,7 +149,7 @@ export function ParisThingsMap({ listings, height = 540 }: Props) {
               pathOptions={{
                 color: colors.marker,
                 weight: 1.5,
-                fillColor: parisListingColor[l.category],
+                fillColor: parisListingColor[theme][l.category],
                 fillOpacity: 0.9,
               }}
             >
@@ -167,7 +167,7 @@ export function ParisThingsMap({ listings, height = 540 }: Props) {
                       letterSpacing: "0.18em",
                       fontSize: 10,
                       fontWeight: 600,
-                      color: parisListingColor[l.category],
+                      color: parisListingColor[theme][l.category],
                       margin: 0,
                     }}
                   >

@@ -444,12 +444,29 @@ export const categoryLabels: Record<ParisListing["category"], { label: string; e
   daytrip: { label: "Day Trip", emoji: "🚂" },
 };
 
-export const parisListingColor: Record<ParisListing["category"], string> = {
-  neighbourhoods: "#2d5a3d",
-  museums: "#1a3a5a",
-  cafes: "#a06a30",
-  restaurants: "#8b1a1a",
-  shopping: "#5a2a5a",
-  hotels: "#7a5a1a",
-  daytrip: "#5a3a1a",
+// Per-category content colors with light + dark variants. Dark variants are
+// lifted-lightness equivalents so each category stays distinguishable on the
+// cocoa-paper background.
+export const parisListingColor: Record<
+  "light" | "dark",
+  Record<ParisListing["category"], string>
+> = {
+  light: {
+    neighbourhoods: "#2d5a3d",
+    museums:        "#1a3a5a",
+    cafes:          "#a06a30",
+    restaurants:    "#8b1a1a",
+    shopping:       "#5a2a5a",
+    hotels:         "#7a5a1a",
+    daytrip:        "#5a3a1a",
+  },
+  dark: {
+    neighbourhoods: "#7ba88a",
+    museums:        "#7a9bb8",
+    cafes:          "#d4a070",
+    restaurants:    "#d97a5a",
+    shopping:       "#b88ab8",
+    hotels:         "#c8a85a",
+    daytrip:        "#a89880",
+  },
 };

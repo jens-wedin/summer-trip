@@ -15,6 +15,7 @@ import {
   bayeuxBaseImage,
 } from "../data/normandy";
 import { NormandyMap } from "../components/NormandyMap";
+import { useTheme } from "../lib/useTheme";
 
 const stageBadge = {
   meet: { label: "Meet", cls: "bg-ink text-paper" },
@@ -25,6 +26,7 @@ const stageBadge = {
 } as const;
 
 export function NormandyPage() {
+  const { theme } = useTheme();
   return (
     <article className="max-w-6xl mx-auto px-6 pb-16">
       <header className="text-center py-10 border-b-[3px] border-double border-ink">
@@ -222,7 +224,7 @@ export function NormandyPage() {
               <div className="flex items-baseline justify-between gap-3">
                 <span
                   className="kicker"
-                  style={{ color: normandyThemeColor[s.theme] }}
+                  style={{ color: normandyThemeColor[theme][s.theme] }}
                 >
                   {normandyThemeLabel[s.theme]}
                 </span>

@@ -442,11 +442,25 @@ export const normandyThemeLabel: Record<NormandySiteTheme, string> = {
   shared: "Shared / city",
 };
 
-export const normandyThemeColor: Record<NormandySiteTheme, string> = {
-  us: "#8b1a1a",
-  uk: "#1a3a5a",
-  canadian: "#b04020",
-  shared: "#5a3a1a",
+// Per-sector content colors with light + dark variants. Dark variants are
+// lifted-lightness equivalents so each sector stays distinguishable on the
+// cocoa-paper background.
+export const normandyThemeColor: Record<
+  "light" | "dark",
+  Record<NormandySiteTheme, string>
+> = {
+  light: {
+    us:       "#8b1a1a",
+    uk:       "#1a3a5a",
+    canadian: "#b04020",
+    shared:   "#5a3a1a",
+  },
+  dark: {
+    us:       "#d97a5a",
+    uk:       "#7a9bb8",
+    canadian: "#e08060",
+    shared:   "#a89880",
+  },
 };
 
 // Bayeux base info

@@ -81,7 +81,7 @@ export function NormandyMap({ sites, height = 540 }: Props) {
       <div className="flex flex-wrap gap-x-5 gap-y-1 byline mb-3">
         {(["us", "uk", "canadian", "shared"] as const).map((t) => (
           <span key={t}>
-            <LegendDot color={normandyThemeColor[t]} /> {normandyThemeLabel[t]}
+            <LegendDot color={normandyThemeColor[theme][t]} /> {normandyThemeLabel[t]}
           </span>
         ))}
       </div>
@@ -104,7 +104,7 @@ export function NormandyMap({ sites, height = 540 }: Props) {
               pathOptions={{
                 color: colors.marker,
                 weight: 1.5,
-                fillColor: normandyThemeColor[s.theme],
+                fillColor: normandyThemeColor[theme][s.theme],
                 fillOpacity: 0.9,
               }}
             >
@@ -122,7 +122,7 @@ export function NormandyMap({ sites, height = 540 }: Props) {
                       letterSpacing: "0.18em",
                       fontSize: 10,
                       fontWeight: 600,
-                      color: normandyThemeColor[s.theme],
+                      color: normandyThemeColor[theme][s.theme],
                       margin: 0,
                     }}
                   >
