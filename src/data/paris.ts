@@ -187,35 +187,35 @@ export const parisHistoricSites: HistoricSite[] = [
 export const parisSections: ParisSection[] = [
   {
     id: "overview",
-    kicker: "Section P · Paris in History",
-    title: "A City of Empire and Memory",
+    kicker: "Avsnitt P · Paris i historien",
+    title: "En stad av imperium och minne",
     lead:
-      "Paris is layered with the past. For Nelson, two of those layers run deep: Napoleon's imperial city — boulevards, columns, museums of plunder — and the four years from 1940 to 1944 when the swastika flew from the Eiffel Tower. This section is the field guide.",
+      "Paris är lager på lager av historia. För Nelson löper två av dessa lager djupast: Napoleons kejserliga stad — boulevarder, kolonner, plundringens museer — och de fyra åren 1940 till 1944 när hakkorsbaneret vajade från Eiffeltornet. Det här avsnittet är fältguiden.",
     body: [
-      "Almost everything you'd recognize as 'classic Paris' carries Napoleon's fingerprints: the Arc de Triomphe, the Vendôme Column, the Rue de Rivoli, the reorganized Louvre, even the modern street numbering and Père Lachaise Cemetery. He didn't just rule Europe — he rebuilt the capital to look like the capital of the world.",
-      "Then, just over a century later, that same city lived 1,533 days under German occupation. Hitler's only foreign tour was a four-hour dawn visit in June 1940. The Vel' d'Hiv Roundup of July 1942 saw French police arrest 13,000 of their own neighbours. And in August 1944, the city rose, de Gaulle walked the Champs-Élysées, and General von Choltitz disobeyed an order to burn it all.",
-      "Read on by theme, then take the map below and walk it.",
+      "Nästan allt man förknippar med 'klassiska Paris' bär Napoleons fingeravtryck: Arc de Triomphe, Vendômekolonnen, Rue de Rivoli, det omorganiserade Louvren, till och med den moderna gatunumreringen och Père Lachaise. Han styrde inte bara Europa — han byggde om huvudstaden för att se ut som världens huvudstad.",
+      "Drygt ett sekel senare levde samma stad i 1 533 dagar under tysk ockupation. Hitlers enda utrikesresa var ett fyratimmars gryningsbesök i juni 1940. Vel' d'Hiv-razzia i juli 1942 lät fransk polis arrestera 13 000 av sina egna grannar. Och i augusti 1944 reste sig staden, de Gaulle promenerade på Champs-Élysées och general von Choltitz vägrade lyda ordern om att bränna allt.",
+      "Läs vidare per tema, ta sedan kartan nedan och gå ut i staden.",
     ],
   },
   {
     id: "napoleon-bio",
     image: {
       src: "https://images.unsplash.com/photo-1551634979-2b11f8c946fe?w=1600&auto=format&fit=crop&q=80",
-      caption: "Les Invalides — Napoleon's final resting place beneath the golden dome.",
+      caption: "Les Invalides — Napoleons sista viloplats under den gyllene kupolen.",
     },
-    kicker: "Chapter I · The Man",
+    kicker: "Kapitel I · Mannen",
     title: "Napoleon Bonaparte",
-    lead: "1769–1821 · Ruled France 1799–1814, briefly 1815 (the Hundred Days).",
+    lead: "1769–1821 · Styrde Frankrike 1799–1814, kortvarigt 1815 (De hundra dagarna).",
     body: [
-      "Born August 15, 1769, in Ajaccio, Corsica — one year after France acquired the island from Genoa. Corsican by birth, French by education and ambition. He graduated from the École Militaire in Paris in 1785 (still standing — see the map).",
-      "He rose through the chaos of the French Revolution, distinguished himself at the Siege of Toulon in 1793, and became a general at twenty-four. The Coup of 18 Brumaire (November 9, 1799) made him First Consul. By 1804 he had crowned himself Emperor at Notre-Dame — taking the crown from Pope Pius VII's hands and placing it on his own head, a deliberate statement that his power came from himself, not the Church.",
-      "He created the Napoleonic Code (still foundational to many countries' laws), built an empire across most of continental Europe, completely reshaped Paris, and won most of the dozens of major battles he fought.",
-      "After the disastrous invasion of Russia in 1812, the tide turned. The Coalition pushed back; Paris fell in March 1814; Napoleon was exiled to Elba. He escaped in February 1815 for the Hundred Days, was decisively defeated at Waterloo on June 18, 1815, and was exiled to Saint Helena in the South Atlantic. He died there on May 5, 1821, aged 51.",
-      "In 1840 his remains were brought back to France in the grand Retour des Cendres. He now rests in a magnificent sarcophagus at Les Invalides — one of the most impressive tombs in the world.",
+      "Född den 15 augusti 1769 i Ajaccio på Korsika — ett år efter att Frankrike förvärvat ön från Genua. Korsikan till börden, fransmannen till bildning och ärelystnad. Han tog examen från École Militaire i Paris 1785 (byggnaden finns kvar — se kartan).",
+      "Han steg genom franska revolutionens kaos, utmärkte sig vid belägringen av Toulon 1793 och blev general vid tjugofyra års ålder. Statskuppen den 18 Brumaire (9 november 1799) gjorde honom till förste konsul. År 1804 krönte han sig till kejsare i Notre-Dame — han tog kronan ur påve Pius VII:s händer och satte den på sitt eget huvud, ett avsiktligt budskap om att hans makt kom från honom själv, inte kyrkan.",
+      "Han skapade den napoleonska lagkodexen (fortfarande grundläggande i många länders rättssystem), byggde ett imperium över större delen av kontinentala Europa, omformade Paris totalt och vann de flesta av de dussintals stora slag han utkämpade.",
+      "Efter den katastrofala invasionen av Ryssland 1812 vände turen. Koalitionen trängde tillbaka; Paris föll i mars 1814; Napoleon förvisades till Elba. Han flydde i februari 1815 under De hundra dagarna, besegrades avgörande vid Waterloo den 18 juni 1815 och förvisades till Saint Helena i södra Atlanten. Han dog där den 5 maj 1821, 51 år gammal.",
+      "År 1840 fördes hans kvarlevor tillbaka till Frankrike i det storstilade Retour des Cendres. Han vilar nu i ett magnifikt sarkofag på Les Invalides — en av världens mest imponerande gravar.",
     ],
     pullQuote:
-      "Impossible is a word found only in the dictionary of fools.",
-    pullQuoteAttribution: "attributed to Napoleon Bonaparte",
+      "Omöjligt är ett ord som bara finns i dårarnas ordbok.",
+    pullQuoteAttribution: "tillskriven Napoleon Bonaparte",
   },
   {
     id: "napoleon-paris",
