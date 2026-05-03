@@ -643,7 +643,6 @@ export const trip: Trip = {
       from: { id: "lund", name: "Lund", country: "Sweden", coords: [55.7047, 13.191] },
       to: { id: "stockholm", name: "Stockholm", country: "Sweden", coords: [59.3293, 18.0686] },
       waypoints: [
-        { id: "helsingborg-pass", name: "Helsingborg", country: "Sweden", coords: [56.0465, 12.6945] },
         { id: "jonkoping-2", name: "Jönköping", country: "Sweden", coords: [57.7826, 14.1618] },
       ],
       drivingKm: 615,
@@ -655,10 +654,9 @@ export const trip: Trip = {
         status: "home",
       },
       charging: {
-        note: "Top up near Helsingborg, then SC Gränna. Arrive Stockholm at ~10%.",
+        note: "Charge in Lund overnight (hotel destination charging or SC Lund Mobilia). One in-flight stop at SC Gränna. Arrive Stockholm at ~10%.",
         stops: [
-          { name: "SC Helsingborg", country: "Sweden", socIn: "70%", socOut: "85%", duration: "12 min", legToNext: "2h 22m" },
-          { name: "SC Gränna", country: "Sweden", socIn: "16%", socOut: "83%", duration: "30 min", legToNext: "2h 56m" },
+          { name: "SC Gränna", country: "Sweden", socIn: "25%", socOut: "85%", duration: "30 min", legToNext: "2h 56m" },
         ],
       },
       enRouteStops: [
@@ -675,7 +673,7 @@ export const trip: Trip = {
         { src: "https://images.unsplash.com/photo-1698148128971-421ad7c1c34f?w=1600&auto=format&fit=crop&q=80", caption: "Up the E4 in high summer." },
       ],
       checklist: [
-        { id: "d14-1", label: "Charge in Helsingborg before departure", done: false },
+        { id: "d14-1", label: "Charge in Lund overnight (hotel or SC Lund Mobilia)", done: false },
         { id: "d14-2", label: "Cat-sitter notified of return", done: false },
         { id: "d14-3", label: "Last-day playlist queued", done: false },
         { id: "d14-4", label: "Photo dump from cameras", done: false },
