@@ -192,7 +192,7 @@ export function ParisThingsMap({ listings, height = 540 }: Props) {
                           letterSpacing: "0.18em",
                           fontWeight: 600,
                           marginLeft: 6,
-                          color: "#8b1a1a",
+                          color: "var(--color-accent)",
                           textTransform: "uppercase",
                         }}
                       >
