@@ -4,12 +4,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        ink: "#1a1a1a",
-        paper: "#f4efe4",
-        paperDark: "#e8e1d0",
-        rule: "#1a1a1a",
-        accent: "#8b1a1a",
-        muted: "#5a5650",
+        ink:       "rgb(var(--color-ink-rgb) / <alpha-value>)",
+        paper:     "rgb(var(--color-paper-rgb) / <alpha-value>)",
+        paperDark: "rgb(var(--color-paper-dark-rgb) / <alpha-value>)",
+        rule:      "rgb(var(--color-rule-rgb) / <alpha-value>)",
+        accent:    "rgb(var(--color-accent-rgb) / <alpha-value>)",
+        muted:     "rgb(var(--color-muted-rgb) / <alpha-value>)",
       },
       fontFamily: {
         serif: ['"Playfair Display"', '"Times New Roman"', "Times", "serif"],

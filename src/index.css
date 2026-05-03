@@ -26,7 +26,8 @@
   font-display: swap;
 }
 
-:root {
+:root,
+:root[data-theme="light"] {
   color-scheme: light;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -34,6 +35,41 @@
   /* Tell modern browsers to render dual-presentation emojis as text glyphs
      (monochrome outline) instead of full-color bitmaps. */
   font-variant-emoji: text;
+
+  /* Color tokens — RGB triplets so Tailwind's <alpha-value> works */
+  --color-paper-rgb:      244 239 228;
+  --color-paper-dark-rgb: 232 225 208;
+  --color-ink-rgb:         26  26  26;
+  --color-ink-soft-rgb:    31  28  23;
+  --color-deck-rgb:        58  53  46;
+  --color-muted-rgb:       90  86  80;
+  --color-rule-rgb:        26  26  26;
+  --color-accent-rgb:     139  26  26;
+
+  /* Convenience CSS variables for selectors that don't need <alpha-value> */
+  --color-paper:      rgb(var(--color-paper-rgb));
+  --color-paper-dark: rgb(var(--color-paper-dark-rgb));
+  --color-ink:        rgb(var(--color-ink-rgb));
+  --color-ink-soft:   rgb(var(--color-ink-soft-rgb));
+  --color-deck:       rgb(var(--color-deck-rgb));
+  --color-muted:      rgb(var(--color-muted-rgb));
+  --color-rule:       rgb(var(--color-rule-rgb));
+  --color-rule-soft:  rgb(var(--color-rule-rgb) / 0.4);
+  --color-accent:     rgb(var(--color-accent-rgb));
+  --color-map-bg:     #ece4d2;
+
+  /* Page background dot pattern */
+  --bg-dot-1: rgb(var(--color-ink-rgb) / 0.035);
+  --bg-dot-2: rgb(var(--color-ink-rgb) / 0.025);
+
+  /* Newsprint photo treatment */
+  --halftone-dot:        rgb(var(--color-ink-rgb) / 0.55);
+  --halftone-hi:         rgb(var(--color-paper-rgb) / 0.35);
+  --photo-tint:          #5a3a1a;
+  --photo-tint-opacity:  0.35;
+
+  /* Leaflet tile filter */
+  --tile-filter: grayscale(0.9) contrast(0.9) sepia(0.25) brightness(1.02);
 }
 
 html,
@@ -42,18 +78,18 @@ body,
   margin: 0;
   padding: 0;
   min-height: 100%;
-  background: #f4efe4;
+  background: var(--color-paper);
 }
 
 body {
-  color: #1a1a1a;
+  color: var(--color-ink);
   font-family: "Lora", "newsprint-emoji", Georgia, serif;
   font-size: 17px;
   line-height: 1.55;
-  background-color: #f4efe4;
+  background-color: var(--color-paper);
   background-image:
-    radial-gradient(rgba(26, 26, 26, 0.035) 1px, transparent 1px),
-    radial-gradient(rgba(26, 26, 26, 0.025) 1px, transparent 1px);
+    radial-gradient(var(--bg-dot-1) 1px, transparent 1px),
+    radial-gradient(var(--bg-dot-2) 1px, transparent 1px);
   background-size: 3px 3px, 7px 7px;
   background-position: 0 0, 1px 2px;
 }
@@ -75,7 +111,7 @@ body {
     font-family: "Playfair Display", "newsprint-emoji", "Times New Roman", serif;
     font-style: italic;
     font-weight: 400;
-    color: #3a352e;
+    color: var(--color-deck);
   }
   .kicker {
     font-family: "Inter", "newsprint-emoji", system-ui, sans-serif;
@@ -83,7 +119,7 @@ body {
     letter-spacing: 0.18em;
     font-weight: 600;
     font-size: 11px;
-    color: #1a1a1a;
+    color: var(--color-ink);
   }
   .byline {
     font-family: "Inter", "newsprint-emoji", system-ui, sans-serif;
@@ -91,13 +127,13 @@ body {
     letter-spacing: 0.14em;
     font-weight: 500;
     font-size: 10.5px;
-    color: #5a5650;
+    color: var(--color-muted);
   }
   .body-prose {
     font-family: "Lora", "newsprint-emoji", Georgia, serif;
     font-size: 17px;
     line-height: 1.62;
-    color: #1f1c17;
+    color: var(--color-ink-soft);
   }
   .body-prose p + p {
     text-indent: 1.2em;
@@ -105,15 +141,15 @@ body {
   }
   .rule {
     border: 0;
-    border-top: 1px solid #1a1a1a;
+    border-top: 1px solid var(--color-rule);
   }
   .rule-thin {
     border: 0;
-    border-top: 1px solid rgba(26, 26, 26, 0.4);
+    border-top: 1px solid var(--color-rule-soft);
   }
   .double-rule {
     border: 0;
-    border-top: 3px double #1a1a1a;
+    border-top: 3px double var(--color-rule);
   }
   .ink-link {
     text-decoration: underline;
@@ -125,7 +161,7 @@ body {
     font-style: italic;
     font-size: 26px;
     line-height: 1.25;
-    color: #1a1a1a;
+    color: var(--color-ink);
   }
   .drop-cap::first-letter {
     font-family: "Playfair Display", serif;
@@ -134,7 +170,7 @@ body {
     float: left;
     line-height: 0.85;
     padding: 6px 8px 0 0;
-    color: #1a1a1a;
+    color: var(--color-ink);
   }
 
   /* Newsprint photo treatment — tints any image to match the paper palette
@@ -142,7 +178,7 @@ body {
   .newsprint-frame {
     position: relative;
     overflow: hidden;
-    background: #f4efe4;
+    background: var(--color-paper);
     isolation: isolate;
   }
   /* Sepia color wash */
@@ -150,9 +186,9 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-    background: #5a3a1a;
+    background: var(--photo-tint);
     mix-blend-mode: color;
-    opacity: 0.35;
+    opacity: var(--photo-tint-opacity);
     pointer-events: none;
     z-index: 1;
   }
@@ -162,8 +198,8 @@ body {
     position: absolute;
     inset: 0;
     background-image:
-      radial-gradient(rgba(26, 26, 26, 0.55) 0.6px, transparent 0.9px),
-      radial-gradient(rgba(244, 239, 228, 0.35) 0.5px, transparent 0.8px);
+      radial-gradient(var(--halftone-dot) 0.6px, transparent 0.9px),
+      radial-gradient(var(--halftone-hi) 0.5px, transparent 0.8px);
     background-size: 3px 3px, 3px 3px;
     background-position: 0 0, 1.5px 1.5px;
     mix-blend-mode: multiply;
@@ -212,13 +248,13 @@ body {
 
 /* Leaflet tweaks to fit paper aesthetic */
 .leaflet-container {
-  background: #ece4d2;
+  background: var(--color-map-bg);
   font-family: "Inter", system-ui, sans-serif;
 }
 .leaflet-tile-pane {
-  filter: grayscale(0.9) contrast(0.9) sepia(0.25) brightness(1.02);
+  filter: var(--tile-filter);
 }
 .leaflet-control-attribution {
-  background: rgba(244, 239, 228, 0.85) !important;
+  background: rgb(var(--color-paper-rgb) / 0.85) !important;
   font-size: 10px !important;
 }
