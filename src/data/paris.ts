@@ -27,12 +27,12 @@ export type ParisSection = {
 
 export const parisHeroImage = {
   src: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=1600&auto=format&fit=crop&q=80",
-  caption: "Eiffel Tower at golden hour — Paris, the eternal capital.",
+  caption: "Eiffeltornet i gyllene timme — Paris, den eviga huvudstaden.",
 };
 
 export const parisSitesMapImage = {
   src: "https://images.unsplash.com/photo-1503917988258-f87a78e3c995?w=1600&auto=format&fit=crop&q=80",
-  caption: "Notre-Dame de Paris on the Île de la Cité.",
+  caption: "Notre-Dame de Paris på Île de la Cité.",
 };
 
 export const parisHistoricSites: HistoricSite[] = [
@@ -342,23 +342,23 @@ export type ParisItineraryStop = {
 
 export const parisTwoDayItinerary: { day: string; theme: string; stops: ParisItineraryStop[] }[] = [
   {
-    day: "Day 1",
-    theme: "Napoleon's Paris",
+    day: "Dag 1",
+    theme: "Napoleons Paris",
     stops: [
-      { time: "Morning", what: "Les Invalides", note: "Napoleon's tomb + Musée de l'Armée" },
-      { time: "Midday", what: "École Militaire & Pont d'Iéna", note: "Walk via Champ de Mars" },
-      { time: "Afternoon", what: "The Louvre", note: "Egyptian collections + Napoleonic galleries" },
-      { time: "Evening", what: "Vendôme Column & Rue de Rivoli walk" },
+      { time: "Morgon", what: "Les Invalides", note: "Napoleons grav + Musée de l'Armée" },
+      { time: "Middag", what: "École Militaire & Pont d'Iéna", note: "Promenad via Champ de Mars" },
+      { time: "Eftermiddag", what: "Louvren", note: "Egyptiska samlingarna + napoleonska gallerier" },
+      { time: "Kväll", what: "Vendômekolonnen & promenad på Rue de Rivoli" },
     ],
   },
   {
-    day: "Day 2",
-    theme: "WWII Paris",
+    day: "Dag 2",
+    theme: "Paris under andra världskriget",
     stops: [
-      { time: "Morning", what: "Mémorial de la Shoah" },
-      { time: "Midday", what: "Île de la Cité → Notre-Dame → Hôtel de Ville", note: "Where de Gaulle gave his famous speech" },
-      { time: "Afternoon", what: "Champs-Élysées walk", note: "From Arc de Triomphe down — think of August 26, 1944" },
-      { time: "Evening", what: "Vel' d'Hiv Memorial", note: "A quieter, reflective end to the day" },
+      { time: "Morgon", what: "Mémorial de la Shoah" },
+      { time: "Middag", what: "Île de la Cité → Notre-Dame → Hôtel de Ville", note: "Där de Gaulle höll sitt berömda tal" },
+      { time: "Eftermiddag", what: "Promenad på Champs-Élysées", note: "Från Arc de Triomphe nedåt — tänk på den 26 augusti 1944" },
+      { time: "Kväll", what: "Vel' d'Hiv-minnesmärket", note: "En stillsam, reflekterande avslutning på dagen" },
     ],
   },
 ];
@@ -435,13 +435,13 @@ export const parisThingsToDo: ParisListing[] = [
 ];
 
 export const categoryLabels: Record<ParisListing["category"], { label: string; emoji: string }> = {
-  neighbourhoods: { label: "Neighbourhoods & Walks", emoji: "🏙️" },
-  museums: { label: "Museums", emoji: "🏛️" },
-  cafes: { label: "Cafés & Breakfast", emoji: "🥐" },
-  restaurants: { label: "Restaurants", emoji: "🍽️" },
+  neighbourhoods: { label: "Stadsdelar", emoji: "🏙️" },
+  museums: { label: "Museer", emoji: "🏛️" },
+  cafes: { label: "Kaféer", emoji: "🥐" },
+  restaurants: { label: "Restauranger", emoji: "🍽️" },
   shopping: { label: "Shopping", emoji: "🛍️" },
-  hotels: { label: "Hotels", emoji: "🏨" },
-  daytrip: { label: "Day Trip", emoji: "🚂" },
+  hotels: { label: "Hotell", emoji: "🏨" },
+  daytrip: { label: "Dagsutflykt", emoji: "🚂" },
 };
 
 // Per-category content colors with light + dark variants. Dark variants are
