@@ -1,8 +1,10 @@
 # The Wedin Tribune — Summer Roadtrip 2026
 
-A small React app for planning and remembering a 14-day Stockholm → Paris → Stockholm roadtrip.
-Designed to read like a paper newspaper: serif headlines, double rules, drop caps, and a faint
-newsprint texture.
+A small React app for planning and remembering a 14-day Stockholm → Paris → Stockholm
+roadtrip (21 Jun – 4 Jul 2026). Designed to read like a paper newspaper: serif headlines,
+double rules, drop caps, and a faint newsprint texture.
+
+Live at **https://jens-wedin.github.io/summer-trip/**.
 
 ## What's inside
 
@@ -10,26 +12,52 @@ newsprint texture.
 - **Itinerary** — every day, distance, lodging, and a teaser.
 - **Day pages** (`/day/1` … `/day/14`) — story columns with drop cap, photo gallery, route map
   highlighting the day, lodging, and a per-day checklist.
-- **Route Map** — the full continental loop on Leaflet/OpenStreetMap, restyled to fit the paper aesthetic.
+- **Route Map** — the full continental loop on Leaflet / OpenStreetMap, restyled to fit the paper aesthetic.
+- **Towns** — Malmö, Lund, Stemmen, Gent, Bayeux, Honfleur, Recklinghausen, Lübeck, Waterloo.
+- **Paris** — history, museums, WWII / Napoleon-era sites, neighbourhoods, cafes, restaurants, hotels.
+- **Normandy** — D-Day sites by sector, Bayeux base, restaurants, shuttle and timeline.
+- **Food & Drinks** — a curated regional eat-and-drink list along the route.
+- **Weather** — a 14-day forecast for every stop, powered by Open-Meteo.
 - **Packing** — sectioned packing manifest, persisted in `localStorage`.
 
-All trip content lives in [`src/data/trip.ts`](src/data/trip.ts) — synthetic for now, easily replaced.
+The default UI language is Swedish.
+
+All trip content lives under [`src/data/`](src/data/) (`trip.ts`, `paris.ts`, `normandy.ts`,
+`towns.ts`, `food.ts`, `drinks.ts`, `weather.ts`) — easily edited.
 
 ## Stack
 
 - Vite + React 19 + TypeScript
-- Tailwind CSS (paper palette, serif typography)
-- React Router
+- Tailwind CSS (paper palette, serif typography, semantic CSS-variable tokens for theming)
+- React Router (basename driven by `import.meta.env.BASE_URL` for the `/summer-trip/` deploy)
 - React-Leaflet + OpenStreetMap tiles
+- Light + Late-Edition dark theme via `data-theme` + a no-flash pre-paint script
 
 ## Running it
 
 ```bash
 npm install
-npm run dev      # http://localhost:5173
+npm run dev      # http://localhost:5173/summer-trip/
 npm run build
-npm run preview
+npm run preview  # http://localhost:4173/summer-trip/
 ```
+
+## Testing & QA
+
+```bash
+npm run test                   # vitest unit tests (jsdom + RTL)
+npx playwright test            # Playwright e2e (i18n smoke + axe-core a11y scan)
+npx tsc -b                     # typecheck
+npm run lint                   # eslint
+```
+
+The full QA gate (typecheck → lint → unit → build → e2e → runtime a11y → audit) runs via the
+`/manfred-dev:test-my-code` skill and writes a report to `qa-reports/`.
+
+## Deploy
+
+Pushes to `main` deploy automatically to GitHub Pages via the workflow in
+[`.github/workflows/`](.github/workflows/). The first deploy self-enables Pages on the repo.
 
 ## Editing trip content
 
