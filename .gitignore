@@ -17,6 +17,11 @@ dist-ssr
 .superpowers/
 memory/
 
+# Playwright
+test-results/
+playwright-report/
+.playwright/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

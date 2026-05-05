@@ -1,0 +1,27 @@
+{
+  "front": {
+    "url": "http://localhost:4173/summer-trip/",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "nodeCount": 4
+      },
+      {
+        "id": "link-in-text-block",
+        "impact": "serious",
+        "help": "Links must be distinguishable without relying on color",
+        "nodeCount": 1
+      }
+    ],
+    "passes": 26
+  },
+  "itinerary": {
+    "url": "http://localhost:4173/summer-trip/itinerary",
+    "violations": [],
+    "incomplete": [],
+    "passes": 19
+  }
+}
