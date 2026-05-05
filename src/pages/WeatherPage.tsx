@@ -14,8 +14,6 @@ export function WeatherPage() {
 
   useEffect(() => {
     let cancelled = false;
-    setLoading(true);
-    setError(null);
 
     const unique = Array.from(
       new Map(tripWeather.map((s) => [coordKey(s), s])).values()
