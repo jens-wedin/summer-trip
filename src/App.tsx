@@ -14,6 +14,7 @@ import { TownPage, TownsIndex } from "./pages/TownPage";
 import { DrinksPage } from "./pages/DrinksPage";
 import { FoodPage } from "./pages/FoodPage";
 import { WeatherPage } from "./pages/WeatherPage";
+import { SunPage } from "./pages/SunPage";
 
 export default function App() {
   useEffect(() => {
@@ -37,6 +38,7 @@ export default function App() {
           <Route path="/drinks" element={<DrinksPage />} />
           <Route path="/food" element={<FoodPage />} />
           <Route path="/weather" element={<WeatherPage />} />
+          <Route path="/sun" element={<SunPage />} />
         </Routes>
       </main>
       <Footer />
