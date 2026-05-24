@@ -140,6 +140,33 @@ export type SunEvents = {
   midnightSun: boolean;
 };
 
+/** Eight-point compass bearing labels (Swedish abbreviations). */
+const COMPASS_SV = ["N", "NÖ", "Ö", "SÖ", "S", "SV", "V", "NV"] as const;
+const COMPASS_FULL_SV = [
+  "Norr",
+  "Nordöst",
+  "Öster",
+  "Sydöst",
+  "Söder",
+  "Sydväst",
+  "Väster",
+  "Nordväst",
+] as const;
+
+/** Compass index for an azimuth (0..360, clockwise from north). */
+function compassIndex(azimuth: number): number {
+  const a = ((azimuth % 360) + 360) % 360;
+  return Math.floor((a + 22.5) / 45) % 8;
+}
+
+export function azimuthCompass(azimuth: number): string {
+  return COMPASS_SV[compassIndex(azimuth)];
+}
+
+export function azimuthCompassFull(azimuth: number): string {
+  return COMPASS_FULL_SV[compassIndex(azimuth)];
+}
+
 /** Scan altitude over one UTC day to find sunrise & sunset. */
 export function sunriseSunset(lat: number, lng: number, dateUTC: Date): SunEvents {
   const dayStart = Date.UTC(
@@ -176,5 +203,66 @@ export function sunriseSunset(lat: number, lng: number, dateUTC: Date): SunEvent
     sunset,
     polarNight: maxAlt < 0,
     midnightSun: minAlt >= 0,
+  };
+}
+
+export type PhotoWindow = { start: Date; end: Date };
+
+export type PhotoWindows = {
+  blueMorning: PhotoWindow | null;
+  goldenMorning: PhotoWindow | null;
+  goldenEvening: PhotoWindow | null;
+  blueEvening: PhotoWindow | null;
+};
+
+/**
+ * Find blue-hour and golden-hour windows for the given UTC day.
+ *
+ * Conventions used: blue hour is altitude in [-6°, -4°]; golden hour is
+ * altitude in [-4°, +6°]. Each band is recorded once on the way up
+ * (morning) and once on the way down (evening). At high latitudes one
+ * or more windows may not exist on a given date.
+ */
+export function photoWindows(lat: number, lng: number, dateUTC: Date): PhotoWindows {
+  const thresholds = [-6, -4, 6] as const;
+  const crossings: Record<number, { rising: Date | null; falling: Date | null }> = {
+    [-6]: { rising: null, falling: null },
+    [-4]: { rising: null, falling: null },
+    [6]: { rising: null, falling: null },
+  };
+
+  const dayStart = Date.UTC(
+    dateUTC.getUTCFullYear(),
+    dateUTC.getUTCMonth(),
+    dateUTC.getUTCDate(),
+    0,
+    0,
+    0
+  );
+  const stepMin = 2;
+  let prev = sunAltitude(lat, lng, new Date(dayStart));
+
+  for (let m = stepMin; m <= 24 * 60; m += stepMin) {
+    const t = dayStart + m * 60_000;
+    const alt = sunAltitude(lat, lng, new Date(t));
+    const half = (stepMin / 2) * 60_000;
+    for (const th of thresholds) {
+      if (crossings[th].rising === null && prev < th && alt >= th) {
+        crossings[th].rising = new Date(t - half);
+      } else if (crossings[th].falling === null && prev >= th && alt < th) {
+        crossings[th].falling = new Date(t - half);
+      }
+    }
+    prev = alt;
+  }
+
+  const window = (a: Date | null, b: Date | null): PhotoWindow | null =>
+    a && b && a.getTime() < b.getTime() ? { start: a, end: b } : null;
+
+  return {
+    blueMorning: window(crossings[-6].rising, crossings[-4].rising),
+    goldenMorning: window(crossings[-4].rising, crossings[6].rising),
+    goldenEvening: window(crossings[6].falling, crossings[-4].falling),
+    blueEvening: window(crossings[-4].falling, crossings[-6].falling),
   };
 }
