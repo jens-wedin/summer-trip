@@ -12,6 +12,7 @@ const nav = [
   { to: "/drinks", label: "Dryck" },
   { to: "/checklist", label: "Packlista" },
   { to: "/weather", label: "Väder" },
+  { to: "/sun", label: "Solen" },
   { to: "/map", label: "Reskartan" },
 ];
 
