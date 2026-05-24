@@ -9,7 +9,14 @@ import {
 } from "react-leaflet";
 import type { Stop } from "../types";
 import { useTheme } from "../lib/useTheme";
-import { nightPolygon, sunAltitude, sunState, terminator } from "../lib/sun";
+import {
+  azimuthCompass,
+  nightPolygon,
+  sunAltitude,
+  sunAzimuth,
+  sunState,
+  terminator,
+} from "../lib/sun";
 
 type Props = {
   date: Date;
@@ -93,7 +100,10 @@ export function SunMap({ date, stops, height = 520 }: Props) {
 
         {stops.map((s) => {
           const alt = sunAltitude(s.coords[0], s.coords[1], date);
+          const az = sunAzimuth(s.coords[0], s.coords[1], date);
           const lit = alt >= 0;
+          const altText = alt >= 0 ? `+${alt.toFixed(0)}°` : `${alt.toFixed(0)}°`;
+          const dirText = lit ? ` · ${azimuthCompass(az)} ${Math.round(az)}°` : "";
           return (
             <CircleMarker
               key={s.id}
@@ -108,7 +118,8 @@ export function SunMap({ date, stops, height = 520 }: Props) {
             >
               <Tooltip direction="top" offset={[0, -6]}>
                 <span style={{ fontFamily: "Playfair Display, serif", fontSize: 12 }}>
-                  {s.name} · {alt >= 0 ? `+${alt.toFixed(0)}°` : `${alt.toFixed(0)}°`}
+                  {s.name} · {altText}
+                  {dirText}
                 </span>
               </Tooltip>
             </CircleMarker>

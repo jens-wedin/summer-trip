@@ -1,6 +1,9 @@
 import { describe, it, expect } from "vitest";
 import {
+  azimuthCompass,
+  azimuthCompassFull,
   nightPolygon,
+  photoWindows,
   sunAltitude,
   sunriseSunset,
   sunState,
@@ -81,5 +84,57 @@ describe("sunriseSunset", () => {
     expect(r.sunrise).not.toBeNull();
     expect(r.sunset).not.toBeNull();
     expect(r.sunrise!.getTime()).toBeLessThan(r.sunset!.getTime());
+  });
+});
+
+describe("azimuthCompass", () => {
+  it("maps cardinal directions", () => {
+    expect(azimuthCompass(0)).toBe("N");
+    expect(azimuthCompass(90)).toBe("Ö");
+    expect(azimuthCompass(180)).toBe("S");
+    expect(azimuthCompass(270)).toBe("V");
+    expect(azimuthCompass(360)).toBe("N");
+  });
+
+  it("maps the intercardinals", () => {
+    expect(azimuthCompass(45)).toBe("NÖ");
+    expect(azimuthCompass(135)).toBe("SÖ");
+    expect(azimuthCompass(225)).toBe("SV");
+    expect(azimuthCompass(315)).toBe("NV");
+  });
+
+  it("rounds to the nearest 45° bucket", () => {
+    expect(azimuthCompass(22)).toBe("N");
+    expect(azimuthCompass(23)).toBe("NÖ");
+    expect(azimuthCompassFull(181)).toBe("Söder");
+  });
+});
+
+describe("photoWindows", () => {
+  it("finds all four windows at mid-latitude on solstice", () => {
+    const w = photoWindows(48.74, -0.71, new Date("2026-06-21T00:00:00Z"));
+    expect(w.blueMorning).not.toBeNull();
+    expect(w.goldenMorning).not.toBeNull();
+    expect(w.goldenEvening).not.toBeNull();
+    expect(w.blueEvening).not.toBeNull();
+  });
+
+  it("orders the morning windows: blue before golden, both before noon", () => {
+    const w = photoWindows(48.74, -0.71, new Date("2026-06-21T00:00:00Z"));
+    expect(w.blueMorning!.start.getTime()).toBeLessThan(w.blueMorning!.end.getTime());
+    expect(w.blueMorning!.end.getTime()).toBeLessThanOrEqual(
+      w.goldenMorning!.start.getTime()
+    );
+    expect(w.goldenMorning!.end.getTime()).toBeLessThan(
+      w.goldenEvening!.start.getTime()
+    );
+  });
+
+  it("returns no windows where the sun stays well above the horizon all day", () => {
+    const w = photoWindows(78, 20, new Date("2026-06-21T00:00:00Z"));
+    expect(w.blueMorning).toBeNull();
+    expect(w.blueEvening).toBeNull();
+    expect(w.goldenMorning).toBeNull();
+    expect(w.goldenEvening).toBeNull();
   });
 });

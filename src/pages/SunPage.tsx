@@ -2,9 +2,15 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { SunMap } from "../components/SunMap";
 import { trip } from "../data/trip";
 import {
+  azimuthCompass,
+  azimuthCompassFull,
+  photoWindows,
   sunAltitude,
+  sunAzimuth,
   sunState,
   sunriseSunset,
+  type PhotoWindow,
+  type PhotoWindows,
   type SunEvents,
 } from "../lib/sun";
 import type { Stop } from "../types";
@@ -12,7 +18,9 @@ import type { Stop } from "../types";
 type StopRow = {
   stop: Stop;
   events: SunEvents;
+  windows: PhotoWindows;
   altitudeNow: number;
+  azimuthNow: number;
 };
 
 const PLAY_HOURS_PER_SECOND = 1.5;
@@ -104,7 +112,9 @@ export function SunPage() {
     return stops.map((stop) => ({
       stop,
       events: sunriseSunset(stop.coords[0], stop.coords[1], date),
+      windows: photoWindows(stop.coords[0], stop.coords[1], date),
       altitudeNow: sunAltitude(stop.coords[0], stop.coords[1], date),
+      azimuthNow: sunAzimuth(stop.coords[0], stop.coords[1], date),
     }));
   }, [stops, date]);
 
@@ -200,17 +210,15 @@ export function SunPage() {
               <tr className="border-b border-ink/40">
                 <th className="py-2 pr-4">Ort</th>
                 <th className="py-2 pr-4">Höjd nu</th>
+                <th className="py-2 pr-4">Riktning nu</th>
                 <th className="py-2 pr-4">Soluppgång (lokal)</th>
                 <th className="py-2 pr-4">Solnedgång (lokal)</th>
                 <th className="py-2 pr-4">Daglängd</th>
               </tr>
             </thead>
             <tbody className="font-serif">
-              {rows.map(({ stop, events, altitudeNow }) => {
-                const zone =
-                  stop.country === "Frankrike" || stop.country === "Belgien"
-                    ? parisZone
-                    : localZone;
+              {rows.map(({ stop, events, altitudeNow, azimuthNow }) => {
+                const zone = zoneFor(stop, localZone, parisZone);
                 const dayLen =
                   events.midnightSun
                     ? "Midnattssol"
@@ -221,6 +229,10 @@ export function SunPage() {
                             events.sunset.getTime() - events.sunrise.getTime()
                           )
                         : "—";
+                const compass =
+                  altitudeNow >= 0
+                    ? `${azimuthCompassFull(azimuthNow)} · ${azimuthCompass(azimuthNow)} ${Math.round(azimuthNow)}°`
+                    : "Under horisonten";
                 return (
                   <tr key={stop.id} className="border-b border-ink/15">
                     <td className="py-2 pr-4">{stop.name}</td>
@@ -229,6 +241,7 @@ export function SunPage() {
                         ? `+${altitudeNow.toFixed(1)}°`
                         : `${altitudeNow.toFixed(1)}°`}
                     </td>
+                    <td className="py-2 pr-4">{compass}</td>
                     <td className="py-2 pr-4">
                       {events.sunrise ? formatLocal(events.sunrise, zone) : "—"}
                     </td>
@@ -243,8 +256,80 @@ export function SunPage() {
           </table>
         </div>
       </section>
+
+      <section className="mt-10">
+        <h3 className="headline text-2xl">Fotofönster — blå och gyllene timme</h3>
+        <p className="deck text-base mt-2 max-w-3xl">
+          Blå timme: solen står mellan{" "}
+          <span className="whitespace-nowrap">−6° och −4°</span> under
+          horisonten — den korta stund då himlen är djupt blå.{" "}
+          Gyllene timme: solen rör sig mellan{" "}
+          <span className="whitespace-nowrap">−4° och +6°</span> — varmt
+          sidoljus runt soluppgång och solnedgång.
+        </p>
+        <hr className="rule mt-3 mb-4" />
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm">
+            <thead className="kicker text-left">
+              <tr className="border-b border-ink/40">
+                <th className="py-2 pr-4">Ort</th>
+                <th className="py-2 pr-4">Blå (morgon)</th>
+                <th className="py-2 pr-4">Gyllene (morgon)</th>
+                <th className="py-2 pr-4">Gyllene (kväll)</th>
+                <th className="py-2 pr-4">Blå (kväll)</th>
+              </tr>
+            </thead>
+            <tbody className="font-serif">
+              {rows.map(({ stop, windows, events }) => {
+                const zone = zoneFor(stop, localZone, parisZone);
+                const cells = [
+                  windows.blueMorning,
+                  windows.goldenMorning,
+                  windows.goldenEvening,
+                  windows.blueEvening,
+                ];
+                const fallback = events.midnightSun
+                  ? "Midnattssol"
+                  : events.polarNight
+                    ? "Polarnatt"
+                    : "—";
+                return (
+                  <tr key={stop.id} className="border-b border-ink/15">
+                    <td className="py-2 pr-4">{stop.name}</td>
+                    {cells.map((w, i) => (
+                      <td className="py-2 pr-4" key={i}>
+                        {formatWindow(w, zone, fallback)}
+                      </td>
+                    ))}
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+        <p className="byline italic mt-3">
+          Tider är lokal tid för respektive ort. Vid höga sommarbreddar
+          (t.ex. Stockholm runt midsommar) når solen aldrig &minus;6° under
+          horisonten — då uteblir den blå timmen.
+        </p>
+      </section>
     </article>
   );
+}
+
+function zoneFor(stop: Stop, defaultZone: string, parisZone: string): string {
+  return stop.country === "Frankrike" || stop.country === "Belgien"
+    ? parisZone
+    : defaultZone;
+}
+
+function formatWindow(
+  window: PhotoWindow | null,
+  zone: string,
+  fallback: string
+): string {
+  if (!window) return fallback;
+  return `${formatLocal(window.start, zone)}–${formatLocal(window.end, zone)}`;
 }
 
 function Stat({ label, value }: { label: string; value: string }) {
