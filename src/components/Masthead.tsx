@@ -14,6 +14,7 @@ const nav = [
   { to: "/weather", label: "Väder" },
   { to: "/sun", label: "Solen" },
   { to: "/map", label: "Reskartan" },
+  { to: "/photos", label: "Foton" },
 ];
 
 export function Masthead() {

@@ -23,6 +23,7 @@ const ROUTES: Route[] = [
   { name: "paris", path: "./paris" },
   { name: "normandy", path: "./normandy" },
   { name: "weather", path: "./weather" },
+  { name: "photos", path: "./photos" },
 ];
 
 const A11Y_TAGS = ["wcag2a", "wcag2aa", "wcag21a", "wcag21aa", "wcag22aa"];

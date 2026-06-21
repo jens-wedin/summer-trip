@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- **Photo gallery (`/photos`, "Resealbumet")** — a bento-style grid of trip
+  photos with an accessible full-screen lightbox (focus-trapped, Esc to close,
+  ←/→ to navigate, focus restored on close), plus a **Foton** entry in the
+  masthead nav. Photos are auto-discovered from `src/photos/` via a Vite
+  build-time glob (drop a file in, commit, push — no code edits per photo) and
+  shown newest-first. Optional per-photo captions/date/place live in
+  `src/data/photoCaptions.ts`. A new `src/lib/photos.ts` helper (with unit
+  tests) builds and sorts the list; the responsive-audit spec now also covers
+  the `/photos` route.
+
 ### Changed
 - **Day 1 itinerary** — recorded the real stops: lunch + Supercharging in
   Jönköping (A6) and an afternoon fika at Vandalorum in Värnamo, with a new

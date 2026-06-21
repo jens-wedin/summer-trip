@@ -19,6 +19,8 @@ Live at **https://jens-wedin.github.io/summer-trip/**.
 - **Food & Drinks** — a curated regional eat-and-drink list along the route.
 - **Weather** — a 14-day forecast for every stop, powered by Open-Meteo.
 - **Packing** — sectioned packing manifest, persisted in `localStorage`.
+- **Photos** (`/photos`) — "Resealbumet", a bento-style gallery of trip photos with an
+  accessible full-screen lightbox (keyboard + Esc/arrows). Auto-discovered from `src/photos/`.
 
 The default UI language is Swedish.
 
@@ -75,3 +77,19 @@ Open `src/data/trip.ts` and edit the `trip` object. Each day has:
 Replace the `picsum.photos` URLs with your own as photos come in.
 
 The packing checklist is in the same file under `packingChecklist`.
+
+## Adding photos during the trip
+
+Drop image files (`.jpg` / `.jpeg` / `.png`) into [`src/photos/`](src/photos/), then
+commit and push. A Vite build-time glob auto-discovers them, so no code edits are needed
+per photo — the GitHub Pages build picks them up and they appear on the **Foton** page,
+newest first.
+
+To caption a photo (optional), add a line to [`src/data/photoCaptions.ts`](src/data/photoCaptions.ts)
+keyed by file name:
+
+```ts
+"IMG_0648.jpeg": { caption: "Fika på Vandalorum", place: "Värnamo", date: "21 juni" },
+```
+
+Captions are optional — photos render fine without an entry.

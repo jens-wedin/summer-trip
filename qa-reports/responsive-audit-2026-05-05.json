@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-21T15:40:12.134Z",
+  "generatedAt": "2026-06-21T16:16:11.765Z",
   "findings": [
     {
       "route": "front",
@@ -38,7 +38,7 @@
       "axeIncomplete": [
         {
           "id": "color-contrast",
-          "nodeCount": 6
+          "nodeCount": 5
         },
         {
           "id": "link-in-text-block",
@@ -89,7 +89,7 @@
       "axeIncomplete": [
         {
           "id": "color-contrast",
-          "nodeCount": 4
+          "nodeCount": 9
         },
         {
           "id": "link-in-text-block",
@@ -519,8 +519,8 @@
         {
           "tag": "a",
           "text": "DAG 2: TRE BROAR, INGEN FÄRJA →",
-          "w": 180,
-          "h": 34
+          "w": 253,
+          "h": 17
         },
         {
           "tag": "a",
@@ -606,8 +606,8 @@
         {
           "tag": "a",
           "text": "DAG 2: TRE BROAR, INGEN FÄRJA →",
-          "w": 220,
-          "h": 34
+          "w": 253,
+          "h": 17
         },
         {
           "tag": "a",
@@ -863,7 +863,7 @@
       "axeIncomplete": [
         {
           "id": "color-contrast",
-          "nodeCount": 5
+          "nodeCount": 4
         },
         {
           "id": "link-in-text-block",
@@ -986,7 +986,7 @@
       "axeIncomplete": [
         {
           "id": "color-contrast",
-          "nodeCount": 6
+          "nodeCount": 5
         },
         {
           "id": "link-in-text-block",
@@ -1006,7 +1006,7 @@
       "axeIncomplete": [
         {
           "id": "color-contrast",
-          "nodeCount": 8
+          "nodeCount": 4
         },
         {
           "id": "link-in-text-block",
@@ -1026,7 +1026,7 @@
       "axeIncomplete": [
         {
           "id": "color-contrast",
-          "nodeCount": 18
+          "nodeCount": 17
         },
         {
           "id": "link-in-text-block",
@@ -1046,7 +1046,7 @@
       "axeIncomplete": [
         {
           "id": "color-contrast",
-          "nodeCount": 4
+          "nodeCount": 3
         },
         {
           "id": "link-in-text-block",
@@ -1520,7 +1520,7 @@
       "axeIncomplete": [
         {
           "id": "color-contrast",
-          "nodeCount": 19
+          "nodeCount": 16
         },
         {
           "id": "link-in-text-block",
@@ -1721,7 +1721,7 @@
       "axeIncomplete": [
         {
           "id": "color-contrast",
-          "nodeCount": 17
+          "nodeCount": 16
         },
         {
           "id": "link-in-text-block",
@@ -1741,7 +1741,7 @@
       "axeIncomplete": [
         {
           "id": "color-contrast",
-          "nodeCount": 27
+          "nodeCount": 23
         },
         {
           "id": "link-in-text-block",
@@ -1761,7 +1761,7 @@
       "axeIncomplete": [
         {
           "id": "color-contrast",
-          "nodeCount": 31
+          "nodeCount": 34
         },
         {
           "id": "link-in-text-block",
@@ -1781,7 +1781,7 @@
       "axeIncomplete": [
         {
           "id": "color-contrast",
-          "nodeCount": 28
+          "nodeCount": 31
         },
         {
           "id": "link-in-text-block",
@@ -1940,7 +1940,7 @@
       "axeIncomplete": [
         {
           "id": "color-contrast",
-          "nodeCount": 16
+          "nodeCount": 19
         },
         {
           "id": "link-in-text-block",
@@ -2099,7 +2099,7 @@
       "axeIncomplete": [
         {
           "id": "color-contrast",
-          "nodeCount": 10
+          "nodeCount": 17
         },
         {
           "id": "link-in-text-block",
@@ -2119,7 +2119,7 @@
       "axeIncomplete": [
         {
           "id": "color-contrast",
-          "nodeCount": 21
+          "nodeCount": 23
         },
         {
           "id": "link-in-text-block",
@@ -2139,7 +2139,7 @@
       "axeIncomplete": [
         {
           "id": "color-contrast",
-          "nodeCount": 25
+          "nodeCount": 28
         },
         {
           "id": "link-in-text-block",
@@ -2159,7 +2159,7 @@
       "axeIncomplete": [
         {
           "id": "color-contrast",
-          "nodeCount": 25
+          "nodeCount": 28
         },
         {
           "id": "link-in-text-block",
@@ -2263,6 +2263,99 @@
     },
     {
       "route": "weather",
+      "breakpoint": "1440",
+      "width": 1440,
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "bodyFontSizePx": 17,
+      "smallTouchTargets": [],
+      "axeViolations": [],
+      "axeIncomplete": []
+    },
+    {
+      "route": "photos",
+      "breakpoint": "320",
+      "width": 320,
+      "horizontalOverflow": false,
+      "scrollWidth": 320,
+      "bodyFontSizePx": 17,
+      "smallTouchTargets": [
+        {
+          "tag": "a",
+          "text": "← HELA RESEPLANEN",
+          "w": 151,
+          "h": 17
+        },
+        {
+          "tag": "a",
+          "text": "FÖRSTASIDAN",
+          "w": 99,
+          "h": 17
+        },
+        {
+          "tag": "a",
+          "text": "RESKARTAN →",
+          "w": 101,
+          "h": 17
+        }
+      ],
+      "axeViolations": [],
+      "axeIncomplete": []
+    },
+    {
+      "route": "photos",
+      "breakpoint": "360",
+      "width": 360,
+      "horizontalOverflow": false,
+      "scrollWidth": 360,
+      "bodyFontSizePx": 17,
+      "smallTouchTargets": [
+        {
+          "tag": "a",
+          "text": "← HELA RESEPLANEN",
+          "w": 151,
+          "h": 17
+        },
+        {
+          "tag": "a",
+          "text": "FÖRSTASIDAN",
+          "w": 99,
+          "h": 17
+        },
+        {
+          "tag": "a",
+          "text": "RESKARTAN →",
+          "w": 101,
+          "h": 17
+        }
+      ],
+      "axeViolations": [],
+      "axeIncomplete": []
+    },
+    {
+      "route": "photos",
+      "breakpoint": "768",
+      "width": 768,
+      "horizontalOverflow": false,
+      "scrollWidth": 768,
+      "bodyFontSizePx": 17,
+      "smallTouchTargets": [],
+      "axeViolations": [],
+      "axeIncomplete": []
+    },
+    {
+      "route": "photos",
+      "breakpoint": "1024",
+      "width": 1024,
+      "horizontalOverflow": false,
+      "scrollWidth": 1024,
+      "bodyFontSizePx": 17,
+      "smallTouchTargets": [],
+      "axeViolations": [],
+      "axeIncomplete": []
+    },
+    {
+      "route": "photos",
       "breakpoint": "1440",
       "width": 1440,
       "horizontalOverflow": false,

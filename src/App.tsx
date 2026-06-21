@@ -15,6 +15,7 @@ import { DrinksPage } from "./pages/DrinksPage";
 import { FoodPage } from "./pages/FoodPage";
 import { WeatherPage } from "./pages/WeatherPage";
 import { SunPage } from "./pages/SunPage";
+import { PhotosPage } from "./pages/PhotosPage";
 
 export default function App() {
   useEffect(() => {
@@ -39,6 +40,7 @@ export default function App() {
           <Route path="/food" element={<FoodPage />} />
           <Route path="/weather" element={<WeatherPage />} />
           <Route path="/sun" element={<SunPage />} />
+          <Route path="/photos" element={<PhotosPage />} />
         </Routes>
       </main>
       <Footer />
