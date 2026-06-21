@@ -32,23 +32,32 @@ export function DayPage() {
 
   return (
     <article className="max-w-6xl mx-auto px-6 pb-16">
-      <nav className="flex items-center justify-between py-3 border-b border-ink">
+      <nav className="flex flex-col items-center gap-2 text-center lg:flex-row lg:items-baseline lg:justify-between lg:gap-4 lg:text-left py-3 border-b border-ink">
         {prev ? (
-          <Link to={`/day/${prev.id}`} className="kicker ink-link">
+          <Link
+            to={`/day/${prev.id}`}
+            className="kicker ink-link order-2 lg:order-1"
+          >
             ← Dag {prev.id}: {prev.title}
           </Link>
         ) : (
-          <span />
+          <span className="hidden lg:block order-2 lg:order-1" />
         )}
-        <Link to="/itinerary" className="kicker">
+        <Link
+          to="/itinerary"
+          className="kicker order-1 lg:order-2"
+        >
           Reseplanen
         </Link>
         {next ? (
-          <Link to={`/day/${next.id}`} className="kicker ink-link">
+          <Link
+            to={`/day/${next.id}`}
+            className="kicker ink-link order-3"
+          >
             Dag {next.id}: {next.title} →
           </Link>
         ) : (
-          <span />
+          <span className="hidden lg:block order-3" />
         )}
       </nav>
 
