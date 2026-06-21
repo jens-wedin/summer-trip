@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+- **Day 1 itinerary** — recorded the real stops: lunch + Supercharging in
+  Jönköping (A6) and an afternoon fika at Vandalorum in Värnamo, with a new
+  story passage on Piet Oudolf's garden and Renzo Piano's barns, plus resource
+  links to the museum. Added actual timings (departed 09:30, reached Malmö
+  18:28) and corrected the waypoint order (Jönköping before Vandalorum) so the
+  route map no longer zig-zags south of Värnamo.
+
 ## [1.0.0] - 2026-05-05
 
 First public cut of *The Wedin Tribune* — a Stockholm → Paris → Stockholm

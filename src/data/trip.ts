@@ -27,12 +27,12 @@ export const trip: Trip = {
       from: { id: "stockholm", name: "Stockholm", country: "Sverige", coords: [59.3293, 18.0686] },
       to: { id: "malmo", name: "Malmö", country: "Sverige", coords: [55.605, 13.0038] },
       waypoints: [
-        { id: "vandalorum", name: "Vandalorum, Värnamo", country: "Sverige", coords: [57.1675, 14.0419] },
         { id: "jonkoping", name: "Jönköping", country: "Sverige", coords: [57.7826, 14.1618] },
+        { id: "vandalorum", name: "Vandalorum, Värnamo", country: "Sverige", coords: [57.1675, 14.0419] },
       ],
       drivingKm: 615,
       drivingDuration: "7h",
-      driveNote: "Obligatoriskt stopp. Resans längsta körning.",
+      driveNote: "Resans längsta körning. Avfärd 09:30, framme i Malmö 18:28 — knappt nio timmar med lunch, fika och laddning inräknade.",
       lodging: {
         name: "MJ's Hotel",
         address: "Malmö",
@@ -48,20 +48,26 @@ export const trip: Trip = {
         status: "booked",
       },
       charging: {
-        note: "Vandalorum har elbilsladdning på plats. Supercharger finns i Jönköping.",
+        note: "Lunch och snabbladdning i Jönköping (Supercharger vid A6, Vätterns sydspets). Vandalorum har egen elbilsladdning på plats — men där blev det fika och trädgård snarare än ström.",
         stops: [
-          { name: "SC Mantorp", country: "Sverige", socIn: "42%", socOut: "90%", duration: "31 min", cost: "217 kr", legToNext: "2h 25m" },
-          { name: "SC Markaryd", country: "Sverige", socIn: "15%", socOut: "70%", duration: "21 min", cost: "249 kr", legToNext: "1h 20m" },
+          { name: "SC Jönköping (A6)", country: "Sverige", socIn: "29%", socOut: "93%", duration: "40 min", cost: "271 kr", legToNext: "1h 30m" },
+          { name: "SC Markaryd", country: "Sverige", socIn: "41%", socOut: "72%", duration: "15 min", cost: "142 kr", legToNext: "1h 5m" },
         ],
       },
       enRouteStops: [
         { name: "Brahehus ruiner (Gränna)", description: "Dramatiska 1600-talsruiner med utsikt över Vättern. Perfekt för att sträcka på benen." },
         { name: "Gränna", description: "Känd för polkagrisar. Se dem tillverkas för hand i stadskärnan." },
-        { name: "Vandalorum, Värnamo", description: "Museum för samtidskonst och design. Piet Oudolfs trädgård. Elbilsladdning på plats." },
+        { name: "Jönköping", description: "Lunch och snabbladdning vid Vätterns sydspets — Supercharger vid A6 medan vi åt, där sjön smalnar av till en glittrande kil." },
+        { name: "Vandalorum, Värnamo", description: "Konst- och designmuseum i Renzo Pianos lador på åkrarna utanför Värnamo (invigt 2011). Här tog vi en eftermiddagsfika och vandrade i Piet Oudolfs trädgård — hans första vid en kulturinstitution i Norden, med tiotusentals perenner som skiftar genom alla fyra årstiderna och en skålformad äng på innergården." },
+      ],
+      resources: [
+        { title: "Vandalorum — Piet Oudolfs trädgård", url: "https://www.vandalorum.se/en/tradgard", note: "26 000 perenner, 47 000 lökar och 7 000 buskar och träd kring museet; innergårdens äng tillkom 2025." },
+        { title: "Vandalorum — konst- och designmuseum", url: "https://www.vandalorum.se/", note: "Renzo Pianos byggnader på åkrarna utanför Värnamo. Restaurang, butik och växlande utställningar." },
       ],
       story: [
-        "Vagnen packades kvällen innan; vi rullade iväg i gryningen, årets längsta dag utsträckt framför oss som en landningsbana. E4 rullades upp på det där alldeles svenska sommarsättet — björk, raps, sjö, igen — i sexhundra kilometer, med ett middagsstopp på Vandalorum för konst, en trädgård och en välvillig snabbladdare.",
-        "Skåne uppenbarade sig platt och gyllene sent på eftermiddagen. Middag på Lilla Torg i Malmö under kastanjerna; torget summade av söndagens stoj från en stad som rustas inför något.",
+        "Vagnen packades kvällen innan; klockan halv tio rullade vi iväg, årets längsta dag utsträckt framför oss som en landningsbana. E4 rullades upp på det där alldeles svenska sommarsättet — björk, raps, sjö, igen. Vid Vätterns sydspets stannade vi i Jönköping för lunch medan vagnen drack ström vid A6:s snabbladdare; sedan vidare de sista milen söderut.",
+        "Strax bortom Värnamo svängde vi av till Vandalorum. Renzo Pianos lador står ute på åkrarna som om de alltid vuxit där, och innanför dem fanns den egentliga anledningen till stoppet: Piet Oudolfs trädgård — den holländske mästarens första vid en kulturinstitution i Norden. Mannen bakom High Line i New York och Nomas trädgård i Köpenhamn har planterat tiotusentals perenner kring museet och låtit innergården bli en skålformad äng. Ingen tavla att betrakta, med hans egna ord, utan en levande process som ändras från dag till dag. Vi tog en lång fika vid uteserveringen, lät barnen springa stigarna mellan gräs och skulptur, och hade svårt att slita oss.",
+        "Skåne uppenbarade sig platt och gyllene; vi rullade in i Malmö 18:28. Middag på Lilla Torg under kastanjerna; torget summade av söndagens stoj från en stad som rustas inför något.",
       ],
       pullQuote: "Årets längsta dag utsträckt framför oss som en landningsbana.",
       images: [
