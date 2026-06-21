@@ -1,0 +1,2276 @@
+{
+  "generatedAt": "2026-06-21T15:40:12.134Z",
+  "findings": [
+    {
+      "route": "front",
+      "breakpoint": "320",
+      "width": 320,
+      "horizontalOverflow": false,
+      "scrollWidth": 320,
+      "bodyFontSizePx": 17,
+      "smallTouchTargets": [
+        {
+          "tag": "a",
+          "text": "FORTSÄTT LÄSA DAG ETT →",
+          "w": 199,
+          "h": 14
+        },
+        {
+          "tag": "a",
+          "text": "+",
+          "w": 30,
+          "h": 30
+        },
+        {
+          "tag": "a",
+          "text": "−",
+          "w": 30,
+          "h": 30
+        },
+        {
+          "tag": "a",
+          "text": "Leaflet",
+          "w": 45,
+          "h": 12
+        }
+      ],
+      "axeViolations": [],
+      "axeIncomplete": [
+        {
+          "id": "color-contrast",
+          "nodeCount": 6
+        },
+        {
+          "id": "link-in-text-block",
+          "nodeCount": 1
+        }
+      ]
+    },
+    {
+      "route": "front",
+      "breakpoint": "360",
+      "width": 360,
+      "horizontalOverflow": false,
+      "scrollWidth": 360,
+      "bodyFontSizePx": 17,
+      "smallTouchTargets": [
+        {
+          "tag": "a",
+          "text": "Avresa vid solståndet",
+          "w": 288,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "FORTSÄTT LÄSA DAG ETT →",
+          "w": 199,
+          "h": 14
+        },
+        {
+          "tag": "a",
+          "text": "+",
+          "w": 30,
+          "h": 30
+        },
+        {
+          "tag": "a",
+          "text": "−",
+          "w": 30,
+          "h": 30
+        },
+        {
+          "tag": "a",
+          "text": "Leaflet",
+          "w": 45,
+          "h": 12
+        }
+      ],
+      "axeViolations": [],
+      "axeIncomplete": [
+        {
+          "id": "color-contrast",
+          "nodeCount": 4
+        },
+        {
+          "id": "link-in-text-block",
+          "nodeCount": 1
+        }
+      ]
+    },
+    {
+      "route": "front",
+      "breakpoint": "768",
+      "width": 768,
+      "horizontalOverflow": false,
+      "scrollWidth": 768,
+      "bodyFontSizePx": 17,
+      "smallTouchTargets": [],
+      "axeViolations": [],
+      "axeIncomplete": [
+        {
+          "id": "color-contrast",
+          "nodeCount": 5
+        },
+        {
+          "id": "link-in-text-block",
+          "nodeCount": 1
+        }
+      ]
+    },
+    {
+      "route": "front",
+      "breakpoint": "1024",
+      "width": 1024,
+      "horizontalOverflow": false,
+      "scrollWidth": 1024,
+      "bodyFontSizePx": 17,
+      "smallTouchTargets": [],
+      "axeViolations": [],
+      "axeIncomplete": [
+        {
+          "id": "color-contrast",
+          "nodeCount": 8
+        },
+        {
+          "id": "link-in-text-block",
+          "nodeCount": 1
+        }
+      ]
+    },
+    {
+      "route": "front",
+      "breakpoint": "1440",
+      "width": 1440,
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "bodyFontSizePx": 17,
+      "smallTouchTargets": [],
+      "axeViolations": [],
+      "axeIncomplete": [
+        {
+          "id": "color-contrast",
+          "nodeCount": 8
+        },
+        {
+          "id": "link-in-text-block",
+          "nodeCount": 1
+        }
+      ]
+    },
+    {
+      "route": "itinerary",
+      "breakpoint": "320",
+      "width": 320,
+      "horizontalOverflow": false,
+      "scrollWidth": 320,
+      "bodyFontSizePx": 17,
+      "smallTouchTargets": [
+        {
+          "tag": "a",
+          "text": "Avresa vid solståndet",
+          "w": 230,
+          "h": 32
+        },
+        {
+          "tag": "a",
+          "text": "LÄS RAPPORT →",
+          "w": 115,
+          "h": 17
+        },
+        {
+          "tag": "a",
+          "text": "Tre broar, ingen färja",
+          "w": 234,
+          "h": 32
+        },
+        {
+          "tag": "a",
+          "text": "LÄS RAPPORT →",
+          "w": 115,
+          "h": 17
+        },
+        {
+          "tag": "a",
+          "text": "LÄS RAPPORT →",
+          "w": 115,
+          "h": 17
+        },
+        {
+          "tag": "a",
+          "text": "LÄS RAPPORT →",
+          "w": 115,
+          "h": 17
+        },
+        {
+          "tag": "a",
+          "text": "LÄS RAPPORT →",
+          "w": 115,
+          "h": 17
+        },
+        {
+          "tag": "a",
+          "text": "Bayeux Shuttle-turen",
+          "w": 233,
+          "h": 32
+        },
+        {
+          "tag": "a",
+          "text": "LÄS RAPPORT →",
+          "w": 115,
+          "h": 17
+        },
+        {
+          "tag": "a",
+          "text": "LÄS RAPPORT →",
+          "w": 115,
+          "h": 17
+        },
+        {
+          "tag": "a",
+          "text": "In i Paris",
+          "w": 99,
+          "h": 32
+        },
+        {
+          "tag": "a",
+          "text": "LÄS RAPPORT →",
+          "w": 115,
+          "h": 17
+        },
+        {
+          "tag": "a",
+          "text": "Paris under fötterna",
+          "w": 220,
+          "h": 32
+        },
+        {
+          "tag": "a",
+          "text": "LÄS RAPPORT →",
+          "w": 115,
+          "h": 17
+        },
+        {
+          "tag": "a",
+          "text": "En dag för strövandet",
+          "w": 234,
+          "h": 32
+        },
+        {
+          "tag": "a",
+          "text": "LÄS RAPPORT →",
+          "w": 115,
+          "h": 17
+        },
+        {
+          "tag": "a",
+          "text": "Slagfält och Ruhr",
+          "w": 190,
+          "h": 32
+        },
+        {
+          "tag": "a",
+          "text": "LÄS RAPPORT →",
+          "w": 115,
+          "h": 17
+        },
+        {
+          "tag": "a",
+          "text": "LÄS RAPPORT →",
+          "w": 115,
+          "h": 17
+        },
+        {
+          "tag": "a",
+          "text": "Över Sundet till Lund",
+          "w": 235,
+          "h": 32
+        },
+        {
+          "tag": "a",
+          "text": "LÄS RAPPORT →",
+          "w": 115,
+          "h": 17
+        },
+        {
+          "tag": "a",
+          "text": "Hem uppför E4",
+          "w": 166,
+          "h": 32
+        },
+        {
+          "tag": "a",
+          "text": "LÄS RAPPORT →",
+          "w": 115,
+          "h": 17
+        }
+      ],
+      "axeViolations": [],
+      "axeIncomplete": []
+    },
+    {
+      "route": "itinerary",
+      "breakpoint": "360",
+      "width": 360,
+      "horizontalOverflow": false,
+      "scrollWidth": 360,
+      "bodyFontSizePx": 17,
+      "smallTouchTargets": [
+        {
+          "tag": "a",
+          "text": "Avresa vid solståndet",
+          "w": 230,
+          "h": 32
+        },
+        {
+          "tag": "a",
+          "text": "LÄS RAPPORT →",
+          "w": 115,
+          "h": 17
+        },
+        {
+          "tag": "a",
+          "text": "Tre broar, ingen färja",
+          "w": 234,
+          "h": 32
+        },
+        {
+          "tag": "a",
+          "text": "LÄS RAPPORT →",
+          "w": 115,
+          "h": 17
+        },
+        {
+          "tag": "a",
+          "text": "Västerut mot Lågländerna",
+          "w": 284,
+          "h": 32
+        },
+        {
+          "tag": "a",
+          "text": "LÄS RAPPORT →",
+          "w": 115,
+          "h": 17
+        },
+        {
+          "tag": "a",
+          "text": "LÄS RAPPORT →",
+          "w": 115,
+          "h": 17
+        },
+        {
+          "tag": "a",
+          "text": "Ett kort skutt in i historien",
+          "w": 288,
+          "h": 32
+        },
+        {
+          "tag": "a",
+          "text": "LÄS RAPPORT →",
+          "w": 115,
+          "h": 17
+        },
+        {
+          "tag": "a",
+          "text": "Bayeux Shuttle-turen",
+          "w": 233,
+          "h": 32
+        },
+        {
+          "tag": "a",
+          "text": "LÄS RAPPORT →",
+          "w": 115,
+          "h": 17
+        },
+        {
+          "tag": "a",
+          "text": "LÄS RAPPORT →",
+          "w": 115,
+          "h": 17
+        },
+        {
+          "tag": "a",
+          "text": "In i Paris",
+          "w": 99,
+          "h": 32
+        },
+        {
+          "tag": "a",
+          "text": "LÄS RAPPORT →",
+          "w": 115,
+          "h": 17
+        },
+        {
+          "tag": "a",
+          "text": "Paris under fötterna",
+          "w": 220,
+          "h": 32
+        },
+        {
+          "tag": "a",
+          "text": "LÄS RAPPORT →",
+          "w": 115,
+          "h": 17
+        },
+        {
+          "tag": "a",
+          "text": "En dag för strövandet",
+          "w": 234,
+          "h": 32
+        },
+        {
+          "tag": "a",
+          "text": "LÄS RAPPORT →",
+          "w": 115,
+          "h": 17
+        },
+        {
+          "tag": "a",
+          "text": "Slagfält och Ruhr",
+          "w": 190,
+          "h": 32
+        },
+        {
+          "tag": "a",
+          "text": "LÄS RAPPORT →",
+          "w": 115,
+          "h": 17
+        },
+        {
+          "tag": "a",
+          "text": "LÄS RAPPORT →",
+          "w": 115,
+          "h": 17
+        },
+        {
+          "tag": "a",
+          "text": "Över Sundet till Lund",
+          "w": 235,
+          "h": 32
+        },
+        {
+          "tag": "a",
+          "text": "LÄS RAPPORT →",
+          "w": 115,
+          "h": 17
+        },
+        {
+          "tag": "a",
+          "text": "Hem uppför E4",
+          "w": 166,
+          "h": 32
+        },
+        {
+          "tag": "a",
+          "text": "LÄS RAPPORT →",
+          "w": 115,
+          "h": 17
+        }
+      ],
+      "axeViolations": [],
+      "axeIncomplete": []
+    },
+    {
+      "route": "itinerary",
+      "breakpoint": "768",
+      "width": 768,
+      "horizontalOverflow": false,
+      "scrollWidth": 768,
+      "bodyFontSizePx": 17,
+      "smallTouchTargets": [],
+      "axeViolations": [],
+      "axeIncomplete": []
+    },
+    {
+      "route": "itinerary",
+      "breakpoint": "1024",
+      "width": 1024,
+      "horizontalOverflow": false,
+      "scrollWidth": 1024,
+      "bodyFontSizePx": 17,
+      "smallTouchTargets": [],
+      "axeViolations": [],
+      "axeIncomplete": []
+    },
+    {
+      "route": "itinerary",
+      "breakpoint": "1440",
+      "width": 1440,
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "bodyFontSizePx": 17,
+      "smallTouchTargets": [],
+      "axeViolations": [],
+      "axeIncomplete": []
+    },
+    {
+      "route": "day-1",
+      "breakpoint": "320",
+      "width": 320,
+      "horizontalOverflow": false,
+      "scrollWidth": 320,
+      "bodyFontSizePx": 17,
+      "smallTouchTargets": [
+        {
+          "tag": "a",
+          "text": "RESEPLANEN",
+          "w": 92,
+          "h": 17
+        },
+        {
+          "tag": "a",
+          "text": "DAG 2: TRE BROAR, INGEN FÄRJA →",
+          "w": 180,
+          "h": 34
+        },
+        {
+          "tag": "a",
+          "text": "+",
+          "w": 30,
+          "h": 30
+        },
+        {
+          "tag": "a",
+          "text": "−",
+          "w": 30,
+          "h": 30
+        },
+        {
+          "tag": "a",
+          "text": "Leaflet",
+          "w": 45,
+          "h": 12
+        },
+        {
+          "tag": "a",
+          "text": "BESÖK WEBBPLATS ↗",
+          "w": 152,
+          "h": 14
+        },
+        {
+          "tag": "button",
+          "text": "Markera som klar",
+          "w": 24,
+          "h": 24
+        },
+        {
+          "tag": "button",
+          "text": "Markera som klar",
+          "w": 24,
+          "h": 24
+        },
+        {
+          "tag": "button",
+          "text": "Markera som klar",
+          "w": 24,
+          "h": 24
+        },
+        {
+          "tag": "button",
+          "text": "Markera som klar",
+          "w": 24,
+          "h": 24
+        },
+        {
+          "tag": "button",
+          "text": "Markera som klar",
+          "w": 24,
+          "h": 24
+        }
+      ],
+      "axeViolations": [],
+      "axeIncomplete": [
+        {
+          "id": "color-contrast",
+          "nodeCount": 1
+        },
+        {
+          "id": "link-in-text-block",
+          "nodeCount": 1
+        }
+      ]
+    },
+    {
+      "route": "day-1",
+      "breakpoint": "360",
+      "width": 360,
+      "horizontalOverflow": false,
+      "scrollWidth": 360,
+      "bodyFontSizePx": 17,
+      "smallTouchTargets": [
+        {
+          "tag": "a",
+          "text": "RESEPLANEN",
+          "w": 92,
+          "h": 17
+        },
+        {
+          "tag": "a",
+          "text": "DAG 2: TRE BROAR, INGEN FÄRJA →",
+          "w": 220,
+          "h": 34
+        },
+        {
+          "tag": "a",
+          "text": "Vandalorum — Piet Oudolfs trädgård ↗",
+          "w": 274,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "Vandalorum — konst- och designmuseum ↗",
+          "w": 307,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "+",
+          "w": 30,
+          "h": 30
+        },
+        {
+          "tag": "a",
+          "text": "−",
+          "w": 30,
+          "h": 30
+        },
+        {
+          "tag": "a",
+          "text": "Leaflet",
+          "w": 45,
+          "h": 12
+        },
+        {
+          "tag": "a",
+          "text": "BESÖK WEBBPLATS ↗",
+          "w": 152,
+          "h": 14
+        },
+        {
+          "tag": "button",
+          "text": "Markera som klar",
+          "w": 24,
+          "h": 24
+        },
+        {
+          "tag": "button",
+          "text": "Markera som klar",
+          "w": 24,
+          "h": 24
+        },
+        {
+          "tag": "button",
+          "text": "Markera som klar",
+          "w": 24,
+          "h": 24
+        },
+        {
+          "tag": "button",
+          "text": "Markera som klar",
+          "w": 24,
+          "h": 24
+        },
+        {
+          "tag": "button",
+          "text": "Markera som klar",
+          "w": 24,
+          "h": 24
+        }
+      ],
+      "axeViolations": [],
+      "axeIncomplete": [
+        {
+          "id": "color-contrast",
+          "nodeCount": 1
+        },
+        {
+          "id": "link-in-text-block",
+          "nodeCount": 1
+        }
+      ]
+    },
+    {
+      "route": "day-1",
+      "breakpoint": "768",
+      "width": 768,
+      "horizontalOverflow": false,
+      "scrollWidth": 768,
+      "bodyFontSizePx": 17,
+      "smallTouchTargets": [],
+      "axeViolations": [],
+      "axeIncomplete": [
+        {
+          "id": "color-contrast",
+          "nodeCount": 1
+        },
+        {
+          "id": "link-in-text-block",
+          "nodeCount": 1
+        }
+      ]
+    },
+    {
+      "route": "day-1",
+      "breakpoint": "1024",
+      "width": 1024,
+      "horizontalOverflow": false,
+      "scrollWidth": 1024,
+      "bodyFontSizePx": 17,
+      "smallTouchTargets": [],
+      "axeViolations": [],
+      "axeIncomplete": [
+        {
+          "id": "color-contrast",
+          "nodeCount": 1
+        },
+        {
+          "id": "link-in-text-block",
+          "nodeCount": 1
+        }
+      ]
+    },
+    {
+      "route": "day-1",
+      "breakpoint": "1440",
+      "width": 1440,
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "bodyFontSizePx": 17,
+      "smallTouchTargets": [],
+      "axeViolations": [],
+      "axeIncomplete": [
+        {
+          "id": "color-contrast",
+          "nodeCount": 1
+        },
+        {
+          "id": "link-in-text-block",
+          "nodeCount": 1
+        }
+      ]
+    },
+    {
+      "route": "map",
+      "breakpoint": "320",
+      "width": 320,
+      "horizontalOverflow": false,
+      "scrollWidth": 320,
+      "bodyFontSizePx": 17,
+      "smallTouchTargets": [
+        {
+          "tag": "a",
+          "text": "+",
+          "w": 30,
+          "h": 30
+        },
+        {
+          "tag": "a",
+          "text": "−",
+          "w": 30,
+          "h": 30
+        },
+        {
+          "tag": "a",
+          "text": "Leaflet",
+          "w": 45,
+          "h": 12
+        },
+        {
+          "tag": "a",
+          "text": "Stockholm → Malmö",
+          "w": 140,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "Malmö → Stemmen",
+          "w": 133,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "Stemmen → Gent",
+          "w": 119,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "Gent → Honfleur",
+          "w": 115,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "Honfleur → Bayeux",
+          "w": 131,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "Bayeux",
+          "w": 48,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "Bayeux",
+          "w": 48,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "Bayeux → Paris",
+          "w": 104,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "Paris",
+          "w": 34,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "Paris",
+          "w": 34,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "Paris → Recklinghausen",
+          "w": 162,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "Recklinghausen → Lübeck",
+          "w": 178,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "Lübeck → Lund",
+          "w": 107,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "Lund → Stockholm",
+          "w": 129,
+          "h": 23
+        }
+      ],
+      "axeViolations": [],
+      "axeIncomplete": [
+        {
+          "id": "color-contrast",
+          "nodeCount": 5
+        },
+        {
+          "id": "link-in-text-block",
+          "nodeCount": 1
+        }
+      ]
+    },
+    {
+      "route": "map",
+      "breakpoint": "360",
+      "width": 360,
+      "horizontalOverflow": false,
+      "scrollWidth": 360,
+      "bodyFontSizePx": 17,
+      "smallTouchTargets": [
+        {
+          "tag": "a",
+          "text": "+",
+          "w": 30,
+          "h": 30
+        },
+        {
+          "tag": "a",
+          "text": "−",
+          "w": 30,
+          "h": 30
+        },
+        {
+          "tag": "a",
+          "text": "Leaflet",
+          "w": 45,
+          "h": 12
+        },
+        {
+          "tag": "a",
+          "text": "Stockholm → Malmö",
+          "w": 140,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "Malmö → Stemmen",
+          "w": 133,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "Stemmen → Gent",
+          "w": 119,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "Gent → Honfleur",
+          "w": 115,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "Honfleur → Bayeux",
+          "w": 131,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "Bayeux",
+          "w": 48,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "Bayeux",
+          "w": 48,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "Bayeux → Paris",
+          "w": 104,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "Paris",
+          "w": 34,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "Paris",
+          "w": 34,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "Paris → Recklinghausen",
+          "w": 162,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "Recklinghausen → Lübeck",
+          "w": 178,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "Lübeck → Lund",
+          "w": 107,
+          "h": 23
+        },
+        {
+          "tag": "a",
+          "text": "Lund → Stockholm",
+          "w": 129,
+          "h": 23
+        }
+      ],
+      "axeViolations": [],
+      "axeIncomplete": [
+        {
+          "id": "color-contrast",
+          "nodeCount": 6
+        },
+        {
+          "id": "link-in-text-block",
+          "nodeCount": 1
+        }
+      ]
+    },
+    {
+      "route": "map",
+      "breakpoint": "768",
+      "width": 768,
+      "horizontalOverflow": false,
+      "scrollWidth": 768,
+      "bodyFontSizePx": 17,
+      "smallTouchTargets": [],
+      "axeViolations": [],
+      "axeIncomplete": [
+        {
+          "id": "color-contrast",
+          "nodeCount": 8
+        },
+        {
+          "id": "link-in-text-block",
+          "nodeCount": 1
+        }
+      ]
+    },
+    {
+      "route": "map",
+      "breakpoint": "1024",
+      "width": 1024,
+      "horizontalOverflow": false,
+      "scrollWidth": 1024,
+      "bodyFontSizePx": 17,
+      "smallTouchTargets": [],
+      "axeViolations": [],
+      "axeIncomplete": [
+        {
+          "id": "color-contrast",
+          "nodeCount": 18
+        },
+        {
+          "id": "link-in-text-block",
+          "nodeCount": 1
+        }
+      ]
+    },
+    {
+      "route": "map",
+      "breakpoint": "1440",
+      "width": 1440,
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "bodyFontSizePx": 17,
+      "smallTouchTargets": [],
+      "axeViolations": [],
+      "axeIncomplete": [
+        {
+          "id": "color-contrast",
+          "nodeCount": 4
+        },
+        {
+          "id": "link-in-text-block",
+          "nodeCount": 1
+        }
+      ]
+    },
+    {
+      "route": "towns",
+      "breakpoint": "320",
+      "width": 320,
+      "horizontalOverflow": false,
+      "scrollWidth": 320,
+      "bodyFontSizePx": 17,
+      "smallTouchTargets": [
+        {
+          "tag": "a",
+          "text": "Malmö",
+          "w": 77,
+          "h": 32
+        },
+        {
+          "tag": "a",
+          "text": "LÄS FÖRDJUPNING →",
+          "w": 150,
+          "h": 17
+        },
+        {
+          "tag": "a",
+          "text": "Stemmen",
+          "w": 104,
+          "h": 32
+        },
+        {
+          "tag": "a",
+          "text": "LÄS FÖRDJUPNING →",
+          "w": 150,
+          "h": 17
+        },
+        {
+          "tag": "a",
+          "text": "Gent",
+          "w": 52,
+          "h": 32
+        },
+        {
+          "tag": "a",
+          "text": "LÄS FÖRDJUPNING →",
+          "w": 150,
+          "h": 17
+        },
+        {
+          "tag": "a",
+          "text": "Honfleur",
+          "w": 100,
+          "h": 32
+        },
+        {
+          "tag": "a",
+          "text": "LÄS FÖRDJUPNING →",
+          "w": 150,
+          "h": 17
+        },
+        {
+          "tag": "a",
+          "text": "Bayeux",
+          "w": 79,
+          "h": 32
+        },
+        {
+          "tag": "a",
+          "text": "LÄS FÖRDJUPNING →",
+          "w": 150,
+          "h": 17
+        },
+        {
+          "tag": "a",
+          "text": "Waterloo",
+          "w": 98,
+          "h": 32
+        },
+        {
+          "tag": "a",
+          "text": "LÄS FÖRDJUPNING →",
+          "w": 150,
+          "h": 17
+        },
+        {
+          "tag": "a",
+          "text": "Recklinghausen",
+          "w": 175,
+          "h": 32
+        },
+        {
+          "tag": "a",
+          "text": "LÄS FÖRDJUPNING →",
+          "w": 150,
+          "h": 17
+        },
+        {
+          "tag": "a",
+          "text": "Lübeck",
+          "w": 81,
+          "h": 32
+        },
+        {
+          "tag": "a",
+          "text": "LÄS FÖRDJUPNING →",
+          "w": 150,
+          "h": 17
+        },
+        {
+          "tag": "a",
+          "text": "Lund",
+          "w": 58,
+          "h": 32
+        },
+        {
+          "tag": "a",
+          "text": "LÄS FÖRDJUPNING →",
+          "w": 150,
+          "h": 17
+        }
+      ],
+      "axeViolations": [],
+      "axeIncomplete": []
+    },
+    {
+      "route": "towns",
+      "breakpoint": "360",
+      "width": 360,
+      "horizontalOverflow": false,
+      "scrollWidth": 360,
+      "bodyFontSizePx": 17,
+      "smallTouchTargets": [
+        {
+          "tag": "a",
+          "text": "Malmö",
+          "w": 77,
+          "h": 32
+        },
+        {
+          "tag": "a",
+          "text": "LÄS FÖRDJUPNING →",
+          "w": 150,
+          "h": 17
+        },
+        {
+          "tag": "a",
+          "text": "Stemmen",
+          "w": 104,
+          "h": 32
+        },
+        {
+          "tag": "a",
+          "text": "LÄS FÖRDJUPNING →",
+          "w": 150,
+          "h": 17
+        },
+        {
+          "tag": "a",
+          "text": "Gent",
+          "w": 52,
+          "h": 32
+        },
+        {
+          "tag": "a",
+          "text": "LÄS FÖRDJUPNING →",
+          "w": 150,
+          "h": 17
+        },
+        {
+          "tag": "a",
+          "text": "Honfleur",
+          "w": 100,
+          "h": 32
+        },
+        {
+          "tag": "a",
+          "text": "LÄS FÖRDJUPNING →",
+          "w": 150,
+          "h": 17
+        },
+        {
+          "tag": "a",
+          "text": "Bayeux",
+          "w": 79,
+          "h": 32
+        },
+        {
+          "tag": "a",
+          "text": "LÄS FÖRDJUPNING →",
+          "w": 150,
+          "h": 17
+        },
+        {
+          "tag": "a",
+          "text": "Waterloo",
+          "w": 98,
+          "h": 32
+        },
+        {
+          "tag": "a",
+          "text": "LÄS FÖRDJUPNING →",
+          "w": 150,
+          "h": 17
+        },
+        {
+          "tag": "a",
+          "text": "Recklinghausen",
+          "w": 175,
+          "h": 32
+        },
+        {
+          "tag": "a",
+          "text": "LÄS FÖRDJUPNING →",
+          "w": 150,
+          "h": 17
+        },
+        {
+          "tag": "a",
+          "text": "Lübeck",
+          "w": 81,
+          "h": 32
+        },
+        {
+          "tag": "a",
+          "text": "LÄS FÖRDJUPNING →",
+          "w": 150,
+          "h": 17
+        },
+        {
+          "tag": "a",
+          "text": "Lund",
+          "w": 58,
+          "h": 32
+        },
+        {
+          "tag": "a",
+          "text": "LÄS FÖRDJUPNING →",
+          "w": 150,
+          "h": 17
+        }
+      ],
+      "axeViolations": [],
+      "axeIncomplete": []
+    },
+    {
+      "route": "towns",
+      "breakpoint": "768",
+      "width": 768,
+      "horizontalOverflow": false,
+      "scrollWidth": 768,
+      "bodyFontSizePx": 17,
+      "smallTouchTargets": [],
+      "axeViolations": [],
+      "axeIncomplete": []
+    },
+    {
+      "route": "towns",
+      "breakpoint": "1024",
+      "width": 1024,
+      "horizontalOverflow": false,
+      "scrollWidth": 1024,
+      "bodyFontSizePx": 17,
+      "smallTouchTargets": [],
+      "axeViolations": [],
+      "axeIncomplete": []
+    },
+    {
+      "route": "towns",
+      "breakpoint": "1440",
+      "width": 1440,
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "bodyFontSizePx": 17,
+      "smallTouchTargets": [],
+      "axeViolations": [],
+      "axeIncomplete": []
+    },
+    {
+      "route": "paris",
+      "breakpoint": "320",
+      "width": 320,
+      "horizontalOverflow": false,
+      "scrollWidth": 320,
+      "bodyFontSizePx": 17,
+      "smallTouchTargets": [
+        {
+          "tag": "a",
+          "text": "EN STAD AV IMPERIUM OCH MINNE",
+          "w": 248,
+          "h": 14
+        },
+        {
+          "tag": "a",
+          "text": "NAPOLEON BONAPARTE",
+          "w": 167,
+          "h": 14
+        },
+        {
+          "tag": "a",
+          "text": "NAPOLEONS PARIS",
+          "w": 133,
+          "h": 14
+        },
+        {
+          "tag": "a",
+          "text": "NAPOLEONS MILITÄRA ARV",
+          "w": 193,
+          "h": 14
+        },
+        {
+          "tag": "a",
+          "text": "PARIS UNDER ANDRA VÄRLDSKRIGET",
+          "w": 261,
+          "h": 14
+        },
+        {
+          "tag": "a",
+          "text": "TYSK OCKUPATION 1940–1944",
+          "w": 216,
+          "h": 14
+        },
+        {
+          "tag": "a",
+          "text": "FRANSKA MOTSTÅNDSRÖRELSEN I PARIS",
+          "w": 243,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "BEFRIELSEN AV PARIS",
+          "w": 156,
+          "h": 14
+        },
+        {
+          "tag": "a",
+          "text": "PLATSKARTA",
+          "w": 92,
+          "h": 14
+        },
+        {
+          "tag": "a",
+          "text": "2-DAGARSPLAN",
+          "w": 111,
+          "h": 14
+        },
+        {
+          "tag": "a",
+          "text": "SAKER ATT GÖRA",
+          "w": 123,
+          "h": 14
+        },
+        {
+          "tag": "button",
+          "text": "ALLA PLATSER",
+          "w": 130,
+          "h": 27
+        },
+        {
+          "tag": "button",
+          "text": "NAPOLEON",
+          "w": 103,
+          "h": 27
+        },
+        {
+          "tag": "button",
+          "text": "ANDRA VÄRLDSKRIGET",
+          "w": 188,
+          "h": 27
+        },
+        {
+          "tag": "a",
+          "text": "+",
+          "w": 30,
+          "h": 30
+        },
+        {
+          "tag": "a",
+          "text": "−",
+          "w": 30,
+          "h": 30
+        },
+        {
+          "tag": "a",
+          "text": "Leaflet",
+          "w": 45,
+          "h": 12
+        },
+        {
+          "tag": "button",
+          "text": "RENSA ALLA",
+          "w": 114,
+          "h": 27
+        },
+        {
+          "tag": "button",
+          "text": "🏙️ STADSDELAR",
+          "w": 140,
+          "h": 27
+        },
+        {
+          "tag": "button",
+          "text": "MUSEER",
+          "w": 103,
+          "h": 27
+        },
+        {
+          "tag": "button",
+          "text": "KAFÉER",
+          "w": 100,
+          "h": 27
+        },
+        {
+          "tag": "button",
+          "text": "RESTAURANGER",
+          "w": 157,
+          "h": 27
+        },
+        {
+          "tag": "button",
+          "text": "SHOPPING",
+          "w": 118,
+          "h": 27
+        },
+        {
+          "tag": "button",
+          "text": "HOTELL",
+          "w": 100,
+          "h": 27
+        },
+        {
+          "tag": "a",
+          "text": "+",
+          "w": 30,
+          "h": 30
+        },
+        {
+          "tag": "a",
+          "text": "−",
+          "w": 30,
+          "h": 30
+        },
+        {
+          "tag": "a",
+          "text": "Leaflet",
+          "w": 45,
+          "h": 12
+        },
+        {
+          "tag": "a",
+          "text": "← DAG 8: IN I PARIS",
+          "w": 142,
+          "h": 17
+        },
+        {
+          "tag": "a",
+          "text": "HELA RESEPLANEN",
+          "w": 134,
+          "h": 17
+        },
+        {
+          "tag": "a",
+          "text": "DAG 11: SLAGFÄLT OCH RUHR →",
+          "w": 224,
+          "h": 17
+        }
+      ],
+      "axeViolations": [],
+      "axeIncomplete": [
+        {
+          "id": "color-contrast",
+          "nodeCount": 19
+        },
+        {
+          "id": "link-in-text-block",
+          "nodeCount": 2
+        }
+      ]
+    },
+    {
+      "route": "paris",
+      "breakpoint": "360",
+      "width": 360,
+      "horizontalOverflow": false,
+      "scrollWidth": 360,
+      "bodyFontSizePx": 17,
+      "smallTouchTargets": [
+        {
+          "tag": "a",
+          "text": "EN STAD AV IMPERIUM OCH MINNE",
+          "w": 248,
+          "h": 14
+        },
+        {
+          "tag": "a",
+          "text": "NAPOLEON BONAPARTE",
+          "w": 167,
+          "h": 14
+        },
+        {
+          "tag": "a",
+          "text": "NAPOLEONS PARIS",
+          "w": 133,
+          "h": 14
+        },
+        {
+          "tag": "a",
+          "text": "NAPOLEONS MILITÄRA ARV",
+          "w": 193,
+          "h": 14
+        },
+        {
+          "tag": "a",
+          "text": "PARIS UNDER ANDRA VÄRLDSKRIGET",
+          "w": 261,
+          "h": 14
+        },
+        {
+          "tag": "a",
+          "text": "TYSK OCKUPATION 1940–1944",
+          "w": 216,
+          "h": 14
+        },
+        {
+          "tag": "a",
+          "text": "FRANSKA MOTSTÅNDSRÖRELSEN I PARIS",
+          "w": 289,
+          "h": 14
+        },
+        {
+          "tag": "a",
+          "text": "BEFRIELSEN AV PARIS",
+          "w": 156,
+          "h": 14
+        },
+        {
+          "tag": "a",
+          "text": "PLATSKARTA",
+          "w": 92,
+          "h": 14
+        },
+        {
+          "tag": "a",
+          "text": "2-DAGARSPLAN",
+          "w": 111,
+          "h": 14
+        },
+        {
+          "tag": "a",
+          "text": "SAKER ATT GÖRA",
+          "w": 123,
+          "h": 14
+        },
+        {
+          "tag": "button",
+          "text": "ALLA PLATSER",
+          "w": 130,
+          "h": 27
+        },
+        {
+          "tag": "button",
+          "text": "NAPOLEON",
+          "w": 103,
+          "h": 27
+        },
+        {
+          "tag": "button",
+          "text": "ANDRA VÄRLDSKRIGET",
+          "w": 188,
+          "h": 27
+        },
+        {
+          "tag": "a",
+          "text": "+",
+          "w": 30,
+          "h": 30
+        },
+        {
+          "tag": "a",
+          "text": "−",
+          "w": 30,
+          "h": 30
+        },
+        {
+          "tag": "a",
+          "text": "Leaflet",
+          "w": 45,
+          "h": 12
+        },
+        {
+          "tag": "button",
+          "text": "RENSA ALLA",
+          "w": 114,
+          "h": 27
+        },
+        {
+          "tag": "button",
+          "text": "🏙️ STADSDELAR",
+          "w": 140,
+          "h": 27
+        },
+        {
+          "tag": "button",
+          "text": "MUSEER",
+          "w": 103,
+          "h": 27
+        },
+        {
+          "tag": "button",
+          "text": "KAFÉER",
+          "w": 100,
+          "h": 27
+        },
+        {
+          "tag": "button",
+          "text": "RESTAURANGER",
+          "w": 157,
+          "h": 27
+        },
+        {
+          "tag": "button",
+          "text": "SHOPPING",
+          "w": 118,
+          "h": 27
+        },
+        {
+          "tag": "button",
+          "text": "HOTELL",
+          "w": 100,
+          "h": 27
+        },
+        {
+          "tag": "a",
+          "text": "+",
+          "w": 30,
+          "h": 30
+        },
+        {
+          "tag": "a",
+          "text": "−",
+          "w": 30,
+          "h": 30
+        },
+        {
+          "tag": "a",
+          "text": "Leaflet",
+          "w": 45,
+          "h": 12
+        },
+        {
+          "tag": "a",
+          "text": "← DAG 8: IN I PARIS",
+          "w": 142,
+          "h": 17
+        },
+        {
+          "tag": "a",
+          "text": "HELA RESEPLANEN",
+          "w": 134,
+          "h": 17
+        },
+        {
+          "tag": "a",
+          "text": "DAG 11: SLAGFÄLT OCH RUHR →",
+          "w": 224,
+          "h": 17
+        }
+      ],
+      "axeViolations": [],
+      "axeIncomplete": [
+        {
+          "id": "color-contrast",
+          "nodeCount": 17
+        },
+        {
+          "id": "link-in-text-block",
+          "nodeCount": 2
+        }
+      ]
+    },
+    {
+      "route": "paris",
+      "breakpoint": "768",
+      "width": 768,
+      "horizontalOverflow": false,
+      "scrollWidth": 768,
+      "bodyFontSizePx": 17,
+      "smallTouchTargets": [],
+      "axeViolations": [],
+      "axeIncomplete": [
+        {
+          "id": "color-contrast",
+          "nodeCount": 27
+        },
+        {
+          "id": "link-in-text-block",
+          "nodeCount": 2
+        }
+      ]
+    },
+    {
+      "route": "paris",
+      "breakpoint": "1024",
+      "width": 1024,
+      "horizontalOverflow": false,
+      "scrollWidth": 1024,
+      "bodyFontSizePx": 17,
+      "smallTouchTargets": [],
+      "axeViolations": [],
+      "axeIncomplete": [
+        {
+          "id": "color-contrast",
+          "nodeCount": 31
+        },
+        {
+          "id": "link-in-text-block",
+          "nodeCount": 2
+        }
+      ]
+    },
+    {
+      "route": "paris",
+      "breakpoint": "1440",
+      "width": 1440,
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "bodyFontSizePx": 17,
+      "smallTouchTargets": [],
+      "axeViolations": [],
+      "axeIncomplete": [
+        {
+          "id": "color-contrast",
+          "nodeCount": 28
+        },
+        {
+          "id": "link-in-text-block",
+          "nodeCount": 2
+        }
+      ]
+    },
+    {
+      "route": "normandy",
+      "breakpoint": "320",
+      "width": 320,
+      "horizontalOverflow": false,
+      "scrollWidth": 320,
+      "bodyFontSizePx": 17,
+      "smallTouchTargets": [
+        {
+          "tag": "a",
+          "text": "DEN LÄNGSTA DAGEN",
+          "w": 153,
+          "h": 14
+        },
+        {
+          "tag": "a",
+          "text": "VARFÖR ATLANTVALLEN BRÖT SAMMAN",
+          "w": 214,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "DE LUFTBURNA OPERATIONERNA",
+          "w": 232,
+          "h": 14
+        },
+        {
+          "tag": "a",
+          "text": "DE FEM STRÄNDERNA",
+          "w": 153,
+          "h": 14
+        },
+        {
+          "tag": "a",
+          "text": "OMAHA — TVÅ SORTERS MÄNNISKOR",
+          "w": 264,
+          "h": 14
+        },
+        {
+          "tag": "a",
+          "text": "FRÅN NORMANDIE TILL CHAMPS-ÉLYSÉES",
+          "w": 236,
+          "h": 40
+        },
+        {
+          "tag": "a",
+          "text": "TIDSLINJE",
+          "w": 74,
+          "h": 14
+        },
+        {
+          "tag": "a",
+          "text": "BEFÄLSSTRUKTUR",
+          "w": 128,
+          "h": 14
+        },
+        {
+          "tag": "a",
+          "text": "PLATSKARTA",
+          "w": 92,
+          "h": 14
+        },
+        {
+          "tag": "a",
+          "text": "BAYEUXBASEN",
+          "w": 104,
+          "h": 14
+        },
+        {
+          "tag": "a",
+          "text": "SHUTTLE-TUR",
+          "w": 99,
+          "h": 14
+        },
+        {
+          "tag": "button",
+          "text": "ALLA SEKTORER",
+          "w": 141,
+          "h": 27
+        },
+        {
+          "tag": "button",
+          "text": "USA",
+          "w": 55,
+          "h": 27
+        },
+        {
+          "tag": "button",
+          "text": "BRITTISK",
+          "w": 92,
+          "h": 27
+        },
+        {
+          "tag": "button",
+          "text": "KANADENSISK",
+          "w": 128,
+          "h": 27
+        },
+        {
+          "tag": "button",
+          "text": "MUSEER & STAD",
+          "w": 140,
+          "h": 27
+        },
+        {
+          "tag": "a",
+          "text": "+",
+          "w": 30,
+          "h": 30
+        },
+        {
+          "tag": "a",
+          "text": "−",
+          "w": 30,
+          "h": 30
+        },
+        {
+          "tag": "a",
+          "text": "Leaflet",
+          "w": 45,
+          "h": 12
+        },
+        {
+          "tag": "a",
+          "text": "BAYEUXSHUTTLE.COM ↗",
+          "w": 175,
+          "h": 14
+        },
+        {
+          "tag": "a",
+          "text": "← DAG 4: TILL DEN NORMANDISKA KUSTEN",
+          "w": 272,
+          "h": 34
+        },
+        {
+          "tag": "a",
+          "text": "HELA RESEPLANEN",
+          "w": 134,
+          "h": 17
+        },
+        {
+          "tag": "a",
+          "text": "AVDELNING P: PARIS I HISTORIEN →",
+          "w": 256,
+          "h": 17
+        }
+      ],
+      "axeViolations": [],
+      "axeIncomplete": [
+        {
+          "id": "color-contrast",
+          "nodeCount": 16
+        },
+        {
+          "id": "link-in-text-block",
+          "nodeCount": 1
+        }
+      ]
+    },
+    {
+      "route": "normandy",
+      "breakpoint": "360",
+      "width": 360,
+      "horizontalOverflow": false,
+      "scrollWidth": 360,
+      "bodyFontSizePx": 17,
+      "smallTouchTargets": [
+        {
+          "tag": "a",
+          "text": "DEN LÄNGSTA DAGEN",
+          "w": 153,
+          "h": 14
+        },
+        {
+          "tag": "a",
+          "text": "VARFÖR ATLANTVALLEN BRÖT SAMMAN",
+          "w": 282,
+          "h": 14
+        },
+        {
+          "tag": "a",
+          "text": "DE LUFTBURNA OPERATIONERNA",
+          "w": 232,
+          "h": 14
+        },
+        {
+          "tag": "a",
+          "text": "DE FEM STRÄNDERNA",
+          "w": 153,
+          "h": 14
+        },
+        {
+          "tag": "a",
+          "text": "OMAHA — TVÅ SORTERS MÄNNISKOR",
+          "w": 264,
+          "h": 14
+        },
+        {
+          "tag": "a",
+          "text": "FRÅN NORMANDIE TILL CHAMPS-ÉLYSÉES",
+          "w": 298,
+          "h": 14
+        },
+        {
+          "tag": "a",
+          "text": "TIDSLINJE",
+          "w": 74,
+          "h": 14
+        },
+        {
+          "tag": "a",
+          "text": "BEFÄLSSTRUKTUR",
+          "w": 128,
+          "h": 14
+        },
+        {
+          "tag": "a",
+          "text": "PLATSKARTA",
+          "w": 92,
+          "h": 14
+        },
+        {
+          "tag": "a",
+          "text": "BAYEUXBASEN",
+          "w": 104,
+          "h": 14
+        },
+        {
+          "tag": "a",
+          "text": "SHUTTLE-TUR",
+          "w": 99,
+          "h": 14
+        },
+        {
+          "tag": "button",
+          "text": "ALLA SEKTORER",
+          "w": 141,
+          "h": 27
+        },
+        {
+          "tag": "button",
+          "text": "USA",
+          "w": 55,
+          "h": 27
+        },
+        {
+          "tag": "button",
+          "text": "BRITTISK",
+          "w": 92,
+          "h": 27
+        },
+        {
+          "tag": "button",
+          "text": "KANADENSISK",
+          "w": 128,
+          "h": 27
+        },
+        {
+          "tag": "button",
+          "text": "MUSEER & STAD",
+          "w": 140,
+          "h": 27
+        },
+        {
+          "tag": "a",
+          "text": "+",
+          "w": 30,
+          "h": 30
+        },
+        {
+          "tag": "a",
+          "text": "−",
+          "w": 30,
+          "h": 30
+        },
+        {
+          "tag": "a",
+          "text": "Leaflet",
+          "w": 45,
+          "h": 12
+        },
+        {
+          "tag": "a",
+          "text": "BAYEUXSHUTTLE.COM ↗",
+          "w": 175,
+          "h": 14
+        },
+        {
+          "tag": "a",
+          "text": "← DAG 4: TILL DEN NORMANDISKA KUSTEN",
+          "w": 308,
+          "h": 17
+        },
+        {
+          "tag": "a",
+          "text": "HELA RESEPLANEN",
+          "w": 134,
+          "h": 17
+        },
+        {
+          "tag": "a",
+          "text": "AVDELNING P: PARIS I HISTORIEN →",
+          "w": 256,
+          "h": 17
+        }
+      ],
+      "axeViolations": [],
+      "axeIncomplete": [
+        {
+          "id": "color-contrast",
+          "nodeCount": 10
+        },
+        {
+          "id": "link-in-text-block",
+          "nodeCount": 1
+        }
+      ]
+    },
+    {
+      "route": "normandy",
+      "breakpoint": "768",
+      "width": 768,
+      "horizontalOverflow": false,
+      "scrollWidth": 768,
+      "bodyFontSizePx": 17,
+      "smallTouchTargets": [],
+      "axeViolations": [],
+      "axeIncomplete": [
+        {
+          "id": "color-contrast",
+          "nodeCount": 21
+        },
+        {
+          "id": "link-in-text-block",
+          "nodeCount": 1
+        }
+      ]
+    },
+    {
+      "route": "normandy",
+      "breakpoint": "1024",
+      "width": 1024,
+      "horizontalOverflow": false,
+      "scrollWidth": 1024,
+      "bodyFontSizePx": 17,
+      "smallTouchTargets": [],
+      "axeViolations": [],
+      "axeIncomplete": [
+        {
+          "id": "color-contrast",
+          "nodeCount": 25
+        },
+        {
+          "id": "link-in-text-block",
+          "nodeCount": 1
+        }
+      ]
+    },
+    {
+      "route": "normandy",
+      "breakpoint": "1440",
+      "width": 1440,
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "bodyFontSizePx": 17,
+      "smallTouchTargets": [],
+      "axeViolations": [],
+      "axeIncomplete": [
+        {
+          "id": "color-contrast",
+          "nodeCount": 25
+        },
+        {
+          "id": "link-in-text-block",
+          "nodeCount": 1
+        }
+      ]
+    },
+    {
+      "route": "weather",
+      "breakpoint": "320",
+      "width": 320,
+      "horizontalOverflow": false,
+      "scrollWidth": 320,
+      "bodyFontSizePx": 17,
+      "smallTouchTargets": [
+        {
+          "tag": "a",
+          "text": "Open-Meteo",
+          "w": 85,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "← HELA RESEPLANEN",
+          "w": 151,
+          "h": 17
+        },
+        {
+          "tag": "a",
+          "text": "PACKLISTA",
+          "w": 78,
+          "h": 17
+        },
+        {
+          "tag": "a",
+          "text": "RESKARTAN →",
+          "w": 101,
+          "h": 17
+        }
+      ],
+      "axeViolations": [],
+      "axeIncomplete": []
+    },
+    {
+      "route": "weather",
+      "breakpoint": "360",
+      "width": 360,
+      "horizontalOverflow": false,
+      "scrollWidth": 360,
+      "bodyFontSizePx": 17,
+      "smallTouchTargets": [
+        {
+          "tag": "a",
+          "text": "Open-Meteo",
+          "w": 85,
+          "h": 20
+        },
+        {
+          "tag": "a",
+          "text": "← HELA RESEPLANEN",
+          "w": 151,
+          "h": 17
+        },
+        {
+          "tag": "a",
+          "text": "PACKLISTA",
+          "w": 78,
+          "h": 17
+        },
+        {
+          "tag": "a",
+          "text": "RESKARTAN →",
+          "w": 101,
+          "h": 17
+        }
+      ],
+      "axeViolations": [],
+      "axeIncomplete": []
+    },
+    {
+      "route": "weather",
+      "breakpoint": "768",
+      "width": 768,
+      "horizontalOverflow": false,
+      "scrollWidth": 768,
+      "bodyFontSizePx": 17,
+      "smallTouchTargets": [],
+      "axeViolations": [],
+      "axeIncomplete": []
+    },
+    {
+      "route": "weather",
+      "breakpoint": "1024",
+      "width": 1024,
+      "horizontalOverflow": false,
+      "scrollWidth": 1024,
+      "bodyFontSizePx": 17,
+      "smallTouchTargets": [],
+      "axeViolations": [],
+      "axeIncomplete": []
+    },
+    {
+      "route": "weather",
+      "breakpoint": "1440",
+      "width": 1440,
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "bodyFontSizePx": 17,
+      "smallTouchTargets": [],
+      "axeViolations": [],
+      "axeIncomplete": []
+    }
+  ]
+}

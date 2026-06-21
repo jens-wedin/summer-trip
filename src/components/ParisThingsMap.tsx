@@ -14,6 +14,7 @@ import {
 } from "../data/paris";
 import { useTheme } from "../lib/useTheme";
 import { mapColors } from "../lib/mapColors";
+import { readableTextColor } from "../lib/contrast";
 
 type Props = {
   listings: ParisListing[];
@@ -112,7 +113,11 @@ export function ParisThingsMap({ listings, height = 540 }: Props) {
               }`}
               style={
                 active
-                  ? { backgroundColor: parisListingColor[theme][cat], color: "#fdfaf3", borderColor: parisListingColor[theme][cat] }
+                  ? {
+                      backgroundColor: parisListingColor[theme][cat],
+                      color: readableTextColor(parisListingColor[theme][cat]),
+                      borderColor: parisListingColor[theme][cat],
+                    }
                   : undefined
               }
             >

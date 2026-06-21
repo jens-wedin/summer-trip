@@ -11,7 +11,7 @@ export function ThemeToggle() {
       onClick={toggle}
       aria-label={label}
       aria-pressed={isDark}
-      className="inline-flex items-center justify-center w-10 h-10 text-ink hover:bg-paperDark focus:outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink"
+      className="inline-flex items-center justify-center w-11 h-11 shrink-0 text-ink hover:bg-paperDark focus:outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink"
     >
       {isDark ? <SunIcon /> : <MoonIcon />}
     </button>

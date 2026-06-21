@@ -209,7 +209,12 @@ export function DayPage() {
                 </p>
               )}
               {day.charging.stops.length > 0 && (
-                <div className="overflow-x-auto">
+                <div
+                  className="overflow-x-auto focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink"
+                  tabIndex={0}
+                  role="region"
+                  aria-label="Laddningsplan, rullbar tabell"
+                >
                   <table className="w-full text-left font-serif text-[14px] border-collapse">
                     <thead>
                       <tr className="border-b border-ink">

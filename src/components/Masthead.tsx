@@ -25,26 +25,26 @@ export function Masthead() {
           <span>{trip.edition}</span>
           <span className="hidden md:inline">{trip.dateline}</span>
           <span className="flex items-center gap-3">
-            <span>Pris · Ett leende</span>
+            <span className="hidden sm:inline">Pris · Ett leende</span>
             <ThemeToggle />
           </span>
         </div>
         <hr className="rule mt-3 mb-4" />
         <Link to="/" className="block text-center">
-          <h1 className="masthead text-[64px] md:text-[96px] tracking-tight">
+          <h1 className="masthead text-[clamp(2rem,10.5vw,6rem)] tracking-tight break-words">
             Sommarresan 2026
           </h1>
         </Link>
         <hr className="rule mt-3" />
-        <div className="flex items-center justify-between text-[11px] kicker py-2 flex-wrap gap-y-1">
+        <div className="flex flex-col items-center gap-1 text-center sm:flex-row sm:justify-between sm:gap-0 sm:text-left text-[11px] kicker py-2">
           <span>Grundad MMXXVI</span>
-          <span className="text-center flex-1">
-            All resa värd att trycka
+          <span className="sm:flex-1 sm:text-center">
+            Vår sommarguide
           </span>
           <span>Stockholm · Paris · Stockholm</span>
         </div>
         <hr className="double-rule" />
-        <nav className="flex items-center justify-center gap-6 md:gap-10 py-3 flex-wrap">
+        <nav className="flex items-center justify-center gap-x-5 gap-y-0 md:gap-x-10 py-1 flex-wrap">
           {nav.map((n) => {
             const active =
               n.to === "/"
@@ -54,7 +54,7 @@ export function Masthead() {
               <Link
                 key={n.to}
                 to={n.to}
-                className={`kicker text-[12px] tracking-section ${
+                className={`kicker text-[12px] tracking-section inline-flex items-center min-h-[44px] px-2 ${
                   active ? "text-accent underline underline-offset-4" : ""
                 }`}
               >

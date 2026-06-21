@@ -454,7 +454,7 @@ export const parisListingColor: Record<
   light: {
     neighbourhoods: "#2d5a3d",
     museums:        "#1a3a5a",
-    cafes:          "#a06a30",
+    cafes:          "#94612b",
     restaurants:    "#8b1a1a",
     shopping:       "#5a2a5a",
     hotels:         "#7a5a1a",

@@ -15,8 +15,12 @@ export function FrontPage() {
   ];
   const minor = [trip.days[2], trip.days[3], trip.days[12]];
 
+  // overflow-x-clip contains Leaflet's overlay-pane SVG, whose transformed box
+  // leaks ~2px past the viewport at 320px and is not caught by clipping the map
+  // wrapper itself (a headless-Chromium quirk). Horizontal-only, so map popups
+  // and vertical scrolling are unaffected.
   return (
-    <article className="max-w-6xl mx-auto px-6 pb-12">
+    <article className="max-w-6xl mx-auto px-6 pb-12 overflow-x-clip">
       <div className="text-center pt-6 pb-3">
         <p className="kicker">Sommarbilresenumret · Specialbilaga</p>
         <h2 className="headline text-4xl md:text-6xl mt-4 mb-3">{trip.title}</h2>

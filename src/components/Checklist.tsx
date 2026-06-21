@@ -53,7 +53,7 @@ export function Checklist({ initial, storageKey, title }: Props) {
               type="button"
               onClick={() => toggle(item.id)}
               aria-label={item.done ? "Markera som ej klar" : "Markera som klar"}
-              className={`mt-1 h-4 w-4 flex-shrink-0 border border-ink flex items-center justify-center transition-colors ${
+              className={`mt-0.5 h-6 w-6 flex-shrink-0 border border-ink flex items-center justify-center transition-colors focus:outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink ${
                 item.done ? "bg-ink text-paper" : "bg-paper"
               }`}
             >

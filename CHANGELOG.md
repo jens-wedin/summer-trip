@@ -15,6 +15,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   18:28) and corrected the waypoint order (Jönköping before Vandalorum) so the
   route map no longer zig-zags south of Värnamo.
 
+### Fixed
+- **Responsive & accessibility (mobile)** — resolved all five block-merge
+  findings from the 2026-05-05 responsive audit:
+  - Masthead title no longer overflows at 320/360 — now fluid
+    `clamp(2rem, 10.5vw, 6rem)`; a residual ~2px Leaflet overlay-SVG overflow on
+    the front page is contained with `overflow-x-clip`.
+  - Masthead nav links now have a 44×44 touch target; the `ThemeToggle` no
+    longer compresses (`shrink-0`) and is a full 44px.
+  - The day-page charging table is now a keyboard-focusable region with an
+    accessible name.
+  - The Paris things-to-do filter switches meet WCAG 1.4.3 contrast in both
+    light and dark themes (auto-picked text colour + darkened café swatch).
+  - Bonus: checklist toggle enlarged 16→24px (WCAG 2.5.8) with a focus ring.
+  Re-audit: **0 horizontal overflow and 0 axe violations** across all 40
+  route×breakpoint measurements.
+
+### Added
+- `src/lib/contrast.ts` — WCAG relative-luminance / contrast helpers
+  (`readableTextColor`) with unit tests.
+- The responsive-audit spec now records axe node selectors / HTML / failure
+  summaries, so contrast and scrollable-region findings can be triaged without
+  re-investigation.
+
 ## [1.0.0] - 2026-05-05
 
 First public cut of *The Wedin Tribune* — a Stockholm → Paris → Stockholm
