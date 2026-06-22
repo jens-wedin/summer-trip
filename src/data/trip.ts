@@ -63,11 +63,13 @@ export const trip: Trip = {
       resources: [
         { title: "Vandalorum — Piet Oudolfs trädgård", url: "https://www.vandalorum.se/en/tradgard", note: "26 000 perenner, 47 000 lökar och 7 000 buskar och träd kring museet; innergårdens äng tillkom 2025." },
         { title: "Vandalorum — konst- och designmuseum", url: "https://www.vandalorum.se/", note: "Renzo Pianos byggnader på åkrarna utanför Värnamo. Restaurang, butik och växlande utställningar." },
+        { title: "Vibliotek — spansk tapas, Malmö", url: "https://www.vibliotek.se/", note: "Södra Vallgatan 3, vid kanalen. Tapas, vin och allt importerat från Spanien." },
       ],
+
       story: [
         "Vagnen packades kvällen innan; klockan halv tio rullade vi iväg, årets längsta dag utsträckt framför oss som en landningsbana. E4 rullades upp på det där alldeles svenska sommarsättet — björk, raps, sjö, igen. Vid Vätterns sydspets stannade vi i Jönköping för lunch medan vagnen drack ström vid A6:s snabbladdare; sedan vidare de sista milen söderut.",
         "Strax bortom Värnamo svängde vi av till Vandalorum. Renzo Pianos lador står ute på åkrarna som om de alltid vuxit där, och innanför dem fanns den egentliga anledningen till stoppet: Piet Oudolfs trädgård — den holländske mästarens första vid en kulturinstitution i Norden. Mannen bakom High Line i New York och Nomas trädgård i Köpenhamn har planterat tiotusentals perenner kring museet och låtit innergården bli en skålformad äng. Ingen tavla att betrakta, med hans egna ord, utan en levande process som ändras från dag till dag. Vi tog en lång fika vid uteserveringen, lät barnen springa stigarna mellan gräs och skulptur, och hade svårt att slita oss.",
-        "Skåne uppenbarade sig platt och gyllene; vi rullade in i Malmö 18:28. Middag på Lilla Torg under kastanjerna; torget summade av söndagens stoj från en stad som rustas inför något.",
+        "Skåne uppenbarade sig platt och gyllene; vi rullade in i Malmö 18:28 och checkade in på MJ's — ett litet boutiquehotell mitt i stan, mörkt trä, marmor och den där berömda rosa flamingostolen. På kvällen blev det tapas på Vibliotek vid kanalen, ett spanskt ställe vars namn leker med vin och bibliotek och där allt — maten, vinet, till och med möblerna — är hämtat från Spanien. Vi beställde alldeles för mycket: croquetas, tortilla, patatas bravas, 'bara en till' tills bordet gav upp.",
       ],
       pullQuote: "Årets längsta dag utsträckt framför oss som en landningsbana.",
       images: [
@@ -111,6 +113,8 @@ export const trip: Trip = {
         price: "2 200 kr",
         payment: "Betala på plats",
         bookedVia: "Hotels.com",
+        description:
+          "Lantgård i utkanten av Lüneburgheden, med egen restaurang (Schultens) — regional, modern mat: Gallowaykött från gården, schnitzel och rejäla specialiteter.",
         status: "booked",
       },
       charging: {
@@ -123,15 +127,21 @@ export const trip: Trip = {
         ],
       },
       enRouteStops: [
-        { name: "Kronborg slott (Helsingør)", description: "Shakespeares Hamletslott. En väldig renässansfästning vid Öresund — en kort avstickare norrut innan Storebælt." },
-        { name: "Storebæltbroen", description: "18 kilometer lång avgiftsbelagd bro över Stora Bält — en av världens längsta hängbroar." },
-        { name: "Hjelholt Uldspinderi, Fyn", description: "Historisk ullspinneri. Vacker omväg genom det danska landsbygdslandskapet. hjelholt.dk" },
+        { name: "Storebæltbroen", description: "18 kilometer lång avgiftsbelagd bro över Stora Bält in på Fyn — en av världens längsta hängbroar." },
+        { name: "Hjelholts Uldspinderi, Fyn", description: "Familjespinneri på södra Fyn som kardat och spunnit dansk ull sedan 1878 — nu i fjärde generationen, med spinnmaskiner från fyrtiotalet som alltjämt snurrar. Fabriksbutik med garn; här fyllde vi på förrådet. hjelholt.dk" },
+        { name: "Odense — Wendorff", description: "Lunchstopp hos bageriet Wendorff på Asylgade. Allt bakas från grunden på en egen surdeg som matas varje dag — känt för sitt fullkornsbröd och sina bakverk." },
         { name: "Lillebæltbroen", description: "Överfarten från Fyn till Jylland — den ursprungliga 1935 års bro används fortfarande bredvid det nyare spannet." },
       ],
-      story: [
-        "Öresundsbron i förmiddagssolen — åtta kilometer snedkabelspann som övergår i fyra kilometer tunnel under sundet, ett ingenjörsmässigt nådesprov vi aldrig tröttnar på. Genom Sjælland och över Stora Bält vid Storebælt, arton kilometer hängkabel sjungande i vinden.",
-        "Fyn gled förbi som ett pastoralmåleri, sedan Lillebælt till Jylland och söderut mot tyska gränsen vid Padborg. Vid femtiden befann vi oss på Lüneburgheden; Stemmen tog emot oss med sin stillhet — den sorts by där kyrkklockan är det högljuddaste på en kilometers radie.",
+      resources: [
+        { title: "Hjelholts Uldspinderi", url: "https://www.hjelholt.dk/", note: "Familjespinneri på Fyn sedan 1878 — fabriksbutik och webbshop med garn." },
+        { title: "Wendorff (bageri, Odense)", url: "https://wendorff.dk/", note: "Asylgade 16. Surdegsbageri där allt görs från grunden." },
       ],
+      story: [
+        "Frukost på MJ's i Malmö — mörkt trä och den rosa flamingostolen i morgonljus — innan vi rullade ut på Öresundsbron i förmiddagssolen: åtta kilometer snedkabelspann som dyker ner i fyra kilometer tunnel under sundet, ett ingenjörsmässigt nådesprov vi aldrig tröttnar på. Genom Sjælland och över Stora Bält vid Storebælt, arton kilometer hängkabel sjungande i vinden, och in på Fyn.",
+        "På södra Fyn svängde vi av till Hjelholts Uldspinderi, ett familjespinneri som kardat och spunnit dansk ull sedan 1878 — fjärde generationen, maskiner från fyrtiotalet som fortfarande snurrar. Vi gick därifrån med famnen full av garn. Sedan norrut till Odense och lunch hos Wendorff, ett bageri där allt görs från grunden på en daglig surdeg; fullkornsbröd och bakverk i skuggan på Asylgade.",
+        "Lillebælt tog oss över till Jylland och söderut mot gränsen vid Padborg. Vid kvällningen nådde vi Lüneburgheden; Stemmen tog emot oss med sin stillhet — den sorts by där kyrkklockan är det högljuddaste på en kilometers radie. En sen middag på Landgut Stemmens egen restaurang rundade av dagen: sallad, en knaprig wienerschnitzel och en currywurst — regionalt och rejält vid hedens kant.",
+      ],
+      pullQuote: "Tre broar, ett nystan garn och en wienerschnitzel vid hedens kant.",
       images: [
         { src: "https://images.unsplash.com/photo-1657315221772-8a7846122d28?w=1600&auto=format&fit=crop&q=80", caption: "Överfarten vid Öresund." },
         { src: "https://images.unsplash.com/photo-1567451600215-ab9204b1fe21?w=1600&auto=format&fit=crop&q=80", caption: "Storebælt — hängbron över Stora Bält." },

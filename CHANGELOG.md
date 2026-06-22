@@ -24,7 +24,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   story passage on Piet Oudolf's garden and Renzo Piano's barns, plus resource
   links to the museum. Added actual timings (departed 09:30, reached Malmö
   18:28) and corrected the waypoint order (Jönköping before Vandalorum) so the
-  route map no longer zig-zags south of Värnamo.
+  route map no longer zig-zags south of Värnamo. Also recorded the Malmö
+  evening: the stay at the MJ's boutique hotel and a (generous) tapas dinner at
+  Vibliotek by the canal, with a resource link.
+- **Day 2 itinerary** — rewrote the story to the real day: breakfast at MJ's,
+  the Öresund crossing, yarn from Hjelholts Uldspinderi (family wool mill on
+  Funen, est. 1878), lunch at the Wendorff bakery in Odense, and a late dinner
+  at Landgut Stemmen (salad, Wiener schnitzel, currywurst). Enriched the
+  en-route stops (dropped Kronborg, which was skipped), added a restaurant
+  description to the lodging, and added Hjelholt + Wendorff resource links.
 
 ### Fixed
 - **Responsive & accessibility (mobile)** — resolved all five block-merge
