@@ -91,7 +91,7 @@ export const trip: Trip = {
       title: "Tre broar, ingen färja",
       kicker: "Dag två · Malmö → Stemmen",
       from: { id: "malmo", name: "Malmö", country: "Sverige", coords: [55.605, 13.0038] },
-      to: { id: "stemmen", name: "Stemmen", country: "Tyskland", coords: [52.875, 9.683] },
+      to: { id: "stemmen", name: "Stemmen", country: "Tyskland", coords: [53.222, 9.551] },
       waypoints: [
         { id: "copenhagen", name: "Copenhagen", country: "Danmark", coords: [55.6761, 12.5683] },
         { id: "storebaelt", name: "Storebælt Bridge", country: "Danmark", coords: [55.3417, 11.0367] },
@@ -159,7 +159,7 @@ export const trip: Trip = {
       weekday: "tisdag",
       title: "Västerut mot Lågländerna",
       kicker: "Dag tre · Stemmen → Gent",
-      from: { id: "stemmen", name: "Stemmen", country: "Tyskland", coords: [52.875, 9.683] },
+      from: { id: "stemmen", name: "Stemmen", country: "Tyskland", coords: [53.222, 9.551] },
       to: { id: "gent", name: "Gent", country: "Belgien", coords: [51.0543, 3.7174] },
       waypoints: [
         { id: "osnabruck", name: "Osnabrück", country: "Tyskland", coords: [52.2799, 8.0472] },
