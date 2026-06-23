@@ -167,7 +167,7 @@ export const trip: Trip = {
       ],
       drivingKm: 520,
       drivingDuration: "5h 15m",
-      driveNote: "Övernattning i Gent.",
+      driveNote: "Mestadels bakom ratten: tre länder på en dag — Tyskland, Nederländerna, Belgien. Övernattning i Gent.",
       lodging: {
         name: "Jam Hotel Ghent",
         address: "Gent, Belgium",
@@ -192,13 +192,16 @@ export const trip: Trip = {
         ],
       },
       enRouteStops: [
-        { name: "Düsseldorf Altstadt", description: "En snabb lunchpaus vid Rhen. Känd för sin historiska stadskärna och 'världens längsta bar'." },
-        { name: "Maastricht (Nederländerna)", description: "Vacker medeltida stad i södra Nederländerna, perfekt för ett kaffestopp." },
+        { name: "Tre länder på en dag", description: "Tyskland, Nederländerna och Belgien i en följd — mestadels motorväg och vindkraftverk." },
+        { name: "Salladslunch vid snabbladdaren", description: "Ett snabbt stopp nära nederländska gränsen: en sallad medan vagnen fyllde på ström." },
+        { name: "Tush, Gent", description: "Burgerstället vid Hoogpoort mitt i stan — rosa neon och en ryktbar friterad kycklingburgare. Här blev det middag." },
+        { name: "Gents medeltida centrum", description: "Kvällspromenad förbi Sint-Niklaaskerk, Gravensteen och gavelhusen längs Graslei och Korenlei." },
       ],
       story: [
-        "Den nordtyska slätten gled förbi som ett grönt kassabok; vindkraftpark efter vindkraftpark. Kaffe i Osnabrück, lunch i farten, gränsen till Nederländerna markerad enbart av ett artigare typsnitt på vägskyltar.",
-        "Gent i gyllene timme är en stad som visar upp sig — tre medeltida torn längs Graslei, en flod som inte kan bestämma sig för om den är en kanal, och en pommes frites-kiosk på varannan gathörn. Vi valde den tredje.",
+        "En dag mest bakom ratten: Stemmen till Gent, tre länder avverkade på rad. Den nordtyska slätten gled förbi som ett grönt kassabok, vindkraftpark efter vindkraftpark, innan Tyskland blev Nederländerna och Nederländerna blev Belgien — gränserna märkbara mest på ett artigare typsnitt på vägskyltarna. En snabb sallad till lunch medan vagnen laddade, sedan vidare västerut.",
+        "I Gent checkade vi in på Jam Hotel, ett industriromantiskt ställe med tegelvalv mitt i stan. Sara hade fått huvudvärk och stannade på rummet; resten av gänget gick ut och åt burgare på Tush vid Hoogpoort, under rosa neon. Sedan en lång kvällspromenad genom Gents vackra medeltida centrum: Sint-Niklaaskerk och de tre tornen, Gravensteen speglad i vattnet, och Graslei och Korenlei i gyllene kvällsljus.",
       ],
+      pullQuote: "Tre länder på en dag — och kvällen tillhörde Gent.",
       images: [
         { src: "https://images.unsplash.com/photo-1633441260458-0838dfa27e9a?w=1600&auto=format&fit=crop&q=80", caption: "Västerut genom Niedersachsen, autobahn genom vindkraftsland." },
         { src: "https://images.unsplash.com/photo-1647273922449-fb98bc3584f1?w=1600&auto=format&fit=crop&q=80", caption: "Maastricht, strax innanför den holländska gränsen." },

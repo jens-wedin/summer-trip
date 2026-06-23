@@ -33,6 +33,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   at Landgut Stemmen (salad, Wiener schnitzel, currywurst). Enriched the
   en-route stops (dropped Kronborg, which was skipped), added a restaurant
   description to the lodging, and added Hjelholt + Wendorff resource links.
+- **Day 3 itinerary** — rewrote the story to the real day: a long drive from
+  Stemmen to Gent across three countries (Germany, Netherlands, Belgium) with a
+  quick salad lunch while charging, then Gent — check-in at the Jam Hotel (Sara
+  stayed in with a headache), burgers at Tush on Hoogpoort, and an evening walk
+  through the medieval centre (Sint-Niklaaskerk, Gravensteen, Graslei/Korenlei).
+  Replaced the speculative Düsseldorf/Maastricht en-route stops with the actual
+  route.
+- **Trip photos** — added 25 more photos (56 total), optimized to ~2000px/q80,
+  and captioned all of them (caption + date + place) from EXIF time/GPS and
+  image content.
 
 ### Fixed
 - **Responsive & accessibility (mobile)** — resolved all five block-merge
