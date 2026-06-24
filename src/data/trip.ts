@@ -221,12 +221,12 @@ export const trip: Trip = {
       from: { id: "gent", name: "Gent", country: "Belgien", coords: [51.0543, 3.7174] },
       to: { id: "honfleur", name: "Honfleur", country: "Frankrike", coords: [49.4185, 0.2308] },
       waypoints: [
-        { id: "calais", name: "Calais", country: "Frankrike", coords: [50.9513, 1.8587] },
-        { id: "rouen", name: "Rouen", country: "Frankrike", coords: [49.4432, 1.0993] },
+        { id: "bray-dunes", name: "Bray-Dunes", country: "Frankrike", coords: [51.0797, 2.5143] },
+        { id: "escalles", name: "Escalles", country: "Frankrike", coords: [50.9215, 1.7023] },
       ],
-      drivingKm: 340,
-      drivingDuration: "3h 45m",
-      driveNote: "Kustnära körsträcka.",
+      drivingKm: 380,
+      drivingDuration: "4h",
+      driveNote: "Längs Engelska kanalen — stränder och bunkrar vid Bray-Dunes och Escalles — och sedan över Pont de Normandie till Honfleur.",
       lodging: {
         name: "L'Absinthe Hôtel",
         address: "Honfleur, France",
@@ -238,7 +238,7 @@ export const trip: Trip = {
         payment: "Sara betalt 15/4",
         bookedVia: "Hotels.com",
         description:
-          "Historisk hamnstad i Normandie, känd för sin pittoreska hamn och impressionistiska historia.",
+          "Historisk hamnstad i Normandie, känd för sin pittoreska hamn och impressionistiska historia. L'Absinthe har egen restaurang (där vi åt) och en 'honesty bar' där man själv skriver upp vad man dricker.",
         status: "booked",
       },
       charging: {
@@ -249,14 +249,16 @@ export const trip: Trip = {
         ],
       },
       enRouteStops: [
-        { name: "Cap Blanc-Nez", description: "Imponerande vita klippar längs Opalkysten med utsikt över Engelska kanalen." },
-        { name: "Saint-Valery-sur-Somme", description: "Charmig medeltida stad vid Sommes mynning, känd för sina färggranna hus och en sälkoloni." },
+        { name: "Bray-Dunes", description: "Första stoppet, en knapp timme från Gent nära Dunkerque: en promenad vid havet och de gamla betongbunkrarna kvar i dynerna." },
+        { name: "Escalles (Cap Blanc-Nez)", description: "Stranden vid Calais, under Cap Blanc-Nez vita kritklippor — Engelska kanalen utbredd framför oss, England någonstans bortom horisonten." },
+        { name: "Pinsa-lunch", description: "En snabb pinsa på vägen — alldeles för mycket mat; vi kom igenom kanske en fjärdedel." },
+        { name: "Pont de Normandie", description: "Två timmars körning och så den höga, svindlande bron över Seines mynning, ner mot Honfleur." },
       ],
       story: [
-        "Ner genom Flandern, längs kusten där vägen tillät det; kritklipporna vid Cap Blanc-Nez reste sig mot himlen ovanför Calais. Vi korsade Seine på den högt svävande Pont de Normandie och Honfleur — målarnas stad, där Boudin lärde Monet att se ljuset — öppnade sig nedanför.",
-        "Skifertak, fiskebåtar speglande sig dubbelt i hamnen, ostron från ett stånd, cider i ett grovt glas.",
+        "Ut ur Gent och västerut mot Engelska kanalen. Första stoppet låg en knapp timme bort, nära Dunkerque: Bray-Dunes, där vi gick längs havet och tittade på de gamla bunkrarna som ligger kvar i dynerna. Vidare till Escalles vid Calais, en strand under Cap Blanc-Nez vita kritklippor med kanalen utbredd framför oss. Lunchen blev en pinsa — alldeles för mycket mat; vi åt kanske en fjärdedel av alltihop.",
+        "Sedan två timmars körning, över den högt svävande Pont de Normandie där Seine möter havet, och in i Honfleur. Vi åt en riktigt bra middag på L'Absinthe och tog en kvällspromenad genom den gamla hamnstaden, bara för att se den. Tillbaka på L'Absinthe-hotellet spelade Nelson och jag schack; baren var en 'honesty bar' där man själv skrev upp vad man druckit.",
       ],
-      pullQuote: "Honfleur — där Boudin lärde Monet att se ljuset.",
+      pullQuote: "Bunkrar i dynerna, kritklippor över kanalen — och schack på honesty-baren i Honfleur.",
       images: [
         { src: "https://images.unsplash.com/photo-1550522667-09c9bdb293a1?w=1600&auto=format&fit=crop&q=80", caption: "Pont de Normandie sent på eftermiddagen." },
         { src: "https://images.unsplash.com/photo-1553406263-51ca876460c9?w=1600&auto=format&fit=crop&q=80", caption: "Cap Blanc-Nez — kritklipporna ovanför Calais." },

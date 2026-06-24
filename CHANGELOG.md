@@ -40,7 +40,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   through the medieval centre (Sint-Niklaaskerk, Gravensteen, Graslei/Korenlei).
   Replaced the speculative Düsseldorf/Maastricht en-route stops with the actual
   route.
-- **Trip photos** — added 25 more photos (56 total), optimized to ~2000px/q80,
+- **Day 4 itinerary** — rewrote the story to the real day: out of Gent and west
+  to the Channel coast, a beach-and-bunkers walk at Bray-Dunes (near Dunkerque),
+  the chalk cliffs of Cap Blanc-Nez above the beach at Escalles, a far-too-large
+  pinsa lunch, then the soaring Pont de Normandie into Honfleur — dinner at
+  L'Absinthe, an evening stroll through the old port, and chess back at the hotel
+  by its "honesty bar". Updated the waypoints (Bray-Dunes, Escalles) and replaced
+  the speculative en-route stops; noted the L'Absinthe restaurant + honesty bar
+  in the lodging.
+- **Trip photos** — added 46 more photos (102 total), optimized to ~2000px/q80,
   and captioned all of them (caption + date + place) from EXIF time/GPS and
   image content.
 
