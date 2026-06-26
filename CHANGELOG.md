@@ -55,7 +55,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   the Mulberry-harbour remains, then the small roads into Bayeux to meet the
   apartment host and cook dinner in. Updated the waypoint (Lion-sur-Mer), added
   en-route stops and a host note to the lodging.
-- **Trip photos** — added 23 more photos (125 total), optimized to ~2000px/q80,
+- **Day 6 itinerary** — rewrote the story to the real day: a full-day guided
+  Bayeux Shuttle D-Day tour (Nelson + Jens) through the British sector (Gold
+  Beach / British Normandy Memorial, Arromanches Mulberry harbour, the
+  Longues-sur-Mer German battery), a lunch break in Bayeux, then the American
+  sector (Omaha Beach and the Normandy American Cemetery at Colleville);
+  Sara & Elsa stayed home for the football and shopping, and the evening closed
+  with a home-made salad and a late walk past the cathedral. Added the tour
+  stops as en-route stops and the timeline PDF as a resource.
+- **Trip photos** — added 36 more photos (161 total), optimized to ~2000px/q80,
   and captioned all of them (caption + date + place) from EXIF time/GPS and
   image content.
 

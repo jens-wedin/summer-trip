@@ -343,12 +343,25 @@ export const trip: Trip = {
           url: "https://bayeuxshuttle.com/tour/british-american-dday-experience/",
           note: "Upphämtning 8:45 · ref 260476 · 10 stopp · tillbaka 17:15",
         },
+        {
+          title: "Turens tidslinje — brittisk/amerikansk D-dag (PDF)",
+          url: "https://bayeuxshuttle.com/wp-content/uploads/2023/05/Blue-PDF-TIMELINE-British-American-DDAY-Experience.pdf",
+          note: "Dagens stopp och en historisk tidslinje.",
+        },
+      ],
+      enRouteStops: [
+        { name: "Gold Beach & Mulberryhamnen", description: "Den brittiska sektorn vid Arromanches — resterna av den konstgjorda invasionshamnen från 1944 ligger kvar ute i vattnet." },
+        { name: "Longues-sur-Mer", description: "Det tyska kustbatteriet med kanonerna kvar i sina betongbunkrar, riktade mot kanalen." },
+        { name: "Lunchpaus i Bayeux", description: "Tillbaka in till stan mitt på dagen för lunch." },
+        { name: "Omaha Beach", description: "Den amerikanska sektorn — den breda, ökända stranden vid lågvatten." },
+        { name: "Amerikanska militärkyrkogården", description: "Colleville-sur-Mer, uppe på branten över Omaha: rader av vita kors med utsikt över havet." },
       ],
       story: [
-        "Bayeux Shuttle-turen — upphämtning 8:45, ref 260476, tio stopp längs D-dagsokusten och tillbaka till stan vid 17:15. Omaha, Pointe du Hoc, den amerikanska begravningsplatsen vid Colleville uppe på branten — guidad den här gången, vilket innebär att man faktiskt kan se.",
-        "Aperitif på kullerstensbelagda rue Saint-Jean medan kyrkklockor började ringa klockan sex.",
+        "Nelson och jag ägnade hela dagen åt en guidad D-dagstur med Bayeux Shuttle — upphämtning på morgonen och tio stopp längs kusten. Vi började i den brittiska sektorn: Gold Beach och Mulberryhamnen vid Arromanches, och det tyska kustbatteriet vid Longues-sur-Mer med kanonerna kvar i sina bunkrar.",
+        "Efter en lunchpaus i Bayeux fortsatte vi till den amerikanska sektorn: Omaha Beach och den amerikanska militärkyrkogården uppe på branten vid Colleville-sur-Mer. En riktigt bra tur — med en kunnig guide gör det hela skillnaden att faktiskt se platserna och förstå vad som hände.",
+        "Sara och Elsa stannade hemma, såg fotbollsmatchen och hann med lite shopping. På kvällen, när vi kom hem, åt vi sallad och tog en sen promenad genom stan — spanade in restauranger och tittade på katedralen.",
       ],
-      pullQuote: "Barn lekte på sand som den 6 juni 1944 inte tillhörde barn.",
+      pullQuote: "Med en guide som kan berätta blir stränderna något man faktiskt ser.",
       images: [
         { src: "https://images.unsplash.com/photo-1718579770275-299c1cc7d1cc?w=1600&auto=format&fit=crop&q=80", caption: "Omaha Beach vid lågvatten." },
         { src: "https://images.unsplash.com/photo-1665764630018-fbd45d77b163?w=1600&auto=format&fit=crop&q=80", caption: "Amerikanska militärkyrkogården, Colleville-sur-Mer." },
