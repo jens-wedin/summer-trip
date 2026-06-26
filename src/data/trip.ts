@@ -273,16 +273,16 @@ export const trip: Trip = {
       id: 5,
       date: "torsdag 25 juni",
       weekday: "torsdag",
-      title: "Ett kort skutt in i historien",
+      title: "Genom hettan till Bayeux",
       kicker: "Dag fem · Honfleur → Bayeux",
       from: { id: "honfleur", name: "Honfleur", country: "Frankrike", coords: [49.4185, 0.2308] },
       to: { id: "bayeux", name: "Bayeux", country: "Frankrike", coords: [49.2768, -0.7028] },
       waypoints: [
-        { id: "caen", name: "Caen", country: "Frankrike", coords: [49.1829, -0.3707] },
+        { id: "lion-sur-mer", name: "Lion-sur-Mer", country: "Frankrike", coords: [49.304, -0.317] },
       ],
-      drivingKm: 95,
-      drivingDuration: "1h 15m",
-      driveNote: "Obligatoriskt stopp. Kort avslutande etapp.",
+      drivingKm: 100,
+      drivingDuration: "1h 30m",
+      driveNote: "Hettan styrde dagen — längs kusten till stranden i Lion-sur-Mer och sedan småvägar in till Bayeux.",
       lodging: {
         name: "Airbnb Lägenhet, Bayeux",
         address: "Bayeux, France",
@@ -291,16 +291,26 @@ export const trip: Trip = {
         price: "4 420 kr",
         payment: "Sara betalt vid bokning",
         bookedVia: "Airbnb",
+        description:
+          "Lägenhet i centrala Bayeux — vi möttes av värden vid incheckning. Bas i tre nätter för D-dagstränderna, gobelängen och katedralen.",
         status: "booked",
       },
       charging: {
         note: "Supercharger i Caen (40 min från Bayeux).",
         stops: [],
       },
-      story: [
-        "En kort kördag — avsiktligt kort. Vägen kantade Côte Fleurie innan den svängde inåt land genom bocagen — ett lapptäcke av små åkrar och höga häckar som 1944 var ett helvete för stridsvagnar och nu bara är pittoreskt.",
-        "Bayeux, vår bas under tre nätter, skonades från de bombningar som jämnade merparten av Normandie med marken; dess katedral och de smala, lutande husen ser ut nästan precis som de såg ut när Vilhelm seglade mot England.",
+      enRouteStops: [
+        { name: "Honfleur på morgonen", description: "En sista promenad i den gamla staden — och solfjädrar inhandlade, för redan på morgonen kröp värmen mot 40 grader." },
+        { name: "Picknick från mataffären", description: "Nybakat bröd, ost och italiensk skinka — lunch att ta med till stranden." },
+        { name: "Lion-sur-Mer", description: "Stranden vid Engelska kanalen. För hett för att vara på sanden, så vi satt i skuggan på trottoaren; Sara och Elsa doppade tårna — bland massor av maneter." },
+        { name: "Arromanches-les-Bains", description: "Ett stopp längs kustvägen: resterna av Mulberryhamnen — den konstgjorda invasionshamnen från 1944 — ligger fortfarande ute i vattnet vid Gold Beach." },
       ],
+      story: [
+        "Vi checkade ut från det vackra hotellet i Honfleur och tog en sista sväng genom staden, där vi köpte solfjädrar — redan på morgonen var det kvävande hett, upp mot 40 grader. Vi bestämde oss för en strandutflykt och handlade picknick i mataffären: nybakat bröd, ost och italiensk skinka.",
+        "Sedan körde vi till Lion-sur-Mer vid kusten. Men det var för varmt för att vara på själva stranden, så vi slog oss ner i skuggan på trottoaren. Sara och Elsa gick ändå ner och doppade tårna — bland förvånansvärt många maneter.",
+        "På eftermiddagen tog vi småvägarna längs kusten mot Bayeux och stannade till vid Arromanches, där resterna av Mulberryhamnen — den konstgjorda invasionshamnen från 1944 — fortfarande ligger ute i vattnet. Framme i Bayeux, vår bas i tre nätter, möttes vi av värden till lägenheten; på kvällen handlade vi middag och lagade mat hemma. Bayeux självt skonades från bombningarna som jämnade stora delar av Normandie med marken — katedralen och de smala, lutande husen står nästan som de gjorde när Vilhelm seglade mot England.",
+      ],
+      pullQuote: "För varmt för stranden — så det blev solfjädrar, skugga och tårna bland maneterna.",
       images: [
         { src: "https://images.unsplash.com/photo-1719731923723-61288b878ff9?w=1600&auto=format&fit=crop&q=80", caption: "Normandisk bocage, häckar och smala åkrar." },
         { src: "https://images.unsplash.com/photo-1666286487652-460b05f89842?w=1600&auto=format&fit=crop&q=80", caption: "Bayeux katedral, västra fasaden." },

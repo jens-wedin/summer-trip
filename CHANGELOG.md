@@ -48,7 +48,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   by its "honesty bar". Updated the waypoints (Bray-Dunes, Escalles) and replaced
   the speculative en-route stops; noted the L'Absinthe restaurant + honesty bar
   in the lodging.
-- **Trip photos** — added 46 more photos (102 total), optimized to ~2000px/q80,
+- **Day 5 itinerary** — rewrote the story to the real day: checkout from
+  Honfleur (hand fans bought against a near-40°C heat), a grocery-store picnic,
+  and a beach trip to Lion-sur-Mer where it was too hot for the sand (shade on
+  the pavement; jellyfish in the shallows), a coastal stop at Arromanches to see
+  the Mulberry-harbour remains, then the small roads into Bayeux to meet the
+  apartment host and cook dinner in. Updated the waypoint (Lion-sur-Mer), added
+  en-route stops and a host note to the lodging.
+- **Trip photos** — added 23 more photos (125 total), optimized to ~2000px/q80,
   and captioned all of them (caption + date + place) from EXIF time/GPS and
   image content.
 
