@@ -63,7 +63,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   Sara & Elsa stayed home for the football and shopping, and the evening closed
   with a home-made salad and a late walk past the cathedral. Added the tour
   stops as en-route stops and the timeline PDF as a resource.
-- **Trip photos** — added 36 more photos (161 total), optimized to ~2000px/q80,
+- **Day 7 itinerary** — rewrote the story to the real day: a slow last day in
+  Bayeux — a late start with a bakery breakfast at À La Reine Mathilde, a booked
+  lunch at Le Moulin de la Galette (galettes, mussels, dessert and a Café Calva),
+  a wander through the Brocante de Bayeux flea market, a visit to the cathedral,
+  and a quiet evening at the apartment with Little Italy pizza while planning
+  Paris. Added the food spots as resources, the day's stops as en-route stops,
+  and a new title/pull-quote.
+- **Trip photos** — added 21 more photos (182 total), optimized to ~2000px/q80,
   and captioned all of them (caption + date + place) from EXIF time/GPS and
   image content.
 

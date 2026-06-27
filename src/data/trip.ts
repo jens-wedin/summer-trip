@@ -376,7 +376,7 @@ export const trip: Trip = {
       id: 7,
       date: "lördag 27 juni",
       weekday: "lördag",
-      title: "Gobelängen, katedralen, fri dag",
+      title: "En lugn dag i Bayeux",
       kicker: "Dag sju · Bayeux",
       from: { id: "bayeux", name: "Bayeux", country: "Frankrike", coords: [49.2768, -0.7028] },
       to: { id: "bayeux", name: "Bayeux", country: "Frankrike", coords: [49.2768, -0.7028] },
@@ -388,10 +388,35 @@ export const trip: Trip = {
         dates: "Natt 3 av 3",
         status: "booked",
       },
-      story: [
-        "En hel dag till fots. Gobelängen allra först — sjuttio meter ullmålning från 1000-talet, mer bildmässigt läsbar än halva morgontidningen. Katedralen, sedan en lång lunch under ett parasoll, därefter Musée Mémorial på eftermiddagen — nyktrande och nödvändigt.",
-        "Aperitif på rue Saint-Jean; en maklig middag för att runda av tre nätter i staden.",
+      resources: [
+        {
+          title: "À La Reine Mathilde — bageri",
+          url: "https://maps.app.goo.gl/TKTCq6k4eW5szdim9",
+          note: "Bröd och kaffe till frukost.",
+        },
+        {
+          title: "Le Moulin de la Galette — lunch",
+          url: "https://maps.app.goo.gl/Jt3D1t7UiKgJE7Kf9",
+          note: "Galettes, musslor, dessert och Café Calva.",
+        },
+        {
+          title: "Little Italy — pizza",
+          url: "https://maps.app.goo.gl/PWMjUXeuKTsbX7mU6",
+          note: "Lokal pizza till middag i lägenheten.",
+        },
       ],
+      enRouteStops: [
+        { name: "Frukost på À La Reine Mathilde", description: "Sen start på dagen — nybakat bröd och kaffe från bageriet." },
+        { name: "Lunch på Le Moulin de la Galette", description: "Bokad lunch: galettes, musslor och dessert, avrundat med kaffe och en Café Calva — kaffe med calvados." },
+        { name: "Brocante de Bayeux", description: "En stor loppmarknad. Mycket att titta på, men inget följde med hem." },
+        { name: "Bayeux katedral", description: "Ett besök i den gotiska katedralen mitt i staden." },
+      ],
+      story: [
+        "En lugn dag. Vi startade sent och inledde med frukost på bageriet À La Reine Mathilde — nybakat bröd och kaffe. Mitt på dagen hade vi bokat lunch på Le Moulin de la Galette: galettes, musslor och dessert, avrundat med kaffe och en Café Calva, alltså kaffe med en skvätt calvados.",
+        "Efter lunchen strosade vi runt på en stor loppmarknad, Brocante de Bayeux — mycket att titta på, men inget vi bar med oss hem. Sedan ett besök i Bayeux katedral, den gotiska jätten mitt i stan.",
+        "Eftermiddagen tillbringade vi lugnt i lägenheten. Till middag blev det lokal pizza från Little Italy, och sedan började vi planera morgondagens etapp — vidare till Paris.",
+      ],
+      pullQuote: "Galettes, musslor och en Café Calva — en maklig sista dag i Bayeux.",
       images: [
         { src: "https://images.unsplash.com/photo-1740833103640-1ce2afad0114?w=1600&auto=format&fit=crop&q=80", caption: "Bayeux katedralinteriör — romansk krypta, gotiskt skepp." },
         { src: "https://images.unsplash.com/photo-1752511424978-6d822cb15635?w=1600&auto=format&fit=crop&q=80", caption: "Korsvirkes-normandiska hus längs en kullerstensbelagd gränd." },
