@@ -440,6 +440,7 @@ export const trip: Trip = {
       ],
       drivingKm: 265,
       drivingDuration: "3h 00m",
+      driveNote: "Tre timmar österut längs A13; lunch på vägen och en lugn söndag rakt in i Paris.",
       lodging: {
         name: "Hotel Panache",
         address: "Paris, France",
@@ -465,11 +466,20 @@ export const trip: Trip = {
         { title: "Paris parking — Indigo Neo", url: "https://www.indigoneo.fr/en/" },
         { title: "Paris parking — Parclick", url: "https://parclick.com/parking-paris" },
         { title: "Paris parking — overview", url: "https://paristouristinformation.fr/plan/public-transport/parking/" },
+        { title: "L'Oursin — middag", url: "https://maps.app.goo.gl/p9AnAgfC43CDger96" },
+      ],
+      enRouteStops: [
+        { name: "Frukost på À La Reine Mathilde", description: "En sista frukost på bageriet i Bayeux innan avfärd." },
+        { name: "Lunch på vägen", description: "Ett kort laddningsstopp och fynd på en lågprisbutik — lunch att äta i bilen." },
+        { name: "Arc de Triomphe", description: "Lugn söndagstrafik in i Paris; vi rullade förbi triumfbågen på väg till hotellet." },
+        { name: "Passage Jouffroy", description: "En eftermiddagspromenad genom den överglasade 1800-talspassagen nära hotellet." },
       ],
       story: [
-        "Österut längs A13. Seine höll oss sällskap den sista timmen och Paris anlände snarare som ett ljud än en stad — tutor, mopeder, den otåliga andedräkten från en plats som i århundraden har varit sin egen medelpunkt.",
-        "Vi lämnade vagnen i Hotel Panaches garage och gick direkt till Seine. Eiffeltornet stod kvar där vi lämnade det; vi satt på stenbröstningen och åt pistachglass som redan höll på att förlora striden mot eftermiddagsvärmen.",
+        "Vi tog en sista frukost på À La Reine Mathilde i Bayeux innan vi rullade österut mot Paris — en dryg tretimmarstur. Ett kort laddningsstopp på vägen, och så hittade vi en lågprisbutik där vi köpte lunch att äta i bilen.",
+        "Vid tvåtiden var vi framme. Trafiken var lugn — det var söndag — så vi tog de stora lederna rakt in, förbi Arc de Triomphe, och checkade in på Hotel Panache på sjunde våningen (med en egen minigolf på rummet!). På eftermiddagen strosade vi genom Passage Jouffroy, den överglasade 1800-talspassagen.",
+        "Till middag inledde vi med en drink på Brasserie Flora och promenerade sedan vidare till L'Oursin.",
       ],
+      pullQuote: "Söndagslugn rakt in i Paris — och minigolf på hotellrummet.",
       images: [
         { src: "https://images.unsplash.com/photo-1439393161192-32360eb753f1?w=1600&auto=format&fit=crop&q=80", caption: "Eiffeltornet, kvällstid." },
         { src: "https://images.unsplash.com/photo-1741470292280-5f068efc561d?w=1600&auto=format&fit=crop&q=80", caption: "Paris från Trocadéros hustak." },
@@ -498,10 +508,26 @@ export const trip: Trip = {
         bookedVia: "Direkt med hotellet",
         status: "booked",
       },
-      story: [
-        "Louvren vid öppningstid, fram till Mona Lisa och ut vid lunchtid. Tuilerierna, sedan en lång stund under ett platan-träd med crêpes och en pocketbok ingen hann läsa ut. Sainte-Chapelle sent på eftermiddagen — rosfönstret ägnat sig åt detsamma i sju hundra år.",
-        "Middag på rue des Martyrs; en promenad tillbaka genom Marais längs upplysta butiksfasader.",
+      resources: [
+        { title: "Merci — konceptbutik", url: "https://maps.app.goo.gl/ayYPsE1Z5Z8sF1z98" },
+        { title: "Dumbo — burgare", url: "https://maps.app.goo.gl/zqdPZDRxuGAD3NLH8" },
+        { title: "Billie — middag", url: "https://maps.app.goo.gl/SXRgL5KQkhaK8s7B8" },
+        { title: "Louvren", url: "https://maps.app.goo.gl/kZZVZvSGN8v8it5A9" },
+        { title: "Notre-Dame", url: "https://maps.app.goo.gl/LoBQyd6dqKiuE9xA6" },
       ],
+      enRouteStops: [
+        { name: "Merci", description: "Promenad till konceptvaruhuset Merci i Marais." },
+        { name: "Dumbo + picknick i parken", description: "Burgare från Dumbo, ätna i en park i närheten." },
+        { name: "Armband och mot Louvren", description: "Ett stopp där Elsa köpte armband — sedan mot Louvren, men Nelson blev sjuk och vi tog en taxi hem." },
+        { name: "Middag på Billie", description: "Efter vila kom vi ut igen: en drink och middag på Billie." },
+        { name: "Kvällspromenad", description: "Louvren, Seines kajer och Notre-Dame — och hela vägen tillbaka. 25 000 steg." },
+      ],
+      story: [
+        "Frukost på hotellet, sedan en promenad till konceptvaruhuset Merci i Marais. Vi hämtade burgare på Dumbo och åt dem i en park i närheten, och stannade till där Elsa köpte armband.",
+        "På väg mot Louvren blev Nelson sjuk, så det fick bli en taxi tillbaka till hotellet för vila. På kvällen kom vi ut igen, tog en drink och åt middag på Billie.",
+        "Sedan en lång kvällspromenad: till Louvren, längs Seines kajer, förbi Notre-Dame och hela vägen hem till hotellet igen — 25 000 steg den här dagen.",
+      ],
+      pullQuote: "25 000 steg: Marais, Louvren, Seines kajer och Notre-Dame.",
       images: [
         { src: "https://images.unsplash.com/photo-1743880475189-e36f80868bcc?w=1600&auto=format&fit=crop&q=80", caption: "Louvren, glaspyramiden på innergården." },
         { src: "https://images.unsplash.com/photo-1560726113-4c3f67cfa9ec?w=1600&auto=format&fit=crop&q=80", caption: "Sainte-Chapelle, det övre kapellet." },

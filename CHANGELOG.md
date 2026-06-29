@@ -70,7 +70,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   and a quiet evening at the apartment with Little Italy pizza while planning
   Paris. Added the food spots as resources, the day's stops as en-route stops,
   and a new title/pull-quote.
-- **Trip photos** — added 21 more photos (182 total), optimized to ~2000px/q80,
+- **Day 8 itinerary** — rewrote the story to the real day: a last bakery
+  breakfast in Bayeux, a three-hour drive with a grocery-outlet lunch eaten on
+  the road, a calm Sunday arrival in Paris past the Arc de Triomphe, check-in at
+  Hotel Panache (7th floor, with an in-room mini golf), a walk through Passage
+  Jouffroy, and a Brasserie Flora drink before dinner at L'Oursin. Added a drive
+  note, en-route stops and the L'Oursin link.
+- **Day 9 itinerary** — rewrote the story to the real day: breakfast at the
+  hotel, a walk to Merci, a Dumbo burger eaten in a Marais park, bracelets for
+  Elsa and a Louvre visit cut short when Nelson fell ill (cab home), then a
+  recovered evening — a drink, dinner at Billie, and a long night walk past the
+  Louvre, along the Seine and Notre-Dame (25 000 steps). Added the food/sight
+  links and the day's stops.
+- **Trip photos** — added 38 more photos (220 total), optimized to ~2000px/q80,
   and captioned all of them (caption + date + place) from EXIF time/GPS and
   image content.
 
