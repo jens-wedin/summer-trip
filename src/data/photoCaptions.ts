@@ -253,6 +253,7 @@ export const photoCaptions: Record<string, PhotoCaption> = {
 
   // Dag 10 · tisdag 30 juni — Paris i Napoleons fotspår (Madeleine, Eiffel, Les Invalides, Aux Crus de Bourgogne)
   "IMG_1088.jpeg": { caption: "Med tunnelbanan genom Paris", date: "30 juni", place: "Paris" },
+  "IMG_1089.jpeg": { caption: "Hela Paris utbrett på en karta", date: "30 juni", place: "Paris" },
   "IMG_1091.jpeg": { caption: "Bland pelarna vid La Madeleine", date: "30 juni", place: "Paris" },
   "IMG_1092.jpeg": { caption: "Inne i La Madeleine", date: "30 juni", place: "Paris" },
   "IMG_1093.jpeg": { caption: "Paris första offentliga toalett, från 1905", date: "30 juni", place: "Paris" },
