@@ -284,6 +284,14 @@ export const photoCaptions: Record<string, PhotoCaption> = {
   "IMG_1142.jpeg": { caption: "Paris i solnedgången efter middagen", date: "30 juni", place: "Paris" },
   "IMG_1146.jpeg": { caption: "Elsa och jag på kollar på bar och kollar på fotboll", date: "30 juni", place: "Paris" },
   "IMG_1147.jpeg": { caption: "Frankrike–Sverige på baren", date: "30 juni", place: "Paris" },
+  "IMG_8838.jpeg": { caption: "Morgon i rummet på Hotel Panache", date: "30 juni", place: "Paris" },
+  "IMG_8840.jpeg": { caption: "Vid bageridisken på morgonen", date: "30 juni", place: "Paris" },
+  "IMG_8846.jpeg": { caption: "Bland grönska och rispapperslampor i en Parisbutik", date: "30 juni", place: "Paris" },
+  "IMG_8848.jpeg": { caption: "Textilier och speglar i en concept store", date: "30 juni", place: "Paris" },
+  "IMG_8855.jpeg": { caption: "Lunch i solen på en terrass", date: "30 juni", place: "Paris" },
+  "IMG_8856.jpeg": { caption: "Genom fönstret till en brasserie", date: "30 juni", place: "Paris" },
+  "IMG_8857.jpeg": { caption: "In i en gyllene delikatessbutik", date: "30 juni", place: "Paris" },
+  "IMG_8864.jpeg": { caption: "Vid bordet på Aux Crus de Bourgogne", date: "30 juni", place: "Paris" },
 
   // Dag 11 · onsdag 1 juli — Paris → Waterloo → Roermond
   "IMG_1149.jpeg": { caption: "Sista frukosten på Hotel Panache", date: "1 juli", place: "Paris" },
@@ -307,6 +315,11 @@ export const photoCaptions: Record<string, PhotoCaption> = {
   "IMG_1174.jpeg": { caption: "Elsa och Sara vid middagen", date: "1 juli", place: "Roermond" },
   "IMG_1175.jpeg": { caption: "Kväll i Roermond", date: "1 juli", place: "Roermond" },
   "IMG_1178.jpeg": { caption: "Sint-Christoffelkatedralen i Roermond", date: "1 juli", place: "Roermond" },
+  "IMG_8871.jpeg": { caption: "Frukostbordet sista morgonen i Paris", date: "1 juli", place: "Paris" },
+  "IMG_8878.jpeg": { caption: "Vila i skuggan vid Waterloo", date: "1 juli", place: "Waterloo" },
+  "IMG_8882.jpeg": { caption: "Slagfältet sett från Lejonkullens trappa", date: "1 juli", place: "Waterloo" },
+  "IMG_8886.jpeg": { caption: "Portabel AC mot värmen på B&B:t i Roermond", date: "1 juli", place: "Roermond" },
+  "IMG_8888.jpeg": { caption: "Kvällsbord på restaurangen i Roermond", date: "1 juli", place: "Roermond" },
 
   // Dag 12 · torsdag 2 juli — Roermond → Lübeck
   "IMG_1179.jpeg": { caption: "Chokladbutiken Albert i Roermond. Hotell och choklad, vad bra!", date: "2 juli", place: "Roermond" },
@@ -314,4 +327,15 @@ export const photoCaptions: Record<string, PhotoCaption> = {
   "IMG_1181.jpeg": { caption: "Automatstation vid Teslaladdning", date: "2 juli", place: "Tyskland" },
   "IMG_1184.jpeg": { caption: "Lübecks gamla stad från Trave", date: "2 juli", place: "Lübeck" },
   "IMG_1185.jpeg": { caption: "Framme på Klassik Altstadt Hotel i Lübeck", date: "2 juli", place: "Lübeck" },
+  "IMG_8889.jpeg": { caption: "Frukost i trädgården på De Pastorie", date: "2 juli", place: "Roermond" },
+  "IMG_8891.jpeg": { caption: "Nelson bland blommorna i B&B-trädgården", date: "2 juli", place: "Roermond" },
+  "IMG_8896.jpeg": { caption: "Gavelhus i Lübecks gamla stad", date: "2 juli", place: "Lübeck" },
+
+  // Dag 13 · fredag 3 juli — Lübeck → Lund (hemkomstmiddag på Bistro Kino)
+  "IMG_8900.jpeg": { caption: "Delat fat till hemkomstmiddagen på Bistro Kino", date: "3 juli", place: "Bistro Kino, Lund" },
+  "IMG_8901.jpeg": { caption: "Krämig fiskrätt med ett glas vitt", date: "3 juli", place: "Bistro Kino, Lund" },
+  "IMG_8902.jpeg": { caption: "Nelson vid middagen på Bistro Kino", date: "3 juli", place: "Bistro Kino, Lund" },
+  "IMG_8903.jpeg": { caption: "Köttbullar med potatismos, gräddsås och lingon — hemma i Sverige igen", date: "3 juli", place: "Bistro Kino, Lund" },
+  "IMG_8904.jpeg": { caption: "Elsa vid hemkomstmiddagen på Bistro Kino", date: "3 juli", place: "Bistro Kino, Lund" },
+  "IMG_8905.jpeg": { caption: "Nöjd vid middagsbordet på Bistro Kino", date: "3 juli", place: "Bistro Kino, Lund" },
 };

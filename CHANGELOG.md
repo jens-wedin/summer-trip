@@ -111,9 +111,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   it to the real day: mostly a long drive north to Lübeck with Jens still unwell,
   arriving at the Klassik Altstadt Hotel in the old town. Adjusted the distance
   (~540 km) and copy.
+- **Day 13 itinerary** — recorded the homecoming evening in Lund: first Swedish
+  dinner at **Bistro Kino** (shared board, creamy fish, and köttbullar with
+  lingonberries), added as a resource link.
 - **Trip photos** — added 58 more photos (278 total), optimized to ~2000px/q80,
   and captioned all of them (caption + date + place) from EXIF time/GPS and
   image content.
+- **Trip photos (second-phone batch)** — added 22 more photos (300 total) across
+  30 juni – 3 juli, optimized to ~2000px/q80 and captioned from EXIF time and
+  image content — including the first **Day 13** photos (the Lund homecoming
+  dinner at Bistro Kino).
 
 ### Fixed
 - **Responsive & accessibility (mobile)** — resolved all five block-merge

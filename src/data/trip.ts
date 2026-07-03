@@ -741,9 +741,12 @@ export const trip: Trip = {
       enRouteStops: [
         { name: "Louisiana Museum of Modern Art (Humlebæk)", description: "Ett av världens vackraste museer, beläget längs kusten norr om Köpenhamn." },
       ],
+      resources: [
+        { title: "Bistro Kino, Lund", url: "https://maps.app.goo.gl/tL5WDGcKsBJB9Vre7", note: "Hemkomstmiddagen — delat fat, krämig fisk och klassiska köttbullar med lingon." },
+      ],
       story: [
         "Vogelfluglinjen i omvänd riktning: Puttgarden till Rødby med Scandlines, Femernsundet platt och skiffergrått, måsar i takt. Över Sjælland på farthållare, sedan Öresundsbron på sena eftermiddagen — Sverige under hjulen för första gången på två veckor.",
-        "Lund vid kvällningen; domkyrkan nära och studentstadens stillhet — en mjuk landning innan den långa sista etappen upp längs E4.",
+        "Lund vid kvällningen; domkyrkan nära och studentstadens stillhet — en mjuk landning innan den långa sista etappen upp längs E4. Första svenska middagen blev på Bistro Kino: ett delat fat, krämig fisk och klassiska köttbullar med lingon och gräddsås — hemma igen.",
       ],
       images: [
         { src: "https://images.unsplash.com/photo-1702411572780-e9fa8c89a4d2?w=1600&auto=format&fit=crop&q=80", caption: "Överfart över Femernsundet med färja." },
