@@ -396,7 +396,7 @@ export const towns: Town[] = [
     name: "Waterloo",
     country: "Belgien",
     tagline: "Napoleons sista slag — 18 juni 1815",
-    visitContext: "Dag 11 · ons 1 juli · middagsstopp på vägen Paris → Recklinghausen",
+    visitContext: "Dag 11 · ons 1 juli · middagsstopp på vägen Paris → Roermond",
     images: [
       { src: "https://images.unsplash.com/photo-1586065695931-44ebab9fca13?w=1600&auto=format&fit=crop&q=80", caption: "Lejonkullen — 226 trappsteg." },
       { src: "https://images.unsplash.com/photo-1734865690020-2d5c0711b864?w=1600&auto=format&fit=crop&q=80", caption: "Slagfältet från kullen — Mont-Saint-Jean." },
@@ -468,63 +468,58 @@ export const towns: Town[] = [
 
   // ──────────────────────────────────────────────────────────────
   {
-    id: "recklinghausen",
-    slug: "recklinghausen",
-    flag: "🇩🇪",
-    name: "Recklinghausen",
-    country: "Tyskland",
-    tagline: "Inkörsporten till Ruhr",
+    id: "roermond",
+    slug: "roermond",
+    flag: "🇳🇱",
+    name: "Roermond",
+    country: "Nederländerna",
+    tagline: "Limburgs historiska stad vid Roer och Maas",
     visitContext: "Dag 11 · ons 1 juli · 1 natt",
-    lodging: { name: "Aspire Palais Recklinghausen", url: "https://aspire-hotels.com/palais/de/startseite/", note: "Trademark Collection by Wyndham · 88,30 €." },
-    images: [
-      { src: "https://images.unsplash.com/photo-1627281107224-9c8ff16656db?w=1600&auto=format&fit=crop&q=80", caption: "Recklinghausen vid Ruhrs norra kant." },
-      { src: "https://images.unsplash.com/photo-1600250382979-c06b4926b941?w=1600&auto=format&fit=crop&q=80", caption: "Zeche Zollverein, UNESCO-världsarv i Essen." },
-      { src: "https://images.unsplash.com/photo-1481414981591-5732874c7193?w=1600&auto=format&fit=crop&q=80", caption: "Ruhrs industriella arv." },
-    ],
+    lodging: { name: "De Pastorie Bed & Breakfast", url: "https://maps.app.goo.gl/E5wpV5WBU4UDBYdV6", note: "Charmigt B&B med egen chocolaterie i gamla stan." },
     history: [
-      { title: "Urgamla rötter", body: "En av Westfalens äldst dokumenterade städer, med uppgifter som går tillbaka till 1017. Ingick i Vest Recklinghausen — en exklav av ärkebiskopsstiftet Köln i nästan 600 år." },
-      { title: "Ruhrs industriarv", body: "Utan att ha industrialiserats lika hårt som Essen eller Dortmund ligger Recklinghausen vid vägskälet i Ruhrs omvandling från kol och stål till kultur och grönska." },
-      { title: "Ruhrfestspiele", body: "Grundat 1946, ett av Tysklands äldsta och mest ansedda teater- och konstfestivaler. Fött ur ett efterkrigstida solidaritetsutbyte mellan gruvarbetare och skådespelare." },
+      { title: "Gammal handelsstad", body: "Roermond växte fram vid sammanflödet av floderna Roer och Maas i nederländska Limburg och blev en välmående handelsstad — tidvis medlem i Hansan. Det medeltida gatunätet och kyrkorna vittnar än idag om stadens ålder." },
+      { title: "Munsterkerk", body: "Onze-Lieve-Vrouwe-Munsterkerk är en sällsynt senromansk klosterkyrka från 1200-talet, grundad som cistercienskloster. Här vilar Gerard IV av Gelre och hans hustru Margaretha — stadens grundare." },
+      { title: "Pierre Cuypers stad", body: "Arkitekten Pierre Cuypers (1827–1921), mannen bakom Rijksmuseum och Amsterdams centralstation, föddes och verkade i Roermond. Hans nygotiska prägel märks i staden och långt utanför den." },
     ],
     pointsOfInterest: [
-      { name: "Altstadt", description: "Kompakt, promenadvänlig medeltida stadskärna med korsvirkeshus, ett torg och smala gränder — en av Ruhrs bäst bevarade gamla städer." },
-      { name: "Ikonen-Museum", description: "Världens största samling av ortodoxa kristna ikoner utanför den ortodoxa världen. Över 1 000 ikoner som spänner över tusen år. Ett genuint överraskande museum för denna del av Tyskland." },
-      { name: "Petruskirche", description: "Vacker sockenkyrka från 1200-talet i hjärtat av gamla stan. Tornet är ett Recklinghausen-landmärke." },
-      { name: "Stadtgarten", description: "Stor, lummig park i utkanten av gamla stan — perfekt för en promenad efter ankomsten." },
+      { name: "Munsterkerk", description: "Den senromanska klosterkyrkan på Munsterplein, med sina fyra torn och åttkantiga mittparti — restaurerad av Cuypers på 1800-talet. Stadens signaturbyggnad." },
+      { name: "Sint-Christoffelkathedraal", description: "Den gotiska katedralen från 1400-talet, tillägnad stadens skyddshelgon Sankt Christoffer, vars förgyllda staty kröner tornet." },
+      { name: "Gamla stan och Markt", description: "Kompakt, promenadvänlig kärna med torg, kaféer och gränder mellan de två kyrkorna." },
+      { name: "Designer Outlet Roermond", description: "Ett av Europas största outletcentra i utkanten av staden — en shoppingmagnet (mer Sara och Elsas gren)." },
+      { name: "Maasplassen", description: "De sammanhängande sjöarna kring Maas strax utanför stan — Nederländernas största vattensportområde." },
     ],
     tips: [
-      { name: "Kvällspromenad", description: "Altstadt är kompakt och bäst utforskad till fots. Gå från torget genom gågatan och runt Petruskirche." },
-      { name: "Westfalisk mat", description: "Leta efter Pfefferpotthast (nöt- och lökgryta), Pumpernickel och lokalt öl." },
-      { name: "Ruhr-utflykt", description: "Har du extra tid är Essen (Zeche Zollverein, UNESCO-världsarv) och Dortmund 20–30 minuter bort." },
-      { name: "Laddning", description: "Tesla Superchargers finns i Ruhr-området (Essen, Dortmund). Kolla Tesla-navigeringen för närmaste station." },
+      { name: "Utforska till fots", description: "Gamla stan är liten; gå mellan Munsterkerk och katedralen och slå dig ner på ett torg." },
+      { name: "Choklad", description: "Staden har fina chocolaterier — B&B:et De Pastorie har till och med en egen." },
+      { name: "Shopping", description: "Har du tid och håg ligger Designer Outlet strax utanför centrum." },
+      { name: "Laddning", description: "Roermond ligger nära motorvägen; Superchargers finns i och kring staden." },
     ],
     deepDive: {
-      title: "Recklinghausen — Ruhrs tysta kant",
+      title: "Roermond — vid flodernas möte",
       intro:
-        "Vid Ruhrs norra kant har Recklinghausen en påtagligt annorlunda karaktär än sina industriella grannar: medeltida stadskärna, ett ikonmuseum i världsklass och ett av Tysklands äldsta folkfestivaler.",
+        "En liten historisk stad i nederländska Limburg, formad av floderna, av handeln och av en av Nederländernas mest inflytelserika arkitekter.",
       chapters: [
         {
-          title: "1. Köln-exklaven",
+          title: "1. Staden vid Roer",
           body: [
-            "I nästan 600 år var Vest Recklinghausen en exklav av ärkebiskopsstiftet Köln — ett stycke katolsk furstbiskopsterritorium omgivet av protestantiska stater. Det formade arkitekturen, religiösa livet och identiteten i sekler.",
+            "Roermond — namnet betyder ungefär 'Roermynningen' — växte fram där floden Roer möter Maas. Läget vid vattnet gjorde staden till en handelsplats och, under senmedeltiden, tidvis medlem i det tyska Hansaförbundet.",
           ],
         },
         {
-          title: "2. Ruhr-berättelsen",
+          title: "2. Munsterkerk",
           body: [
-            "Ruhr var den tyska industrialiseringens maskinrum — kol, stål, kemikalier. Recklinghausen låg i utkanten av det hela, mindre hårt industrialiserat än Essen eller Dortmund, vilket delvis är skälet till att gamla stan överlevde.",
-            "Efter efterkrigstidens kolaps för kol och stål omvandlade sig Ruhr: Zeche Zollverein i Essen — världens största kolgruva när den lades ned — är nu ett UNESCO-världsarv och ett museum ritat av Rem Koolhaas.",
+            "Stadens äldsta skatt är Munsterkerk, en senromansk kyrka från 1200-talet grundad som cisterciensiskt nunnekloster av Gerard IV av Gelre. Hans och hustru Margarethas gravmonument står kvar i koret. På 1800-talet restaurerades kyrkan av stadens berömdaste son.",
           ],
         },
         {
-          title: "3. Ruhrfestspiele",
+          title: "3. Cuypers arv",
           body: [
-            "Grundat 1946 ur ett enastående efterkrigstida utbyte: Hamburgskådespelare uppträdde i Recklinghausen mot koldonationer från de lokala gruvarbetarna — kol som höll Hamburgs teatrar uppvärmda under den brutala efterkrigsvintern. Ur det bytet växte ett av Tysklands mest ansedda konstfestivaler.",
+            "Pierre Cuypers föddes i Roermond 1827 och byggde här upp sin verkstad för kyrkokonst. Han skulle bli 1800-talets store nederländske arkitekt — Rijksmuseum och Amsterdam Centraal är hans verk — och den nygotiska stil han odlade satte spår i hela landet, med början i hemstaden.",
           ],
         },
       ],
       lookFor:
-        "I Altstadt — leta efter Kölns vapen, ett svart kors på vitt, på gamla byggnader och portar. De markerar seklernas furstbiskopsstyre som formade detta hörn av Westfalen.",
+        "Leta upp den förgyllda statyn av Sankt Christoffer högst upp på katedralens torn — stadens skyddshelgon, som bär Kristusbarnet över floden.",
     },
     relatedDayIds: [11, 12],
   },

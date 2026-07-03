@@ -13,7 +13,7 @@ Live at **https://jens-wedin.github.io/summer-trip/**.
 - **Day pages** (`/day/1` … `/day/14`) — story columns with drop cap, photo gallery, route map
   highlighting the day, lodging, and a per-day checklist.
 - **Route Map** — the full continental loop on Leaflet / OpenStreetMap, restyled to fit the paper aesthetic.
-- **Towns** — Malmö, Lund, Stemmen, Gent, Bayeux, Honfleur, Recklinghausen, Lübeck, Waterloo.
+- **Towns** — Malmö, Lund, Stemmen, Gent, Bayeux, Honfleur, Roermond, Lübeck, Waterloo.
 - **Paris** — history, museums, WWII / Napoleon-era sites, neighbourhoods, cafes, restaurants, hotels.
 - **Normandy** — D-Day sites by sector, Bayeux base, restaurants, shuttle and timeline.
 - **Food & Drinks** — a curated regional eat-and-drink list along the route.
