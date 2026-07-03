@@ -82,7 +82,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   recovered evening — a drink, dinner at Billie, and a long night walk past the
   Louvre, along the Seine and Notre-Dame (25 000 steps). Added the food/sight
   links and the day's stops.
-- **Trip photos** — added 38 more photos (220 total), optimized to ~2000px/q80,
+- **Day 10 itinerary** — rewrote the story to the real day: Nelson & Jens in
+  Napoleon's footsteps (La Madeleine + the 1905 public toilet, Place de la
+  Concorde, the Eiffel Tower from École Militaire, a Picchetto burrata-and-pizza
+  lunch, then Les Invalides — Napoleon's tomb, Musée de l'Armée and the Ordre de
+  la Libération), while Sara & Elsa shopped at Galeries Lafayette; dinner at Aux
+  Crus de Bourgogne and the France–Sweden match at a bar. New title, resources
+  and en-route stops.
+- **Day 11 itinerary** — corrected the destination from Recklinghausen to
+  **Roermond, Netherlands**: Paris → Waterloo (museum + battlefield, still in
+  Napoleon's footsteps) → Roermond, where the family stayed at De Pastorie B&B
+  (with its chocolaterie) and ate Indian; Jens fell ill in the evening. Updated
+  the route waypoint, lodging, charging and copy.
+- **Day 12 itinerary** — updated the leg to start from **Roermond** and rewrote
+  it to the real day: mostly a long drive north to Lübeck with Jens still unwell,
+  arriving at the Klassik Altstadt Hotel in the old town. Adjusted the distance
+  (~540 km) and copy.
+- **Trip photos** — added 58 more photos (278 total), optimized to ~2000px/q80,
   and captioned all of them (caption + date + place) from EXIF time/GPS and
   image content.
 
