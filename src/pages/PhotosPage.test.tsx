@@ -3,7 +3,7 @@ import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { MemoryRouter } from "react-router-dom";
 import { PhotosPage } from "./PhotosPage";
-import { tripPhotos } from "../lib/photos";
+import { tripPhotos, groupPhotosByDate } from "../lib/photos";
 
 const setup = () =>
   render(
@@ -29,6 +29,15 @@ describe("PhotosPage", () => {
       expect(screen.getByRole("dialog")).toBeInTheDocument();
       await user.keyboard("{Escape}");
       expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
+    },
+  );
+
+  it.runIf(tripPhotos.length > 0)(
+    "renders a date/route heading per day group",
+    () => {
+      setup();
+      const headings = screen.getAllByRole("heading", { level: 3 });
+      expect(headings).toHaveLength(groupPhotosByDate(tripPhotos).length);
     },
   );
 

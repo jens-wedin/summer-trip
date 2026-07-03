@@ -54,6 +54,37 @@ export function buildPhotoList(
     .sort((a, b) => dateKey(b.date) - dateKey(a.date) || b.filename.localeCompare(a.filename));
 }
 
+export type PhotoGroup = {
+  /** DOM-safe key derived from the shared date (or index for undated). */
+  key: string;
+  /** Swedish "D månad" caption date shared by every photo in the group. */
+  date?: string;
+  /**
+   * Photos in display order, each carrying its index into the flat source
+   * list — so the flat-indexed lightbox keeps navigating across group borders.
+   */
+  items: { photo: Photo; index: number }[];
+};
+
+/**
+ * Split an already-sorted photo list into consecutive same-date groups. Relies
+ * on buildPhotoList's date-first sort, so every photo from one day is adjacent
+ * and becomes a single group. Pure, so it's unit-testable.
+ */
+export function groupPhotosByDate(photos: Photo[]): PhotoGroup[] {
+  const groups: PhotoGroup[] = [];
+  photos.forEach((photo, index) => {
+    const prev = groups[groups.length - 1];
+    if (prev && prev.date === photo.date) {
+      prev.items.push({ photo, index });
+    } else {
+      const key = (photo.date ?? `odaterad-${index}`).replace(/\s+/g, "-");
+      groups.push({ key, date: photo.date, items: [{ photo, index }] });
+    }
+  });
+  return groups;
+}
+
 // Build-time discovery: drop an image into src/photos/ and it appears here.
 const modules = import.meta.glob("../photos/*.{jpg,jpeg,png,JPG,JPEG,PNG}", {
   eager: true,

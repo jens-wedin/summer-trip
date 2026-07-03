@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { buildPhotoList } from "./photos";
+import { buildPhotoList, groupPhotosByDate } from "./photos";
 
 // Shape returned by import.meta.glob(..., { eager: true, query: "?url", import: "default" })
 const entries: Record<string, string> = {
@@ -92,5 +92,45 @@ describe("buildPhotoList", () => {
 
   it("returns an empty array when there are no photos", () => {
     expect(buildPhotoList({}, {})).toEqual([]);
+  });
+});
+
+describe("groupPhotosByDate", () => {
+  const photo = (filename: string, date?: string) =>
+    ({ id: filename, filename, src: `/${filename}`, date, alt: filename }) as const;
+
+  it("groups consecutive same-date photos and preserves the flat index", () => {
+    const groups = groupPhotosByDate([
+      photo("a.jpeg", "2 juli"),
+      photo("b.jpeg", "2 juli"),
+      photo("c.jpeg", "1 juli"),
+    ]);
+    expect(groups.map((g) => g.date)).toEqual(["2 juli", "1 juli"]);
+    expect(groups[0].items).toEqual([
+      { photo: photo("a.jpeg", "2 juli"), index: 0 },
+      { photo: photo("b.jpeg", "2 juli"), index: 1 },
+    ]);
+    // The lightbox is flat-indexed, so c.jpeg must keep its global index 2.
+    expect(groups[1].items).toEqual([{ photo: photo("c.jpeg", "1 juli"), index: 2 }]);
+  });
+
+  it("gives each group a DOM-safe key from its date", () => {
+    const groups = groupPhotosByDate([photo("a.jpeg", "1 juli")]);
+    expect(groups[0].key).toBe("1-juli");
+  });
+
+  it("collects undated photos into a single trailing group", () => {
+    const groups = groupPhotosByDate([
+      photo("a.jpeg", "1 juli"),
+      photo("b.jpeg"),
+      photo("c.jpeg"),
+    ]);
+    expect(groups).toHaveLength(2);
+    expect(groups[1].date).toBeUndefined();
+    expect(groups[1].items.map((i) => i.index)).toEqual([1, 2]);
+  });
+
+  it("returns no groups for an empty list", () => {
+    expect(groupPhotosByDate([])).toEqual([]);
   });
 });
