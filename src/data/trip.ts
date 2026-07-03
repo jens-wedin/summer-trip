@@ -72,6 +72,7 @@ export const trip: Trip = {
         "Skåne uppenbarade sig platt och gyllene; vi rullade in i Malmö 18:28 och checkade in på MJ's — ett litet boutiquehotell mitt i stan, mörkt trä, marmor och den där berömda rosa flamingostolen. På kvällen blev det tapas på Vibliotek vid kanalen, ett spanskt ställe vars namn leker med vin och bibliotek och där allt — maten, vinet, till och med möblerna — är hämtat från Spanien. Vi beställde alldeles för mycket: croquetas, tortilla, patatas bravas, 'bara en till' tills bordet gav upp.",
       ],
       pullQuote: "Årets längsta dag utsträckt framför oss som en landningsbana.",
+      heroPhoto: "IMG_0678.jpeg",
       images: [
         { src: "https://images.unsplash.com/photo-1724450682478-2408a7ad0115?w=1600&auto=format&fit=crop&q=80", caption: "Iväg i gryningen, E4 rullar söderut." },
         { src: "https://images.unsplash.com/photo-1653458295159-3d738297c9d9?w=1600&auto=format&fit=crop&q=80", caption: "Vättern, inlandshavet." },
@@ -142,6 +143,7 @@ export const trip: Trip = {
         "Lillebælt tog oss över till Jylland och söderut mot gränsen vid Padborg. Vid kvällningen nådde vi Lüneburgheden; Stemmen tog emot oss med sin stillhet — den sorts by där kyrkklockan är det högljuddaste på en kilometers radie. En sen middag på Landgut Stemmens egen restaurang rundade av dagen: sallad, en knaprig wienerschnitzel och en currywurst — regionalt och rejält vid hedens kant.",
       ],
       pullQuote: "Tre broar, ett nystan garn och en wienerschnitzel vid hedens kant.",
+      heroPhoto: "IMG_0705.jpeg",
       images: [
         { src: "https://images.unsplash.com/photo-1657315221772-8a7846122d28?w=1600&auto=format&fit=crop&q=80", caption: "Överfarten vid Öresund." },
         { src: "https://images.unsplash.com/photo-1567451600215-ab9204b1fe21?w=1600&auto=format&fit=crop&q=80", caption: "Storebælt — hängbron över Stora Bält." },
@@ -202,6 +204,7 @@ export const trip: Trip = {
         "I Gent checkade vi in på Jam Hotel, ett industriromantiskt ställe med tegelvalv mitt i stan. Sara hade fått huvudvärk och stannade på rummet; resten av gänget gick ut och åt burgare på Tush vid Hoogpoort, under rosa neon. Sedan en lång kvällspromenad genom Gents vackra medeltida centrum: Sint-Niklaaskerk och de tre tornen, Gravensteen speglad i vattnet, och Graslei och Korenlei i gyllene kvällsljus.",
       ],
       pullQuote: "Tre länder på en dag — och kvällen tillhörde Gent.",
+      heroPhoto: "IMG_0752.jpeg",
       images: [
         { src: "https://images.unsplash.com/photo-1633441260458-0838dfa27e9a?w=1600&auto=format&fit=crop&q=80", caption: "Västerut genom Niedersachsen, autobahn genom vindkraftsland." },
         { src: "https://images.unsplash.com/photo-1647273922449-fb98bc3584f1?w=1600&auto=format&fit=crop&q=80", caption: "Maastricht, strax innanför den holländska gränsen." },
@@ -259,6 +262,7 @@ export const trip: Trip = {
         "Sedan två timmars körning, över den högt svävande Pont de Normandie där Seine möter havet, och in i Honfleur. Vi åt en riktigt bra middag på L'Absinthe och tog en kvällspromenad genom den gamla hamnstaden, bara för att se den. Tillbaka på L'Absinthe-hotellet spelade Nelson och jag schack; baren var en 'honesty bar' där man själv skrev upp vad man druckit.",
       ],
       pullQuote: "Bunkrar i dynerna, kritklippor över kanalen — och schack på honesty-baren i Honfleur.",
+      heroPhoto: "IMG_0838.jpeg",
       images: [
         { src: "https://images.unsplash.com/photo-1550522667-09c9bdb293a1?w=1600&auto=format&fit=crop&q=80", caption: "Pont de Normandie sent på eftermiddagen." },
         { src: "https://images.unsplash.com/photo-1553406263-51ca876460c9?w=1600&auto=format&fit=crop&q=80", caption: "Cap Blanc-Nez — kritklipporna ovanför Calais." },
@@ -311,6 +315,7 @@ export const trip: Trip = {
         "På eftermiddagen tog vi småvägarna längs kusten mot Bayeux och stannade till vid Arromanches, där resterna av Mulberryhamnen — den konstgjorda invasionshamnen från 1944 — fortfarande ligger ute i vattnet. Framme i Bayeux, vår bas i tre nätter, möttes vi av värden till lägenheten; på kvällen handlade vi middag och lagade mat hemma. Bayeux självt skonades från bombningarna som jämnade stora delar av Normandie med marken — katedralen och de smala, lutande husen står nästan som de gjorde när Vilhelm seglade mot England.",
       ],
       pullQuote: "För varmt för stranden — så det blev solfjädrar, skugga och tårna bland maneterna.",
+      heroPhoto: "IMG_0884.jpeg",
       images: [
         { src: "https://images.unsplash.com/photo-1719731923723-61288b878ff9?w=1600&auto=format&fit=crop&q=80", caption: "Normandisk bocage, häckar och smala åkrar." },
         { src: "https://images.unsplash.com/photo-1666286487652-460b05f89842?w=1600&auto=format&fit=crop&q=80", caption: "Bayeux katedral, västra fasaden." },
@@ -362,6 +367,7 @@ export const trip: Trip = {
         "Sara och Elsa stannade hemma, såg fotbollsmatchen och hann med lite shopping. På kvällen, när vi kom hem, åt vi sallad och tog en sen promenad genom stan — spanade in restauranger och tittade på katedralen.",
       ],
       pullQuote: "Med en guide som kan berätta blir stränderna något man faktiskt ser.",
+      heroPhoto: "IMG_0932.jpeg",
       images: [
         { src: "https://images.unsplash.com/photo-1718579770275-299c1cc7d1cc?w=1600&auto=format&fit=crop&q=80", caption: "Omaha Beach vid lågvatten." },
         { src: "https://images.unsplash.com/photo-1665764630018-fbd45d77b163?w=1600&auto=format&fit=crop&q=80", caption: "Amerikanska militärkyrkogården, Colleville-sur-Mer." },
@@ -417,6 +423,7 @@ export const trip: Trip = {
         "Eftermiddagen tillbringade vi lugnt i lägenheten. Till middag blev det lokal pizza från Little Italy, och sedan började vi planera morgondagens etapp — vidare till Paris.",
       ],
       pullQuote: "Galettes, musslor och en Café Calva — en maklig sista dag i Bayeux.",
+      heroPhoto: "IMG_0989.jpeg",
       images: [
         { src: "https://images.unsplash.com/photo-1740833103640-1ce2afad0114?w=1600&auto=format&fit=crop&q=80", caption: "Bayeux katedralinteriör — romansk krypta, gotiskt skepp." },
         { src: "https://images.unsplash.com/photo-1752511424978-6d822cb15635?w=1600&auto=format&fit=crop&q=80", caption: "Korsvirkes-normandiska hus längs en kullerstensbelagd gränd." },
@@ -480,6 +487,7 @@ export const trip: Trip = {
         "Till middag inledde vi med en drink på Brasserie Flora och promenerade sedan vidare till L'Oursin.",
       ],
       pullQuote: "Söndagslugn rakt in i Paris — och minigolf på hotellrummet.",
+      heroPhoto: "IMG_1032.JPG",
       images: [
         { src: "https://images.unsplash.com/photo-1439393161192-32360eb753f1?w=1600&auto=format&fit=crop&q=80", caption: "Eiffeltornet, kvällstid." },
         { src: "https://images.unsplash.com/photo-1741470292280-5f068efc561d?w=1600&auto=format&fit=crop&q=80", caption: "Paris från Trocadéros hustak." },
@@ -528,6 +536,7 @@ export const trip: Trip = {
         "Sedan en lång kvällspromenad: till Louvren, längs Seines kajer, förbi Notre-Dame och hela vägen hem till hotellet igen — 25 000 steg den här dagen.",
       ],
       pullQuote: "25 000 steg: Marais, Louvren, Seines kajer och Notre-Dame.",
+      heroPhoto: "IMG_8834.jpeg",
       images: [
         { src: "https://images.unsplash.com/photo-1743880475189-e36f80868bcc?w=1600&auto=format&fit=crop&q=80", caption: "Louvren, glaspyramiden på innergården." },
         { src: "https://images.unsplash.com/photo-1560726113-4c3f67cfa9ec?w=1600&auto=format&fit=crop&q=80", caption: "Sainte-Chapelle, det övre kapellet." },
@@ -577,6 +586,7 @@ export const trip: Trip = {
         "Till middag samlades vi på den klassiska franska restaurangen Aux Crus de Bourgogne. Och eftersom det var fotboll gick Elsa och jag sedan till en bar och såg matchen mellan Frankrike och Sverige.",
       ],
       pullQuote: "I Napoleons fotspår genom Paris — och Frankrike mot Sverige på kvällen.",
+      heroPhoto: "IMG_1105.jpeg",
       images: [
         { src: "https://images.unsplash.com/photo-1656310842874-34921d692cd3?w=1600&auto=format&fit=crop&q=80", caption: "Musée d'Orsay, den stora klockan." },
         { src: "https://images.unsplash.com/photo-1653691296512-6a082a687d1e?w=1600&auto=format&fit=crop&q=80", caption: "Île Saint-Louis i skymningen." },
@@ -624,6 +634,7 @@ export const trip: Trip = {
         "På kvällen stannade vi i Roermond i Nederländerna, där vi bodde på De Pastorie Bed & Breakfast (med egen chocolaterie) och åt på en indisk restaurang. På kvällen blev Jens sjuk.",
       ],
       pullQuote: "I Napoleons fotspår till Waterloo — och natt i Roermond.",
+      heroPhoto: "IMG_1152.jpeg",
       images: [
         { src: "https://images.unsplash.com/photo-1734865664440-baf72f06d45a?w=1600&auto=format&fit=crop&q=80", caption: "Belgiskt landskap nära slagfältet vid Waterloo." },
         { src: "https://images.unsplash.com/photo-1600250382979-c06b4926b941?w=1600&auto=format&fit=crop&q=80", caption: "In i Ruhr — Zeche Zollverein nära Essen." },
@@ -677,6 +688,7 @@ export const trip: Trip = {
         "På kvällen checkade vi in på Klassik Altstadt Hotel mitt i Lübecks gamla stad. Hansestadens tegelgotik och marsipan väntade utanför dörren till morgondagen.",
       ],
       pullQuote: "En lång, stilla körning norrut — och Lübecks tegelgotik vid kvällen.",
+      heroPhoto: "IMG_1184.jpeg",
       images: [
         { src: "https://images.unsplash.com/photo-1663591800789-9004bf951782?w=1600&auto=format&fit=crop&q=80", caption: "Lübecks Holstentor." },
         { src: "https://images.unsplash.com/photo-1563284573-51f0b7d93e40?w=1600&auto=format&fit=crop&q=80", caption: "Hamburg Speicherstadt på vägen dit." },

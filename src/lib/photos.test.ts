@@ -1,5 +1,11 @@
 import { describe, it, expect } from "vitest";
-import { buildPhotoList, groupPhotosByDate } from "./photos";
+import {
+  buildPhotoList,
+  groupPhotosByDate,
+  dayMonth,
+  indexByFilename,
+  groupByDayMonth,
+} from "./photos";
 
 // Shape returned by import.meta.glob(..., { eager: true, query: "?url", import: "default" })
 const entries: Record<string, string> = {
@@ -132,5 +138,42 @@ describe("groupPhotosByDate", () => {
 
   it("returns no groups for an empty list", () => {
     expect(groupPhotosByDate([])).toEqual([]);
+  });
+});
+
+describe("dayMonth", () => {
+  it("extracts the 'D månad' key regardless of a weekday prefix", () => {
+    expect(dayMonth("onsdag 1 juli")).toBe("1 juli");
+    expect(dayMonth("1 juli")).toBe("1 juli");
+    expect(dayMonth("söndag 21 juni")).toBe("21 juni");
+  });
+
+  it("lowercases the month and returns '' when there's no date", () => {
+    expect(dayMonth("Söndag 21 JUNI")).toBe("21 juni");
+    expect(dayMonth(undefined)).toBe("");
+    expect(dayMonth("ingen dag")).toBe("");
+  });
+});
+
+describe("indexByFilename / groupByDayMonth", () => {
+  const photo = (filename: string, date?: string) =>
+    ({ id: filename, filename, src: `/${filename}`, date, alt: filename }) as const;
+
+  it("indexes photos by file name", () => {
+    const idx = indexByFilename([photo("a.jpeg", "1 juli"), photo("b.JPG")]);
+    expect(idx["a.jpeg"].src).toBe("/a.jpeg");
+    expect(idx["b.JPG"].src).toBe("/b.JPG");
+  });
+
+  it("groups by day, keeps input order, and skips undated photos", () => {
+    const map = groupByDayMonth([
+      photo("a.jpeg", "2 juli"),
+      photo("b.jpeg", "1 juli"),
+      photo("c.jpeg", "2 juli"),
+      photo("d.jpeg"),
+    ]);
+    expect(map["2 juli"].map((p) => p.filename)).toEqual(["a.jpeg", "c.jpeg"]);
+    expect(map["1 juli"].map((p) => p.filename)).toEqual(["b.jpeg"]);
+    expect(Object.keys(map)).not.toContain("");
   });
 });

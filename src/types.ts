@@ -79,6 +79,8 @@ export type Day = {
   resources?: Resource[];
   story: string[];
   pullQuote?: string;
+  /** File name of a trip photo (src/photos/) to use as the day's hero image. */
+  heroPhoto?: string;
   images: ImageItem[];
   checklist: ChecklistItem[];
 };

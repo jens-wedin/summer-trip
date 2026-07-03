@@ -71,7 +71,13 @@ Open `src/data/trip.ts` and edit the `trip` object. Each day has:
 - `lodging`
 - `story` — array of paragraphs (the first gets a drop cap)
 - `pullQuote` — optional
-- `images` — `{ src, caption?, credit? }[]`
+- `heroPhoto` — optional file name of a photo in `src/photos/` to use as the
+  day's hero image (e.g. `"IMG_0678.jpeg"`). When set, the day page uses that
+  real photo (and its caption) instead of `images[0]`, and the end-of-page
+  gallery shows the day's other photos (matched by date). Prefer a
+  landscape/architecture shot — the hero is center-cropped to a wide frame.
+- `images` — `{ src, caption?, credit? }[]` (placeholders / fallback for days
+  without photos yet)
 - `checklist` — `{ id, label, done }[]`
 
 Replace the `picsum.photos` URLs with your own as photos come in.

@@ -8,6 +8,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- **Day-page heroes & galleries from real photos** — each day page (`/day/N`)
+  now opens with a real trip photo instead of a stock image, and its end-of-page
+  "Ur fotografens väska" gallery shows that day's actual photos. Heroes were
+  hand-picked as landscape/architecture shots with no people; the choice is set
+  per day via a new optional `heroPhoto` field on each `Day`. Photos are matched
+  to days by date, and the gallery header deep-links to that day's section in the
+  album (`/photos#grupp-<date>`). Days without photos yet (13–14) keep their
+  placeholder images. New pure helpers in `src/lib/photos.ts` (`dayMonth`,
+  `indexByFilename`, `groupByDayMonth`) with unit tests; `/photos` now scrolls to
+  the linked section on load.
+- **Grouped photo album** — `/photos` is split into one section per day, each
+  led by a date + route dateline (e.g. "1 juli · Paris → Roermond"), sorted by
+  capture date; the lightbox still navigates continuously across sections.
 - **Photo gallery (`/photos`, "Resealbumet")** — a bento-style grid of trip
   photos with an accessible full-screen lightbox (focus-trapped, Esc to close,
   ←/→ to navigate, focus restored on close), plus a **Foton** entry in the

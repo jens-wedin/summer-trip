@@ -85,6 +85,31 @@ export function groupPhotosByDate(photos: Photo[]): PhotoGroup[] {
   return groups;
 }
 
+/**
+ * Extract the "D månad" key from any Swedish date string, so a day's
+ * "onsdag 1 juli" lines up with a photo's "1 juli". Returns "" if none.
+ */
+export function dayMonth(date?: string): string {
+  const m = /(\d{1,2})\s+([a-zA-ZåäöÅÄÖ]+)/.exec(date ?? "");
+  return m ? `${m[1]} ${m[2].toLowerCase()}` : "";
+}
+
+/** Index photos by file name for direct lookup (e.g. a day's chosen hero). */
+export function indexByFilename(photos: Photo[]): Record<string, Photo> {
+  return Object.fromEntries(photos.map((p) => [p.filename, p]));
+}
+
+/** Group photos by their "D månad" date, preserving input (gallery) order. */
+export function groupByDayMonth(photos: Photo[]): Record<string, Photo[]> {
+  const map: Record<string, Photo[]> = {};
+  for (const p of photos) {
+    const key = dayMonth(p.date);
+    if (!key) continue;
+    (map[key] ??= []).push(p);
+  }
+  return map;
+}
+
 // Build-time discovery: drop an image into src/photos/ and it appears here.
 const modules = import.meta.glob("../photos/*.{jpg,jpeg,png,JPG,JPEG,PNG}", {
   eager: true,
@@ -93,3 +118,9 @@ const modules = import.meta.glob("../photos/*.{jpg,jpeg,png,JPG,JPEG,PNG}", {
 }) as Record<string, string>;
 
 export const tripPhotos: Photo[] = buildPhotoList(modules, photoCaptions);
+
+/** file name → resolved Photo, for looking up a day's hero by name. */
+export const photoByFilename: Record<string, Photo> = indexByFilename(tripPhotos);
+
+/** "D månad" → that day's photos, in gallery order (newest-first). */
+export const photosByDayMonth: Record<string, Photo[]> = groupByDayMonth(tripPhotos);

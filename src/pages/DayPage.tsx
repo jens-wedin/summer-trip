@@ -4,6 +4,7 @@ import { RouteMap } from "../components/RouteMap";
 import { Checklist } from "../components/Checklist";
 import type { Lodging } from "../types";
 import { townsForDay } from "../data/towns";
+import { dayMonth, photoByFilename, photosByDayMonth } from "../lib/photos";
 
 const PARIS_DAY_IDS = new Set([8, 9, 10]);
 const NORMANDY_DAY_IDS = new Set([5, 6, 7]);
@@ -29,6 +30,24 @@ export function DayPage() {
   const next = trip.days.find((d) => d.id === dayId + 1);
   const restDay = day.from.id === day.to.id;
   const dayTowns = townsForDay(day.id);
+
+  // Real trip photos for this day (from the Photos page), oldest-first so the
+  // gallery reads like the day unfolded.
+  const dayPhotos = [...(photosByDayMonth[dayMonth(day.date)] ?? [])].reverse();
+  const heroPhoto = day.heroPhoto ? photoByFilename[day.heroPhoto] : undefined;
+  const anchor = dayMonth(day.date).replace(/\s+/g, "-"); // ties to /photos#grupp-…
+
+  // Hero: the day's chosen photo, else the placeholder image.
+  const hero = heroPhoto
+    ? { src: heroPhoto.src, alt: heroPhoto.alt, caption: heroPhoto.caption, credit: undefined as string | undefined }
+    : { src: day.images[0].src, alt: day.images[0].caption ?? "", caption: day.images[0].caption, credit: day.images[0].credit };
+
+  // End-of-page gallery: the day's remaining real photos, else placeholders.
+  const galleryPhotos = dayPhotos.filter((p) => p.filename !== day.heroPhoto);
+  const gallery =
+    galleryPhotos.length > 0
+      ? galleryPhotos.map((p) => ({ key: p.id, src: p.src, alt: p.alt, caption: p.caption ?? "" }))
+      : day.images.slice(1).map((img, i) => ({ key: `ph-${i}`, src: img.src, alt: img.caption ?? "", caption: img.caption ?? "" }));
 
   return (
     <article className="max-w-6xl mx-auto px-6 pb-16">
@@ -81,15 +100,17 @@ export function DayPage() {
         <main className="lg:col-span-8 lg:border-r lg:border-ink lg:pr-10">
           <div className="newsprint-frame border border-ink">
             <img
-              src={day.images[0].src}
-              alt={day.images[0].caption ?? ""}
+              src={hero.src}
+              alt={hero.alt}
               className="w-full h-72 md:h-[420px] object-cover block"
             />
           </div>
-          <p className="byline italic mt-2">
-            {day.images[0].caption}
-            {day.images[0].credit && ` — ${day.images[0].credit}`}
-          </p>
+          {hero.caption && (
+            <p className="byline italic mt-2">
+              {hero.caption}
+              {hero.credit && ` — ${hero.credit}`}
+            </p>
+          )}
 
           <div className="body-prose mt-6">
             <p className="drop-cap">{day.story[0]}</p>
@@ -258,23 +279,34 @@ export function DayPage() {
             </section>
           )}
 
-          {day.images.length > 1 && (
+          {gallery.length > 0 && (
             <section className="mt-10">
-              <p className="kicker">Ur fotografens väska</p>
+              <div className="flex items-baseline justify-between gap-3">
+                <p className="kicker">Ur fotografens väska</p>
+                {galleryPhotos.length > 0 && (
+                  <Link to={`/photos#grupp-${anchor}`} className="kicker ink-link">
+                    Se dagen i Resealbumet →
+                  </Link>
+                )}
+              </div>
               <hr className="rule mt-2 mb-4" />
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {day.images.slice(1).map((img, i) => (
-                  <figure key={i}>
+                {gallery.map((img) => (
+                  <figure key={img.key}>
                     <div className="newsprint-frame border border-ink">
                       <img
                         src={img.src}
-                        alt={img.caption ?? ""}
+                        alt={img.alt}
+                        loading="lazy"
+                        decoding="async"
                         className="w-full h-56 object-cover block"
                       />
                     </div>
-                    <figcaption className="byline italic mt-1">
-                      {img.caption}
-                    </figcaption>
+                    {img.caption && (
+                      <figcaption className="byline italic mt-1">
+                        {img.caption}
+                      </figcaption>
+                    )}
                   </figure>
                 ))}
               </div>

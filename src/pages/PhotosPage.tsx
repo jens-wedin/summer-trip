@@ -1,6 +1,6 @@
-import { useRef, useState } from "react";
-import { Link } from "react-router-dom";
-import { tripPhotos, groupPhotosByDate } from "../lib/photos";
+import { useEffect, useRef, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { tripPhotos, groupPhotosByDate, dayMonth } from "../lib/photos";
 import { trip } from "../data/trip";
 import { Lightbox } from "../components/Lightbox";
 
@@ -14,18 +14,11 @@ function bentoSpan(i: number): string {
   return "";
 }
 
-// "onsdag 1 juli" / "1 juli" → "1 juli" — a shared key to line photo dates up
-// with the authoritative trip days (which prefix the weekday).
-function dayMonthKey(s: string): string {
-  const m = /(\d{1,2})\s+([a-zA-ZåäöÅÄÖ]+)/.exec(s);
-  return m ? `${m[1]} ${m[2].toLowerCase()}` : "";
-}
-
 // Date → the day's route, straight from the trip data: "1 juli" →
 // "Paris → Roermond"; a day that starts and ends in the same town → "Paris".
 const routeByDate: Record<string, string> = Object.fromEntries(
   trip.days.map((d) => [
-    dayMonthKey(d.date),
+    dayMonth(d.date),
     d.from.name === d.to.name ? d.from.name : `${d.from.name} → ${d.to.name}`,
   ]),
 );
@@ -35,6 +28,14 @@ const photoGroups = groupPhotosByDate(tripPhotos);
 export function PhotosPage() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const tileRefs = useRef<(HTMLButtonElement | null)[]>([]);
+  const { hash } = useLocation();
+
+  // Deep links from the day pages (/photos#grupp-24-juni) land on the day's
+  // section; SPA navigation doesn't honour the hash on its own, so scroll here.
+  useEffect(() => {
+    if (!hash) return;
+    document.getElementById(hash.slice(1))?.scrollIntoView({ block: "start" });
+  }, [hash]);
 
   const close = () => {
     const i = openIndex;
