@@ -338,4 +338,16 @@ export const photoCaptions: Record<string, PhotoCaption> = {
   "IMG_8903.jpeg": { caption: "Köttbullar med potatismos, gräddsås och lingon — hemma i Sverige igen", date: "3 juli", place: "Bistro Kino, Lund" },
   "IMG_8904.jpeg": { caption: "Elsa vid hemkomstmiddagen på Bistro Kino", date: "3 juli", place: "Bistro Kino, Lund" },
   "IMG_8905.jpeg": { caption: "Nöjd vid middagsbordet på Bistro Kino", date: "3 juli", place: "Bistro Kino, Lund" },
+
+  // Dag 14 · lördag 4 juli — Lund → Stockholm (fika vid Brunstorp, hem och hemmapizza)
+  "IMG_1198.jpeg": { caption: "Sista etappen hemåt längs E4", date: "4 juli", place: "På vägen mot Jönköping" },
+  "IMG_1199.jpeg": { caption: "Sara vid ratten på hemresan", date: "4 juli", place: "På vägen mot Jönköping" },
+  "IMG_1201.jpeg": { caption: "På grusgången vid Brunstorps trädgårdscafé", date: "4 juli", place: "Brunstorps Trädgårdscafé, Jönköping" },
+  "IMG_1202.jpeg": { caption: "Strosande i caféträdgården", date: "4 juli", place: "Brunstorps Trädgårdscafé, Jönköping" },
+  "IMG_1203.jpeg": { caption: "Brunstorps trädgårdscafé — röda stugor och skulpturer", date: "4 juli", place: "Brunstorps Trädgårdscafé, Jönköping" },
+  "IMG_1204.jpeg": { caption: "Röd gård och frodig trädgård vid Brunstorp", date: "4 juli", place: "Brunstorps Trädgårdscafé, Jönköping" },
+  "IMG_1206.jpeg": { caption: "Hela Vättern utbredd under äppelträden", date: "4 juli", place: "Brunstorp, Jönköping" },
+  "IMG_1210.jpeg": { caption: "Sträck på benen vid laddstoppet på hemvägen", date: "4 juli", place: "På vägen hem" },
+  "IMG_1213.jpeg": { caption: "Pizzadeg som fått jäsa till sen middag hemma", date: "4 juli", place: "Stockholm" },
+  "IMG_1214.jpeg": { caption: "Eld i pizzaugnen sent på kvällen — hemma igen", date: "4 juli", place: "Stockholm" },
 };

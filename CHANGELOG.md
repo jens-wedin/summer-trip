@@ -114,6 +114,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Day 13 itinerary** — recorded the homecoming evening in Lund: first Swedish
   dinner at **Bistro Kino** (shared board, creamy fish, and köttbullar with
   lingonberries), added as a resource link.
+- **Day 14 itinerary** — rewrote the final leg to the real day: up the E4 with an
+  afternoon fika at **Brunstorps trädgårdscafé** on Vättern's east bank (added as
+  a resource link), a semla picked up at Johanna, and home for a very late
+  wood-fired homemade pizza. New Vättern-panorama hero (`IMG_1206`) that bookends
+  the Day 1 lake stop.
 - **Trip photos** — added 58 more photos (278 total), optimized to ~2000px/q80,
   and captioned all of them (caption + date + place) from EXIF time/GPS and
   image content.
@@ -121,6 +126,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   30 juni – 3 juli, optimized to ~2000px/q80 and captioned from EXIF time and
   image content — including the first **Day 13** photos (the Lund homecoming
   dinner at Bistro Kino).
+- **Trip photos (final leg)** — added the last 10 photos (310 total) from **Day
+  14** (4 juli), optimized and captioned: the drive home, Brunstorps café, and
+  the late home pizza. Every day of the trip now has real photos.
 
 ### Fixed
 - **Responsive & accessibility (mobile)** — resolved all five block-merge

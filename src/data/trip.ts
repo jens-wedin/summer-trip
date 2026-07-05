@@ -784,14 +784,17 @@ export const trip: Trip = {
         ],
       },
       enRouteStops: [
-        { name: "Flygvapenmuseum Linköping", description: "Världsledande museum för flyghistoria." },
-        { name: "Vadstena", description: "Historisk stad vid Vättern med ett mäktigt Vasaslott och ett medeltida klostercentrum." },
+        { name: "Brunstorps trädgårdscafé (Huskvarna)", description: "Eftermiddagsfika på Vätterns östra brant — röda stugor, en skulpturpark i gräset och en trädgård med hela sjön utbredd under äppelträden." },
+      ],
+      resources: [
+        { title: "Brunstorps Trädgårdscafé", url: "https://maps.app.goo.gl/RuihhSiFrUUJEtRz9", note: "Trädgårdscafé på Vätterns östra sida nära Huskvarna — fika, skulpturpark och vid sjöutsikt." },
       ],
       story: [
-        "Den sista sträckan. Kaffe i Jönköping där vi hade haft förmiddagskaffe tretton dagar tidigare, landet tyst stolt över sig självt i det högsommarliga ljuset.",
-        "Hem före middagstid. Kökslampa tänd, katten ointresserad, fjorton dagars damm på vagnen.",
+        "Den sista sträckan, uppför E4 i högsommarljus. Vid Jönköping — där vi tagit förmiddagskaffe tretton dagar tidigare — svängde vi av till Brunstorps trädgårdscafé på Vätterns östra brant: röda stugor, skulpturer i gräset och hela sjön utbredd under äppelträden. En stilla fika med utsikten som följt oss ut på resan och nu vinkade oss hem.",
+        "En semla att ta med från Johanna, sedan de sista milen norrut. Hemma på kvällen — kökslampan tänd, katten föga imponerad och fjorton dagars vägdamm på vagnen. Och eftersom ingen orkade laga något ordentligt blev det pizzaugnen ute i trädgården: jäst deg, eld i ugnen och hemmagjord pizza långt in på natten. Hemma igen.",
       ],
-      pullQuote: "Kökslampa tänd, katten ointresserad.",
+      pullQuote: "Hela Vättern utbredd under äppelträden — och sedan hem.",
+      heroPhoto: "IMG_1206.jpeg",
       images: [
         { src: "https://images.unsplash.com/photo-1659521218958-d39c01cee9c1?w=1600&auto=format&fit=crop&q=80", caption: "Stockholm. Hem." },
         { src: "https://images.unsplash.com/photo-1698148128971-421ad7c1c34f?w=1600&auto=format&fit=crop&q=80", caption: "Uppför E4 i högsommar." },
